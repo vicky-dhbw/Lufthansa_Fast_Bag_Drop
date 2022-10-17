@@ -1,0 +1,3 @@
+Getroffene Annahmen
+----------------------
+- Ticket = BoardingPass
