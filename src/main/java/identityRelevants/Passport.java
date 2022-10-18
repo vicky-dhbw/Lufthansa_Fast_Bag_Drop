@@ -1,4 +1,4 @@
 package identityRelevants;
 
-public class Ticket {
+public class Passport {
 }
