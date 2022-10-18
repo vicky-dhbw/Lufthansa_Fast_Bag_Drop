@@ -5,7 +5,7 @@ import automatComponents.PassportScanner;
 import automatComponents.TakeDecision;
 import identityRelevants.Passport;
 
-public class Passenger {
+public class Passenger extends Human{
 
     public void executeCheckIn(PassportScanner passportScanner, Passport passport){
 

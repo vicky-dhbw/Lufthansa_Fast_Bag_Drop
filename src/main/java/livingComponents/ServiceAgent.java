@@ -1,4 +1,4 @@
 package livingComponents;
 
-public class ServiceAgent {
+public class ServiceAgent extends Employee{
 }

@@ -1,4 +1,4 @@
 package livingComponents;
 
-public class FederalPolice {
+public class FederalPolice extends Employee{
 }
