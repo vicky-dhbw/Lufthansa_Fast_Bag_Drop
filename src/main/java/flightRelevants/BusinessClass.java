@@ -11,11 +11,11 @@ public class BusinessClass {
         for(int i=0;i<numberOfRowsBC;i++){
             for(int j=0;j<numberOfColumnsBC;j++){
                 seats[i][j]=new Seat();
-                seats[i][j].setSeatId(setSeatId(i,j));
+                seats[i][j].setSeatId(setSeatID(i,j));
             }
         }
     }
-    public static String setSeatId(int i,int j){
+    public static String setSeatID(int i,int j){
         char[] columns=new char[]{'A','C','D','G','H','K'};
         return (Integer.toString(i+1))+(columns[j]);
     }
@@ -23,7 +23,5 @@ public class BusinessClass {
     public Seat[][] getSeats(){
         return seats;
     }
-
-
 
 }

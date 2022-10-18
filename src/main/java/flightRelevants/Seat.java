@@ -9,7 +9,7 @@ public class Seat {
         this.seatId=seatId;
     }
 
-    public String getSeatId(){
+    public String getSeatID(){
         return seatId;
     }
 
