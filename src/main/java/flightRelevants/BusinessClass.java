@@ -24,4 +24,7 @@ public class BusinessClass {
         return seats;
     }
 
+    public void printSeatIds(){
+        EconomyClass.SeatPrinter(numberOfRowsBC, numberOfColumnsBC, seats);
+    }
 }

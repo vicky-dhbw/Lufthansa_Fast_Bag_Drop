@@ -19,7 +19,12 @@ public class BusinessQueue implements IQueue{
     }
 
     @Override
-    public void removePassenger(Passenger passenger) {
-        businessQueue.remove(passenger);
+    public Passenger removePassenger() {
+        return businessQueue.poll();
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return businessQueue.isEmpty();
     }
 }

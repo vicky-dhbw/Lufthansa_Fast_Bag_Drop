@@ -29,4 +29,8 @@ public class PremiumEconomyClass {
         return seats;
     }
 
+    public void printSeatIds(){
+        EconomyClass.SeatPrinter(numberOfRowsPEC, numberOfColumnsPEC, seats);
+    }
+
 }

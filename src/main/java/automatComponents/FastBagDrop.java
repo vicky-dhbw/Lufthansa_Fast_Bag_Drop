@@ -9,7 +9,7 @@ import java.util.UUID;
 
 public class FastBagDrop {
 
-    private UUID serialNumber;
+    private final UUID serialNumber;
     private Manufacturer manufacturer;
     private FastBagDropState currentState;
     private final FastBagDropSection rightSection=new FastBagDropSection();
@@ -46,4 +46,7 @@ public class FastBagDrop {
         return leftSection;
     }
 
+    public Database getDatabase() {
+        return database;
+    }
 }

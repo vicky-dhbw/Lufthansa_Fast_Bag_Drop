@@ -6,6 +6,7 @@ import automatComponents.TakeDecision;
 import identityRelevants.BoardingPass;
 import identityRelevants.Passport;
 import passengerRelevants.Baggage;
+import services.CheckIn;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,12 +14,12 @@ import java.util.List;
 public class Passenger extends Human{
 
     private final Passport passport;
-    private final List<Baggage> baggage;
+    private final List<Baggage> baggageList;
     private BoardingPass boardingPass;
 
     public Passenger(){
         passport=new Passport();
-        baggage=new ArrayList<>();
+        baggageList=new ArrayList<>();
         boardingPass=new BoardingPass();
     }
 
@@ -30,6 +31,10 @@ public class Passenger extends Human{
 
     }
 
+    public void placePassportAtScanner(){
+
+    }
+
     public void takeCheckInDecision(TakeDecision decision){
 
     }
@@ -38,8 +43,12 @@ public class Passenger extends Human{
 
     }
 
+    public BoardingPass takeBoardingPass(){
+        return new BoardingPass();
+    }
+
     public List<Baggage> getBaggage() {
-        return baggage;
+        return baggageList;
     }
 
     public BoardingPass getBoardingPass() {
@@ -50,14 +59,12 @@ public class Passenger extends Human{
         this.boardingPass=boardingPass;
     }
 
-    public void createBaggage(int numberOfBaggage){
-        for(int i=0;i<numberOfBaggage;i++){
-            Baggage baggage_=new Baggage();
-            baggage.add(baggage_);
-        }
-    }
 
     public Passport getPassport() {
         return passport;
+    }
+
+    public List<Baggage> getBaggageList() {
+        return baggageList;
     }
 }

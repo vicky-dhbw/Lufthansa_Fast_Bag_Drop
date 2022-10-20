@@ -30,7 +30,7 @@ public class EconomyClass {
     }
 
     public boolean assureNullSeat(int i, int j) {
-        String[] nullSeats = new String[]{"02", "06", "110", "118", "250", "251", "252", "256", "257", "258"};
+        String[] nullSeats = new String[]{"02", "06", "100", "108", "250", "251", "252", "256", "257", "258"};
 
         for (String nullSeat : nullSeats) {
             String ifNullSeat = Integer.toString(i) + Integer.toString(j);
@@ -43,6 +43,24 @@ public class EconomyClass {
     }
     public Seat[][] getSeats(){
         return seats;
+    }
+
+    public void printSeatIds(){
+        SeatPrinter(numberOfRowsEC, numberOfColumnsEC, seats);
+    }
+
+    static void SeatPrinter(int numberOfRowsEC, int numberOfColumnsEC, Seat[][] seats) {
+        for (int i = 0; i < numberOfRowsEC; i++) {
+            for (int j = 0; j < numberOfColumnsEC; j++) {
+                if (seats[i][j]==null) {
+                    System.err.print(" X ");
+                }
+                else{
+                    System.err.print(" "+ seats[i][j].getSeatID()+" ");
+                }
+            }
+            System.err.println(" ");
+        }
     }
 
 

@@ -11,4 +11,9 @@ public class Display {
     public void searchBookingClassSeat(Flight flight){
 
     }
+    public void showMessage(boolean ifSuccessful){
+        if(ifSuccessful){
+
+        }
+    }
 }

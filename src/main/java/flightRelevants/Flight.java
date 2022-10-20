@@ -61,4 +61,10 @@ public class Flight {
     public Gate getFlightGate() {
         return flightGate;
     }
+
+    public void printFlightSeats(){
+       businessClass.printSeatIds();
+       premiumEconomyClass.printSeatIds();
+       economyClass.printSeatIds();
+    }
 }

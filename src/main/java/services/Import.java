@@ -1,32 +1,69 @@
 package services;
 
+import automatComponents.*;
 import flightRelevants.Flight;
+import flightRelevants.FlightID;
+import flightRelevants.Gate;
 import flightRelevants.IATAAirportCodes;
 import identityRelevants.BoardingPass;
 import identityRelevants.BookingClass;
 import identityRelevants.LeftBoardingPassPart;
 import identityRelevants.RightBoardingPassPart;
 import livingComponents.Passenger;
+import passengerRelevants.Baggage;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.Queue;
+import java.util.*;
 
 public class Import {
 
-    public void executeImport(Flight forFlight){
+    Queue<String> contents;
+    public void executeImport(Flight forFlight, FastBagDrop fastBagDrop){
+        contents=new LinkedList<>();
+        getContentsToList();
+
         try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader("src/main/java/Data/assignment.csv")); //change path to main/java/records.csv
+            BufferedReader bufferedReader = new BufferedReader(new FileReader("src/main/java/Data/assignment.csv"));
             String line;
 
             while ((line = bufferedReader.readLine()) != null) {
-                Passenger passenger=new Passenger();
-                passenger=createPassengers(line);
-                passenger.setBoardingPass(createBoardingPass(line,forFlight));
+                String[] entries = line.split(";");
+                List<Object> databaseObjects=new ArrayList<Object>();
+                FlightID flightID=forFlight.getFlightID();
+                IATAAirportCodes source=forFlight.getSource();
+                IATAAirportCodes destination=forFlight.getDestination();
+                Gate gate=forFlight.getFlightGate();
+                String boardingTime= forFlight.getBoardingTime();
+                String ticketId=entries[5];
+                String key=entries[4];
+                String name=entries[3];
+                BookingClass bookingClass=createBookingClass(entries[1]);
+
+                databaseObjects.add(flightID);
+                databaseObjects.add(source);
+                databaseObjects.add(destination);
+                databaseObjects.add(gate);
+                databaseObjects.add(boardingTime);
+                databaseObjects.add(ticketId);
+                databaseObjects.add(bookingClass);
+                databaseObjects.add(name);
+
+                fastBagDrop.getDatabase().getPassengerDatabase().put(key,databaseObjects);
+                //System.err.println(line);
+                Passenger passenger=createPassenger(line);
+                assignBaggageToPassenger(passenger,Integer.parseInt(entries[2]));
+                if(bookingClass==BookingClass.B){
+                    addPassengersToBusinessQueue(fastBagDrop,passenger);
+                }
+                if(bookingClass==BookingClass.P|| bookingClass==BookingClass.E){
+                    addPassengerToEconomyQueue(fastBagDrop,passenger);
+                }
+
+
 
             }
         } catch (Exception e) {
@@ -34,52 +71,49 @@ public class Import {
         }
     }
 
-    public BoardingPass createBoardingPass(String line, Flight forFlight){
-        String[] entries = line.split(";");
-        BoardingPass boardingPass=new BoardingPass();
-        boardingPass.getLeftBoardingPassPart().setName(entries[3]);
-        boardingPass.getLeftBoardingPassPart().setBookingClass(createBookingClass(entries[1]));
-        boardingPass.getLeftBoardingPassPart().setDestination(forFlight.getDestination());
-        boardingPass.getLeftBoardingPassPart().setSource(forFlight.getSource());
-        boardingPass.getLeftBoardingPassPart().setId(entries[5]);
-        boardingPass.getLeftBoardingPassPart().setFlightID(forFlight.getFlightID());
-        Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("dd.MMM");
-        boardingPass.getLeftBoardingPassPart().setDate(formatter.format(date));
-
-        boardingPass.setRightBoardingPassPart(createRightPartOfBoardingPass(boardingPass.getLeftBoardingPassPart(),forFlight));
 
 
-        return boardingPass;
-    }
-
-    public Passenger createPassengers(String line){
+    public Passenger createPassenger(String line){
         String[] entries = line.split(";");
         Passenger passenger=new Passenger();
         passenger.setName(entries[3]);
-        passenger.createBaggage(Integer.parseInt(entries[2]));
         passenger.getPassport().setId(entries[4]);
 
         return passenger;
     }
 
-    public RightBoardingPassPart createRightPartOfBoardingPass(LeftBoardingPassPart leftBoardingPassPart,Flight forFlight){
-        RightBoardingPassPart rightBoardingPassPart=new RightBoardingPassPart();
-        rightBoardingPassPart.setName(leftBoardingPassPart.getName());
-        rightBoardingPassPart.setBookingClass(leftBoardingPassPart.getBookingClass());
-        rightBoardingPassPart.setDestination(leftBoardingPassPart.getDestination());
-        rightBoardingPassPart.setSource(leftBoardingPassPart.getSource());
-        rightBoardingPassPart.setId(leftBoardingPassPart.getId());
-        rightBoardingPassPart.setFlightID(leftBoardingPassPart.getFlightID());
-        rightBoardingPassPart.setDate(leftBoardingPassPart.getDate());
-        rightBoardingPassPart.setGate(forFlight.getFlightGate());
-        rightBoardingPassPart.setBoardingTime(forFlight.getBoardingTime());
-
-        return rightBoardingPassPart;
+    public void assignBaggageToPassenger(Passenger passenger,int numberOfBaggage){
+        for(int i=0;i<numberOfBaggage;i++){
+            Baggage baggage=new Baggage();
+            passenger.getBaggageList().add(baggage);
+            baggage.setContent(contents.poll());
+        }
     }
 
-    public void formQueue(Queue queue){
+    public void getContentsToList(){
+        try{
+            BufferedReader bufferedReader=new BufferedReader(new FileReader("src/main/java/Data/baggage_content.txt"));
+            String line;
 
+            while ((line = bufferedReader.readLine()) != null){
+                contents.add(line);
+            }
+        }catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+
+
+    public void addPassengersToBusinessQueue(FastBagDrop fastBagDrop,Passenger passenger){
+        IQueue queue=new BusinessQueue();
+        fastBagDrop.getLeftSection().setQueue(queue);
+        fastBagDrop.getLeftSection().getQueue().addPassenger(passenger);
+    }
+    public void addPassengerToEconomyQueue(FastBagDrop fastBagDrop,Passenger passenger){
+        IQueue queue=new EconomyQueue();
+        fastBagDrop.getRightSection().setQueue(queue);
+        fastBagDrop.getRightSection().getQueue().addPassenger(passenger);
     }
     public BookingClass createBookingClass(String bookingClass){
         if(bookingClass.equals("Business")){

@@ -1,6 +1,9 @@
 package automatComponents;
 
 import automatComponents.*;
+import livingComponents.Passenger;
+
+import java.util.Queue;
 
 public class FastBagDropSection {
 
@@ -11,6 +14,8 @@ public class FastBagDropSection {
     private BaggageScanner baggageScanner=new BaggageScanner();
     private IDCardScanner idCardScanner =new IDCardScanner();
     private Display display=new Display();
+
+    private IQueue queue;
 
     public FastBagDropSection(){
         passportScanner=new PassportScanner();
@@ -76,5 +81,13 @@ public class FastBagDropSection {
 
     public void setDisplay(Display display) {
         this.display = display;
+    }
+
+    public IQueue getQueue() {
+        return queue;
+    }
+
+    public void setQueue(IQueue queue) {
+        this.queue = queue;
     }
 }
