@@ -1,3 +1,5 @@
+package automatComponents;
+
 import identityRelevants.IDCard;
 
 public class IDCardScanner {

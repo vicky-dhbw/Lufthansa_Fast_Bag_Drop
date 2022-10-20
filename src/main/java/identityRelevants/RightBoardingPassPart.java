@@ -2,7 +2,7 @@ package identityRelevants;
 
 import flightRelevants.Gate;
 
-public class RightBoardingPassPart extends GeneralBoardingPassPart{
+public class RightBoardingPassPart extends LeftBoardingPassPart{
 
     private Gate gate;
 
@@ -10,7 +10,17 @@ public class RightBoardingPassPart extends GeneralBoardingPassPart{
         return gate;
     }
 
+    private String boardingTime;
+
     public void setGate(Gate gate) {
         this.gate = gate;
+    }
+
+    public String getBoardingTime() {
+        return boardingTime;
+    }
+
+    public void setBoardingTime(String boardingTime) {
+        this.boardingTime = boardingTime;
     }
 }
