@@ -18,4 +18,11 @@ public class BusinessQueue {
     public void setBusinessQueue(Queue<Passenger> businessQueue) {
         this.businessQueue = businessQueue;
     }
+    public void addPassenger(Passenger passenger) {
+        businessQueue.offer(passenger);
+    }
+
+    public Passenger removePassenger() {
+        return businessQueue.poll();
+    }
 }

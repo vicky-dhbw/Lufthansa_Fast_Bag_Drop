@@ -10,7 +10,7 @@ import java.util.Queue;
 public class EconomyQueue {
 
     private final Queue<Passenger> economyQueue;
-    Comparator<Passenger> passengerClassComparator = (p1, p2) -> p1.getBoardingPass().getLeftBoardingPassPart().getBookingClass().getClassCode() - p2.getBoardingPass().getLeftBoardingPassPart().getBookingClass().getClassCode();
+    Comparator<Passenger> passengerClassComparator = (p1, p2) -> p1.getPassengerBookingClass().getClassCode() - p2.getPassengerBookingClass().getClassCode();
 
     public EconomyQueue(){
         economyQueue=new PriorityQueue<>(passengerClassComparator);

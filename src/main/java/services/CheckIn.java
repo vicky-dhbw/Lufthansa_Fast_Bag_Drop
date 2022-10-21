@@ -16,21 +16,25 @@ import java.util.Date;
 public class CheckIn {
 
     public void executeCheckIn(FastBagDrop fastBagDrop,Flight flight){
-        int v=0;
-        while (!fastBagDrop.getLeftSection().getQueue().getPassengerQueue().isEmpty()){
-            Passenger passenger=fastBagDrop.getLeftSection().getQueue().removePassenger();
-            simulateCheckIn(fastBagDrop,passenger);
-            v++;
-
+        while (!(fastBagDrop.getLeftSection().getBusinessQueue().getBusinessQueue().isEmpty())){
+            Passenger passenger=fastBagDrop.getLeftSection().getBusinessQueue().removePassenger();
+            simulateCheckInForBusinessQueue(fastBagDrop,passenger);
         }
-        System.err.println(v);
+        while (!(fastBagDrop.getRightSection().getEconomyQueue().getEconomyQueue().isEmpty())){
+            Passenger passenger_=fastBagDrop.getRightSection().getEconomyQueue().removePassenger();
+            simulateCheckInForEconomyQueue(fastBagDrop,passenger_);
+        }
     }
 
-    public void simulateCheckIn(FastBagDrop fastBagDrop,Passenger passenger){
+    public void simulateCheckInForBusinessQueue(FastBagDrop fastBagDrop,Passenger passenger){
         boolean ifFound=fastBagDrop.getLeftSection().getPassportScanner().scanPassport(fastBagDrop.getDatabase(), passenger.getPassport());
         fastBagDrop.getLeftSection().getDisplay().showMessage(ifFound,passenger);
     }
 
+    public void simulateCheckInForEconomyQueue(FastBagDrop fastBagDrop,Passenger passenger){
+        boolean ifFound=fastBagDrop.getRightSection().getPassportScanner().scanPassport(fastBagDrop.getDatabase(), passenger.getPassport());
+        fastBagDrop.getRightSection().getDisplay().showMessage(ifFound,passenger);
+    }
 
     public BoardingPass createBoardingPass(String line, Flight forFlight){
         String[] entries = line.split(";");

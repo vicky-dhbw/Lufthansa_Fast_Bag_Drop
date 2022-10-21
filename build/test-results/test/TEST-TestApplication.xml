@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestApplication" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-20T20:57:52" hostname="Vickys-MacBook-Pro.local" time="0.27">
+<testsuite name="TestApplication" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-10-21T18:50:35" hostname="Vickys-MacBook-Pro.local" time="0.804">
   <properties/>
-  <testcase name="TestQueueNotEmpty()" classname="TestApplication" time="0.27"/>
+  <testcase name="testBusinessQueue()" classname="TestApplication" time="0.33"/>
+  <testcase name="assureBaggageListNotNull()" classname="TestApplication" time="0.205"/>
+  <testcase name="importSuccess()" classname="TestApplication" time="0.145"/>
+  <testcase name="TestQueueNotEmpty()" classname="TestApplication" time="0.121"/>
   <system-out><![CDATA[Index 5 out of bounds for length 3
+Index 5 out of bounds for length 3
+Index 5 out of bounds for length 3
+Index 5 out of bounds for length 3
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

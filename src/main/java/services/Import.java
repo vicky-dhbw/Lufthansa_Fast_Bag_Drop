@@ -54,17 +54,15 @@ public class Import {
 
 
                 fastBagDrop.getDatabase().getPassengerDatabase().put(key,databaseObjects);
-                //System.err.println(line);
-                Passenger passenger=createPassenger(line);
+                Passenger passenger=new Passenger();
+                passenger=createPassenger(line);
                 assignBaggageToPassenger(passenger,Integer.parseInt(entries[2]));
                 if(bookingClass==BookingClass.B){
                     addPassengersToBusinessQueue(fastBagDrop,passenger);
                 }
-                if(bookingClass==BookingClass.P|| bookingClass==BookingClass.E){
+                else if(bookingClass==BookingClass.P|| bookingClass==BookingClass.E){
                     addPassengerToEconomyQueue(fastBagDrop,passenger);
                 }
-
-
 
             }
         } catch (Exception e) {
@@ -110,8 +108,8 @@ public class Import {
 
     public void addPassengersToBusinessQueue(FastBagDrop fastBagDrop,Passenger passenger){
         //G queue=new BusinessQueue();
-       // fastBagDrop.getRightSection().getBusinessQueue().addPassenger(passenger);
-                //getQueue().addPassenger(passenger);
+       fastBagDrop.getLeftSection().getBusinessQueue().addPassenger(passenger);
+
     }
     public void addPassengerToEconomyQueue(FastBagDrop fastBagDrop,Passenger passenger){
         fastBagDrop.getRightSection().getEconomyQueue().addPassenger(passenger);
