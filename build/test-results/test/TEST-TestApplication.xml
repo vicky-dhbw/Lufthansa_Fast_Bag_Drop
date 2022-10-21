@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestApplication" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-20T20:57:52" hostname="Vickys-MacBook-Pro.local" time="0.27">
+  <properties/>
+  <testcase name="TestQueueNotEmpty()" classname="TestApplication" time="0.27"/>
+  <system-out><![CDATA[Index 5 out of bounds for length 3
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
