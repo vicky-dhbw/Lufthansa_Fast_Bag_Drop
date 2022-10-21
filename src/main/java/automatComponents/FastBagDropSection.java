@@ -29,10 +29,10 @@ public class FastBagDropSection {
         display=new Display();
 
         if(position==Position.LEFT){
-            businessQueue=new BusinessQueue();
+            businessQueue=new BusinessQueue(); //new creation of left section creates only a new business Queue, --> note economyQueue is null for leftSection
         }
         if(position==Position.RIGHT){
-            economyQueue=new EconomyQueue();
+            economyQueue=new EconomyQueue();  //new creation of right section creates only a new economy Queue, --> note businessQueue is null for rightSection
         }
     }
 
