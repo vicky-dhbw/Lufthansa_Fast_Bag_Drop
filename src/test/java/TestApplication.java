@@ -72,4 +72,25 @@ public class TestApplication {
         }
     }
 
+    @Test
+    @Order(6)
+    public void baggageCountIsPerfect(){
+        Queue<Passenger> businessQ=fastBagDrop.getLeftSection().getBusinessQueue().getBusinessQueue();
+        Queue<Passenger> economyQ=fastBagDrop.getRightSection().getEconomyQueue().getEconomyQueue();
+
+        int counterBusinessBaggage=0;
+        int counterEconomyBaggage=0;
+
+        for(Passenger passenger:businessQ){
+            List<Baggage> testBB=passenger.getBaggageList();
+            counterBusinessBaggage+=testBB.size();
+        }
+
+        for (Passenger passenger:economyQ){
+            List<Baggage> testEB=passenger.getBaggageList();
+            counterEconomyBaggage+=testEB.size();
+        }
+        assertEquals(375,counterBusinessBaggage+counterEconomyBaggage);
+    }
+
 }

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestApplication" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-10-21T19:35:56" hostname="Vickys-MacBook-Pro.local" time="0.858">
+<testsuite name="TestApplication" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-10-21T19:51:17" hostname="Vickys-MacBook-Pro.local" time="1.015">
   <properties/>
-  <testcase name="testBusinessQueue()" classname="TestApplication" time="0.295"/>
-  <testcase name="assureBaggageContent()" classname="TestApplication" time="0.176"/>
-  <testcase name="assureBaggageListNotNull()" classname="TestApplication" time="0.13"/>
-  <testcase name="importSuccess()" classname="TestApplication" time="0.115"/>
-  <testcase name="TestQueueNotEmpty()" classname="TestApplication" time="0.139"/>
+  <testcase name="testBusinessQueue()" classname="TestApplication" time="0.303"/>
+  <testcase name="assureBaggageContent()" classname="TestApplication" time="0.207"/>
+  <testcase name="assureBaggageListNotNull()" classname="TestApplication" time="0.123"/>
+  <testcase name="baggageCountIsPerfect()" classname="TestApplication" time="0.111"/>
+  <testcase name="importSuccess()" classname="TestApplication" time="0.11"/>
+  <testcase name="TestQueueNotEmpty()" classname="TestApplication" time="0.157"/>
   <system-out><![CDATA[Index 5 out of bounds for length 3
+Index 5 out of bounds for length 3
 Index 5 out of bounds for length 3
 Index 5 out of bounds for length 3
 Index 5 out of bounds for length 3
