@@ -25,10 +25,13 @@ public class CheckIn {
         while (!(fastBagDrop.getLeftSection().getBusinessQueue().getBusinessQueue().isEmpty())){
             Passenger passenger=fastBagDrop.getLeftSection().getBusinessQueue().removePassenger();
             simulateCheckInForBusinessQueue(fastBagDrop,passenger);
+            generateBoardingPass(fastBagDrop.getDatabase(), passenger,flight);
+            fastBagDrop.getLeftSection().getDisplay().displayBoardingPass(passenger);
         }
         while (!(fastBagDrop.getRightSection().getEconomyQueue().getEconomyQueue().isEmpty())){
             Passenger passenger_=fastBagDrop.getRightSection().getEconomyQueue().removePassenger();
             simulateCheckInForEconomyQueue(fastBagDrop,passenger_);
+            generateBoardingPass(fastBagDrop.getDatabase(), passenger_,flight);
         }
     }
 
@@ -40,25 +43,6 @@ public class CheckIn {
     public void simulateCheckInForEconomyQueue(FastBagDrop fastBagDrop,Passenger passenger){
         boolean ifFound=fastBagDrop.getRightSection().getPassportScanner().scanPassport(fastBagDrop.getDatabase(), passenger.getPassport());
         fastBagDrop.getRightSection().getDisplay().showMessage(ifFound,passenger);
-    }
-
-    public BoardingPass createBoardingPass(String line, Flight forFlight){
-        String[] entries = line.split(";");
-        BoardingPass boardingPass=new BoardingPass();
-        boardingPass.getLeftBoardingPassPart().setName(entries[3]);
-        boardingPass.getLeftBoardingPassPart().setBookingClass(createBookingClass(entries[1]));
-        boardingPass.getLeftBoardingPassPart().setDestination(forFlight.getDestination());
-        boardingPass.getLeftBoardingPassPart().setSource(forFlight.getSource());
-        boardingPass.getLeftBoardingPassPart().setId(entries[5]);
-        boardingPass.getLeftBoardingPassPart().setFlightID(forFlight.getFlightID());
-        Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("dd.MMM");
-        boardingPass.getLeftBoardingPassPart().setDate(formatter.format(date));
-
-        boardingPass.setRightBoardingPassPart(createRightPartOfBoardingPass(boardingPass.getLeftBoardingPassPart(),forFlight));
-
-
-        return boardingPass;
     }
 
     public void generateBoardingPass(Database database,Passenger passenger,Flight forFlight){

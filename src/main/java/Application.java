@@ -23,8 +23,7 @@ public class Application {
         FederalPolice federalPolice=new FederalPolice();
         FastBagDrop fastBagDrop=new FastBagDrop();
         serviceAgent.executeImport(fastBagDrop.getServices().getImporter(),flight,fastBagDrop);
-        //fastBagDrop.getServices().getCheckIn().executeCheckIn(fastBagDrop,flight);
-
+        fastBagDrop.getServices().getCheckIn().executeCheckIn(fastBagDrop,flight);
 
     }
 
