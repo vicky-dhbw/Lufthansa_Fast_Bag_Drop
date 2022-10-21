@@ -1,5 +1,5 @@
 Getroffene Annahmen
 ----------------------
-- Ticket = BoardingPass
-
--- thanks, i will make it Borading Pass✌🏽
+S03
+- Das in den Spezifikationen genannte "Ticket" wird als unvollständiger Boarding Pass interpretiert
+  und dementsprechend nicht gesondert moduliert.
