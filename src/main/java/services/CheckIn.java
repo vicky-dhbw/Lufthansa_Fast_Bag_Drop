@@ -62,6 +62,7 @@ public class CheckIn {
     }
 
     public void generateBoardingPass(Database database,Passenger passenger,Flight forFlight){
+        //creates BoardingPass for Passenger from the Database created in Import
         List<Object> passengerFlightDetails=database.getListForKey(passenger.getPassport().getId());
         passenger.getBoardingPass().getLeftBoardingPassPart().setFlightID((FlightID) passengerFlightDetails.get(0));
         passenger.getBoardingPass().getLeftBoardingPassPart().setSource((IATAAirportCodes) passengerFlightDetails.get(1));
