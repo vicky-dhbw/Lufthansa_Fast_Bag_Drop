@@ -16,16 +16,19 @@ import java.util.Date;
 public class CheckIn {
 
     public void executeCheckIn(FastBagDrop fastBagDrop,Flight flight){
-        EconomyQueue economyQueue=(EconomyQueue) fastBagDrop.getLeftSection().getQueue();
-        while (!economyQueue.isEmpty()){
+        int v=0;
+        while (!fastBagDrop.getLeftSection().getQueue().getPassengerQueue().isEmpty()){
+            Passenger passenger=fastBagDrop.getLeftSection().getQueue().removePassenger();
+            simulateCheckIn(fastBagDrop,passenger);
+            v++;
 
         }
+        System.err.println(v);
     }
 
-    public void simulateCheckIn(FastBagDropSection leftSection){
-        Passenger passenger=leftSection.getQueue().removePassenger();
-
-
+    public void simulateCheckIn(FastBagDrop fastBagDrop,Passenger passenger){
+        boolean ifFound=fastBagDrop.getLeftSection().getPassportScanner().scanPassport(fastBagDrop.getDatabase(), passenger.getPassport());
+        fastBagDrop.getLeftSection().getDisplay().showMessage(ifFound,passenger);
     }
 
 

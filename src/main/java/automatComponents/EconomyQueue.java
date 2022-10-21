@@ -7,29 +7,27 @@ import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-public class EconomyQueue implements IQueue{
+public class EconomyQueue {
 
+    private final Queue<Passenger> economyQueue;
+    Comparator<Passenger> passengerClassComparator = (p1, p2) -> p1.getBoardingPass().getLeftBoardingPassPart().getBookingClass().getClassCode() - p2.getBoardingPass().getLeftBoardingPassPart().getBookingClass().getClassCode();
 
-    private final Comparator<Passenger> passengerClassComparator=(p1,p2)->p1.getBoardingPass().getLeftBoardingPassPart().getBookingClass().getClassCode()-p2.getBoardingPass().getLeftBoardingPassPart().getBookingClass().getClassCode();
-    private final Queue<Passenger> economyQueue=new PriorityQueue<>(passengerClassComparator);
+    public EconomyQueue(){
+        economyQueue=new PriorityQueue<>(passengerClassComparator);
+    }
     public Queue<Passenger> getEconomyQueue() {
-        return economyQueue;
+        return this.economyQueue;
     }
 
-    @Override
     public void addPassenger(Passenger passenger) {
-        economyQueue.offer(passenger);
+        this.economyQueue.offer(passenger);
     }
 
-    @Override
     public Passenger removePassenger() {
-        return economyQueue.poll();
+        return this.economyQueue.poll();
     }
 
-    @Override
-    public boolean isEmpty() {
-        return economyQueue.isEmpty();
-    }
+
 
 
 }

@@ -1,9 +1,11 @@
 package livingComponents;
 
+import automatComponents.Database;
 import automatComponents.Display;
 import automatComponents.PassportScanner;
 import automatComponents.TakeDecision;
 import identityRelevants.BoardingPass;
+import identityRelevants.BookingClass;
 import identityRelevants.Passport;
 import passengerRelevants.Baggage;
 import services.CheckIn;
@@ -17,6 +19,8 @@ public class Passenger extends Human{
     private final List<Baggage> baggageList;
     private BoardingPass boardingPass;
 
+    private BookingClass passengerBookingClass;
+
     public Passenger(){
         passport=new Passport();
         baggageList=new ArrayList<>();
@@ -27,11 +31,11 @@ public class Passenger extends Human{
         this.name=name;
     }
 
-    public void executeCheckIn(PassportScanner passportScanner, Passport passport){
-
+    public String getName(){
+        return this.name;
     }
 
-    public void placePassportAtScanner(){
+    public void executeCheckIn(PassportScanner passportScanner, Passport passport){
 
     }
 
@@ -66,5 +70,13 @@ public class Passenger extends Human{
 
     public List<Baggage> getBaggageList() {
         return baggageList;
+    }
+
+    public BookingClass getPassengerBookingClass() {
+        return passengerBookingClass;
+    }
+
+    public void setPassengerBookingClass(BookingClass passengerBookingClass) {
+        this.passengerBookingClass = passengerBookingClass;
     }
 }

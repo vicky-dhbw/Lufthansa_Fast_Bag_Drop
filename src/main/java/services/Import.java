@@ -52,6 +52,7 @@ public class Import {
                 databaseObjects.add(bookingClass);
                 databaseObjects.add(name);
 
+
                 fastBagDrop.getDatabase().getPassengerDatabase().put(key,databaseObjects);
                 //System.err.println(line);
                 Passenger passenger=createPassenger(line);
@@ -69,6 +70,7 @@ public class Import {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+
     }
 
 
@@ -78,6 +80,7 @@ public class Import {
         Passenger passenger=new Passenger();
         passenger.setName(entries[3]);
         passenger.getPassport().setId(entries[4]);
+        passenger.setPassengerBookingClass(createBookingClass(entries[1]));  //comparator relevant for queueing
 
         return passenger;
     }
@@ -106,14 +109,12 @@ public class Import {
 
 
     public void addPassengersToBusinessQueue(FastBagDrop fastBagDrop,Passenger passenger){
-        IQueue queue=new BusinessQueue();
-        fastBagDrop.getLeftSection().setQueue(queue);
-        fastBagDrop.getLeftSection().getQueue().addPassenger(passenger);
+        //G queue=new BusinessQueue();
+       // fastBagDrop.getRightSection().getBusinessQueue().addPassenger(passenger);
+                //getQueue().addPassenger(passenger);
     }
     public void addPassengerToEconomyQueue(FastBagDrop fastBagDrop,Passenger passenger){
-        IQueue queue=new EconomyQueue();
-        fastBagDrop.getRightSection().setQueue(queue);
-        fastBagDrop.getRightSection().getQueue().addPassenger(passenger);
+        fastBagDrop.getRightSection().getEconomyQueue().addPassenger(passenger);
     }
     public BookingClass createBookingClass(String bookingClass){
         if(bookingClass.equals("Business")){

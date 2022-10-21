@@ -5,26 +5,17 @@ import livingComponents.Passenger;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BusinessQueue implements IQueue{
+public class BusinessQueue {
 
-    private final Queue<Passenger> businessQueue=new LinkedList<>();
+    private Queue<Passenger> businessQueue=new LinkedList<>();
+    public BusinessQueue(){
+    }
 
     public Queue<Passenger> getBusinessQueue() {
         return businessQueue;
     }
 
-    @Override
-    public void addPassenger(Passenger passenger) {
-        businessQueue.offer(passenger);
-    }
-
-    @Override
-    public Passenger removePassenger() {
-        return businessQueue.poll();
-    }
-
-    @Override
-    public boolean isEmpty() {
-        return businessQueue.isEmpty();
+    public void setBusinessQueue(Queue<Passenger> businessQueue) {
+        this.businessQueue = businessQueue;
     }
 }

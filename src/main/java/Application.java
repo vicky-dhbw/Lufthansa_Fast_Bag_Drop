@@ -1,6 +1,6 @@
+import automatComponents.BusinessQueue;
 import automatComponents.EconomyQueue;
 import automatComponents.FastBagDrop;
-import automatComponents.IQueue;
 import flightRelevants.Flight;
 import flightRelevants.FlightID;
 import flightRelevants.Gate;
@@ -22,8 +22,11 @@ public class Application {
         FederalPolice federalPolice=new FederalPolice();
         FastBagDrop fastBagDrop=new FastBagDrop();
         serviceAgent.executeImport(fastBagDrop.getServices().getImporter(),flight,fastBagDrop);
+        fastBagDrop.getServices().getCheckIn().executeCheckIn(fastBagDrop,flight);
 
-        EconomyQueue economyQueue= (EconomyQueue) fastBagDrop.getRightSection().getQueue();
+        //EconomyQueue economyQueue= (EconomyQueue) fastBagDrop.getRightSection().getQueue();
+        System.err.println(fastBagDrop.getLeftSection().getQueue().getPassengerQueue().size());
+
 
     }
 

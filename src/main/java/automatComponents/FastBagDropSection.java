@@ -15,9 +15,11 @@ public class FastBagDropSection {
     private IDCardScanner idCardScanner =new IDCardScanner();
     private Display display=new Display();
 
-    private IQueue queue;
+    private EconomyQueue economyQueue;
 
-    public FastBagDropSection(){
+    private BusinessQueue businessQueue;
+
+    public FastBagDropSection(Position position){
         passportScanner=new PassportScanner();
         documentPrinter =new DocumentPrinter();
         conveyorBelt=new ConveyorBelt();
@@ -25,6 +27,13 @@ public class FastBagDropSection {
         baggageScanner=new BaggageScanner();
         idCardScanner =new IDCardScanner();
         display=new Display();
+
+        if(position==Position.LEFT){
+            businessQueue=new BusinessQueue();
+        }
+        if(position==Position.RIGHT){
+            economyQueue=new EconomyQueue();
+        }
     }
 
     public PassportScanner getPassportScanner() {
@@ -83,11 +92,19 @@ public class FastBagDropSection {
         this.display = display;
     }
 
-    public IQueue getQueue() {
-        return queue;
+    public EconomyQueue getEconomyQueue() {
+        return economyQueue;
     }
 
-    public void setQueue(IQueue queue) {
-        this.queue = queue;
+    public void setEconomyQueue(EconomyQueue economyQueue) {
+        this.economyQueue = economyQueue;
+    }
+
+    public BusinessQueue getBusinessQueue() {
+        return businessQueue;
+    }
+
+    public void setBusinessQueue(BusinessQueue businessQueue) {
+        this.businessQueue = businessQueue;
     }
 }

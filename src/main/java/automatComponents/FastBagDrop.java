@@ -12,8 +12,8 @@ public class FastBagDrop {
     private final UUID serialNumber;
     private Manufacturer manufacturer;
     private FastBagDropState currentState;
-    private final FastBagDropSection rightSection=new FastBagDropSection();
-    private final FastBagDropSection leftSection=new FastBagDropSection();
+    private final FastBagDropSection rightSection=new FastBagDropSection(Position.RIGHT);
+    private final FastBagDropSection leftSection=new FastBagDropSection(Position.LEFT);
     private final Database database=new Database();
 
     private final Services services=new Services();

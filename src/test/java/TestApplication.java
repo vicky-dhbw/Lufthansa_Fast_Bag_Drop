@@ -23,14 +23,19 @@ public class TestApplication {
         serviceAgent=new ServiceAgent();
         FederalPolice federalPolice=new FederalPolice();
         fastBagDrop=new FastBagDrop();
+        serviceAgent.executeImport(fastBagDrop.getServices().getImporter(),flight,fastBagDrop);
     }
 
     @Test
     @Order(1)
     public void TestQueueNotEmpty(){
-        serviceAgent.executeImport(fastBagDrop.getServices().getImporter(),flight,fastBagDrop);
         assertNotNull(fastBagDrop.getLeftSection().getQueue());
         assertNotNull(fastBagDrop.getRightSection().getQueue());
+    }
+    @Test
+    @Order(2)
+    public void testBusinessQueue(){
+        //assertEquals(48,fastBagDrop.getLeftSection().getQueue().s);
     }
 
 }

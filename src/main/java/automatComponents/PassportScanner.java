@@ -4,11 +4,8 @@ import identityRelevants.Passport;
 
 public class PassportScanner {
 
-    public boolean scanPassport(Passport passport){
-        return true;
+    public boolean scanPassport(Database database, Passport passport){
+        return database.searchForTicketInDatabase(passport.getId());
     }
 
-    public void searchTicket(){
-
-    }
 }
