@@ -58,7 +58,18 @@ public class TestApplication {
             List<Baggage> testBList=passenger.getBaggageList();
             assertTrue(testBList.size()>=1);
         }
+    }
 
+    @Test
+    @Order(5)
+    public void assureBaggageContent(){
+        Queue<Passenger> testQueue=fastBagDrop.getRightSection().getEconomyQueue().getEconomyQueue();
+        for(Passenger passenger:testQueue){
+            List<Baggage> testB=passenger.getBaggageList();
+            for(Baggage baggage:testB){
+                assertTrue(baggage.getContent().length()>0);
+            }
+        }
     }
 
 }

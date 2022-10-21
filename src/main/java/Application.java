@@ -8,6 +8,7 @@ import flightRelevants.IATAAirportCodes;
 import livingComponents.FederalPolice;
 import livingComponents.Passenger;
 import livingComponents.ServiceAgent;
+import passengerRelevants.Baggage;
 
 import java.io.*;
 import java.util.List;
@@ -24,7 +25,6 @@ public class Application {
         serviceAgent.executeImport(fastBagDrop.getServices().getImporter(),flight,fastBagDrop);
         //fastBagDrop.getServices().getCheckIn().executeCheckIn(fastBagDrop,flight);
 
-        System.err.println(fastBagDrop.getRightSection().getEconomyQueue().getEconomyQueue().size());
 
     }
 
