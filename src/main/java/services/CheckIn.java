@@ -1,17 +1,23 @@
 package services;
 
+import automatComponents.Database;
 import automatComponents.EconomyQueue;
 import automatComponents.FastBagDrop;
 import automatComponents.FastBagDropSection;
 import flightRelevants.Flight;
+import flightRelevants.FlightID;
+import flightRelevants.IATAAirportCodes;
 import identityRelevants.BoardingPass;
 import identityRelevants.BookingClass;
 import identityRelevants.LeftBoardingPassPart;
 import identityRelevants.RightBoardingPassPart;
 import livingComponents.Passenger;
 
+import javax.xml.crypto.Data;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
 
 public class CheckIn {
 
@@ -53,6 +59,21 @@ public class CheckIn {
 
 
         return boardingPass;
+    }
+
+    public void generateBoardingPass(Database database,Passenger passenger,Flight forFlight){
+        List<Object> passengerFlightDetails=database.getListForKey(passenger.getPassport().getId());
+        passenger.getBoardingPass().getLeftBoardingPassPart().setFlightID((FlightID) passengerFlightDetails.get(0));
+        passenger.getBoardingPass().getLeftBoardingPassPart().setSource((IATAAirportCodes) passengerFlightDetails.get(1));
+        passenger.getBoardingPass().getLeftBoardingPassPart().setDestination((IATAAirportCodes) passengerFlightDetails.get(2));
+        passenger.getBoardingPass().getLeftBoardingPassPart().setId((String) passengerFlightDetails.get(5));
+        passenger.getBoardingPass().getLeftBoardingPassPart().setBookingClass((BookingClass) passengerFlightDetails.get(6));
+        passenger.getBoardingPass().getLeftBoardingPassPart().setName((String) passengerFlightDetails.get(7));
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("dd.MMM");
+        passenger.getBoardingPass().getLeftBoardingPassPart().setDate(formatter.format(date));
+        passenger.getBoardingPass().setRightBoardingPassPart(createRightPartOfBoardingPass(passenger.getBoardingPass().getLeftBoardingPassPart(), forFlight));
+
     }
     public RightBoardingPassPart createRightPartOfBoardingPass(LeftBoardingPassPart leftBoardingPassPart, Flight forFlight){
         RightBoardingPassPart rightBoardingPassPart=new RightBoardingPassPart();

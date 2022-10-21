@@ -17,4 +17,8 @@ public class Database {
     public boolean searchForTicketInDatabase(String passportId){
         return passengerDatabase.containsKey(passportId);
     }
+
+    public List<Object> getListForKey(String passportId){
+        return passengerDatabase.get(passportId);
+    }
 }
