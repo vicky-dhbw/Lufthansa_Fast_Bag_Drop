@@ -32,6 +32,7 @@ public class CheckIn {
             Passenger passenger_=fastBagDrop.getRightSection().getEconomyQueue().removePassenger();
             simulateCheckInForEconomyQueue(fastBagDrop,passenger_);
             generateBoardingPass(fastBagDrop.getDatabase(), passenger_,flight);
+            fastBagDrop.getRightSection().getDisplay().displayBoardingPass(passenger_);
         }
     }
 

@@ -12,6 +12,9 @@ import livingComponents.ServiceAgent;
 import org.junit.jupiter.api.*;
 import passengerRelevants.Baggage;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
@@ -92,5 +95,37 @@ public class TestApplication {
         }
         assertEquals(375,counterBusinessBaggage+counterEconomyBaggage);
     }
+
+    @Test
+    @Order(7)
+    public void checkIfNoOfContentsMatchNoOfBaggage(){
+
+        List<String> entries_=new ArrayList<>();
+        int counterBaggage=0;
+        try{
+            BufferedReader bufferedReader=new BufferedReader(new FileReader("src/main/java/Data/assignment.csv"));
+            String line;
+
+            while ((line = bufferedReader.readLine()) != null){
+                String[] entries=line.split(";");
+                counterBaggage+=Integer.parseInt(entries[2]);
+            }
+        }catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        int counterContent=0;
+        try{
+            BufferedReader bufferedReader=new BufferedReader(new FileReader("src/main/java/Data/baggage_content.txt"));
+            while ((bufferedReader.readLine())!= null){
+                counterContent++;
+            }
+        }catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        assertEquals(counterBaggage-375,counterContent);
+    }
+
 
 }

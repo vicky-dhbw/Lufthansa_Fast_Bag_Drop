@@ -3,7 +3,13 @@ package flightRelevants;
 import identityRelevants.BookingClass;
 
 public class Seat {
-    public String seatId;
+    private String seatId;
+    private SeatStatus seatStatus;
+
+    public Seat(){
+        seatStatus=SeatStatus.FREE;
+    }
+
 
     public void setSeatId(String seatId){
         this.seatId=seatId;
@@ -13,4 +19,11 @@ public class Seat {
         return seatId;
     }
 
+    public SeatStatus getSeatStatus() {
+        return seatStatus;
+    }
+
+    public void setSeatStatus(SeatStatus seatStatus) {
+        this.seatStatus = seatStatus;
+    }
 }

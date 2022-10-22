@@ -1,5 +1,9 @@
 package automatComponents;
 
+import flightRelevants.Flight;
+import flightRelevants.Seat;
+import livingComponents.Passenger;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,5 +24,11 @@ public class Database {
 
     public List<Object> getListForKey(String passportId){
         return passengerDatabase.get(passportId);
+    }
+    //the database should search a free seat for the passenger
+    //for the ease of developing, the seat plan of the flight is stored in this database
+    public Seat searchForFreeSeat(Flight flight, Passenger passenger){
+
+        return new Seat();
     }
 }

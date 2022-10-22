@@ -1,6 +1,7 @@
 package flightRelevants;
 
 import automatComponents.EconomyQueue;
+import livingComponents.Passenger;
 
 public class Flight {
 
@@ -67,4 +68,6 @@ public class Flight {
        premiumEconomyClass.printSeatIds();
        economyClass.printSeatIds();
     }
+
+
 }

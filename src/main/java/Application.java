@@ -16,7 +16,7 @@ import java.util.Map;
 import java.util.Queue;
 
 public class Application {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args){
 
         Flight flight=new Flight(FlightID.LH2121,"22:00", IATAAirportCodes.FRA,IATAAirportCodes.HKG,Gate.A05);
         ServiceAgent serviceAgent=new ServiceAgent();

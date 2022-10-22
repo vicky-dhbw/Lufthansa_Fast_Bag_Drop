@@ -34,7 +34,7 @@ public class Display {
         int numberOfBaggage=passenger.getBaggageList().size();
         //String sequence=Integer.toString(passenger.getBoardingPass().getLeftBoardingPassPart().getSequence());
         System.out.println("-----------------------------------------------------------------------------");
-        System.out.println("LUFTHANSA           "+ "Ticket ID: "+ticketId+" |  "+name);
+        System.out.println("LUFTHANSA                      "+ticketId+" |  "+name);
         System.out.println(name);
         System.out.println(source+"   "+flightID+"   "+bookingClass+"  "+date+"                       |  "+ source);
         System.out.println(destination+"                                            |  "+ destination);

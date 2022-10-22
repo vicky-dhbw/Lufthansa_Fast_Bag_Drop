@@ -41,7 +41,7 @@ public class Import {
                 String ticketId=entries[5];
                 String key=entries[4];
                 String name=entries[3];
-                BookingClass bookingClass=createBookingClass(entries[1]);
+                BookingClass bookingClass=BookingClassCreator.createBookingClass(entries[1]);
                 String seqNo=entries[0];
 
                 databaseObjects.add(flightID);
@@ -56,8 +56,7 @@ public class Import {
 
 
                 fastBagDrop.getDatabase().getPassengerDatabase().put(key,databaseObjects);
-                Passenger passenger=new Passenger();
-                passenger=createPassenger(line);
+                Passenger passenger=createPassenger(line);
                 assignBaggageToPassenger(passenger,Integer.parseInt(entries[2]));
                 if(bookingClass==BookingClass.B){
                     addPassengersToBusinessQueue(fastBagDrop,passenger);
@@ -80,7 +79,7 @@ public class Import {
         Passenger passenger=new Passenger();
         passenger.setName(entries[3]);
         passenger.getPassport().setId(entries[4]);
-        passenger.setPassengerBookingClass(createBookingClass(entries[1]));  //comparator relevant for queueing
+        passenger.setPassengerBookingClass(BookingClassCreator.createBookingClass(entries[1]));  //comparator relevant for queueing
 
         return passenger;
     }
@@ -115,19 +114,6 @@ public class Import {
     }
     public void addPassengerToEconomyQueue(FastBagDrop fastBagDrop,Passenger passenger){
         fastBagDrop.getRightSection().getEconomyQueue().addPassenger(passenger);
-    }
-    public BookingClass createBookingClass(String bookingClass){
-        if(bookingClass.equals("Business")){
-            return BookingClass.B;
-        }
-        if(bookingClass.equals("Premium Economy")){
-            return BookingClass.P;
-        }
-        if(bookingClass.equals("Economy")){
-            return BookingClass.E;
-        }
-
-        return null;
     }
 }
 
