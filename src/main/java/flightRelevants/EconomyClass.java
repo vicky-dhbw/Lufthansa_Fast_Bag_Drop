@@ -59,7 +59,7 @@ public class EconomyClass {
                     System.err.print(" "+ seats[i][j].getSeatID()+" ");
                 }
             }
-            System.err.println(" ");
+            System.out.println(" ");
         }
     }
 

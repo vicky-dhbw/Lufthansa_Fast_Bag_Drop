@@ -14,10 +14,10 @@ public class Display {
     }
     public void showMessage(boolean ifSuccessful, Passenger passenger){
         if(ifSuccessful){
-            System.err.println("Ticket found for "+ passenger.getName());
+            System.out.println("Ticket found for "+ passenger.getName());
         }
         else {
-            System.err.println("„Sorry. No registered ticket found for "+passenger.getName()+" and flight LH2121");
+            System.out.println("„Sorry. No registered ticket found for "+passenger.getName()+" and flight LH2121");
         }
     }
 
@@ -33,14 +33,14 @@ public class Display {
         String time=passenger.getBoardingPass().getRightBoardingPassPart().getBoardingTime().toString();
         int numberOfBaggage=passenger.getBaggageList().size();
         //String sequence=Integer.toString(passenger.getBoardingPass().getLeftBoardingPassPart().getSequence());
-        System.err.println("-----------------------------------------------------------------------------");
-        System.err.println("LUFTHANSA           "+ "Ticket ID: "+ticketId+" |  "+name);
-        System.err.println(name);
-        System.err.println(source+"   "+flightID+"   "+bookingClass+"  "+date+"                       |  "+ source);
-        System.err.println(destination+"                                            |  "+ destination);
-        System.err.println("                                               |  "+flightID+" "+bookingClass+" "+date);
-        System.err.println("                                               | GATE: "+gate+"   "+time);
-        System.err.println("MAX "+numberOfBaggage+ "  HANDLUGGAGE");
-        System.err.println("-----------------------------------------------------------------------------");
+        System.out.println("-----------------------------------------------------------------------------");
+        System.out.println("LUFTHANSA           "+ "Ticket ID: "+ticketId+" |  "+name);
+        System.out.println(name);
+        System.out.println(source+"   "+flightID+"   "+bookingClass+"  "+date+"                       |  "+ source);
+        System.out.println(destination+"                                            |  "+ destination);
+        System.out.println("                                               |  "+flightID+" "+bookingClass+" "+date);
+        System.out.println("                                               | GATE: "+gate+"   "+time);
+        System.out.println("MAX "+numberOfBaggage+ "  HANDLUGGAGE");
+        System.out.println("-----------------------------------------------------------------------------");
     }
 }
