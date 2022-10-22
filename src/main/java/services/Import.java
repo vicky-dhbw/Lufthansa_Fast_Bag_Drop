@@ -42,6 +42,7 @@ public class Import {
                 String key=entries[4];
                 String name=entries[3];
                 BookingClass bookingClass=createBookingClass(entries[1]);
+                String seqNo=entries[0];
 
                 databaseObjects.add(flightID);
                 databaseObjects.add(source);
@@ -51,6 +52,7 @@ public class Import {
                 databaseObjects.add(ticketId);
                 databaseObjects.add(bookingClass);
                 databaseObjects.add(name);
+                databaseObjects.add(seqNo);
 
 
                 fastBagDrop.getDatabase().getPassengerDatabase().put(key,databaseObjects);

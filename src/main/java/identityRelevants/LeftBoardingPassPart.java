@@ -12,7 +12,7 @@ public class LeftBoardingPassPart {
     private IATAAirportCodes destination;
     private String date;
     private String id;
-    private int sequence;
+    private Integer sequence;
 
     private FlightID flightID;
 
@@ -63,7 +63,7 @@ public class LeftBoardingPassPart {
         this.id = id;
     }
 
-    public int getSequence() {
+    public Integer getSequence() {
         return sequence;
     }
 

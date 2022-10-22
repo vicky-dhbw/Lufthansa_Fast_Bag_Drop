@@ -54,6 +54,7 @@ public class CheckIn {
         passenger.getBoardingPass().getLeftBoardingPassPart().setId((String) passengerFlightDetails.get(5));
         passenger.getBoardingPass().getLeftBoardingPassPart().setBookingClass((BookingClass) passengerFlightDetails.get(6));
         passenger.getBoardingPass().getLeftBoardingPassPart().setName((String) passengerFlightDetails.get(7));
+        //passenger.getBoardingPass().getLeftBoardingPassPart().setSequence((Integer) passengerFlightDetails.get(8));
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd.MMM");
         passenger.getBoardingPass().getLeftBoardingPassPart().setDate(formatter.format(date));
@@ -71,6 +72,7 @@ public class CheckIn {
         rightBoardingPassPart.setDate(leftBoardingPassPart.getDate());
         rightBoardingPassPart.setGate(forFlight.getFlightGate());
         rightBoardingPassPart.setBoardingTime(forFlight.getBoardingTime());
+        //rightBoardingPassPart.setSequence(leftBoardingPassPart.getSequence());
 
         return rightBoardingPassPart;
     }
