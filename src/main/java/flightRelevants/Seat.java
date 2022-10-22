@@ -6,6 +6,8 @@ public class Seat {
     private String seatId;
     private SeatStatus seatStatus;
 
+    private SeatClass seatClass;
+
     public Seat(){
         seatStatus=SeatStatus.FREE;
     }
@@ -25,5 +27,13 @@ public class Seat {
 
     public void setSeatStatus(SeatStatus seatStatus) {
         this.seatStatus = seatStatus;
+    }
+
+    public SeatClass getSeatClass() {
+        return seatClass;
+    }
+
+    public void setSeatClass(SeatClass seatClass) {
+        this.seatClass = seatClass;
     }
 }

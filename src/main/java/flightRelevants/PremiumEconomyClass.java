@@ -11,6 +11,7 @@ public class PremiumEconomyClass {
             for(int j=0;j<numberOfColumnsPEC;j++){
                 seats[i][j]=new Seat();
                 seats[i][j].setSeatId(setSeatID(i+12,j));
+                seats[i][j].setSeatClass(SeatClass.P);
             }
         }
     }

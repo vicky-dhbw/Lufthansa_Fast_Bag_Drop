@@ -14,6 +14,7 @@ public class EconomyClass {
                 }
                 seats[i][j] = new Seat();
                 seats[i][j].setSeatId(setSeatID(i + 16, j));
+                seats[i][j].setSeatClass(SeatClass.E);
             }
         }
     }

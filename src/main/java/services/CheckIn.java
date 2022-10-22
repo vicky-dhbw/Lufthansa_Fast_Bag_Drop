@@ -4,9 +4,7 @@ import automatComponents.Database;
 import automatComponents.EconomyQueue;
 import automatComponents.FastBagDrop;
 import automatComponents.FastBagDropSection;
-import flightRelevants.Flight;
-import flightRelevants.FlightID;
-import flightRelevants.IATAAirportCodes;
+import flightRelevants.*;
 import identityRelevants.BoardingPass;
 import identityRelevants.BookingClass;
 import identityRelevants.LeftBoardingPassPart;
@@ -24,26 +22,41 @@ public class CheckIn {
     public void executeCheckIn(FastBagDrop fastBagDrop,Flight flight){
         while (!(fastBagDrop.getLeftSection().getBusinessQueue().getBusinessQueue().isEmpty())){
             Passenger passenger=fastBagDrop.getLeftSection().getBusinessQueue().removePassenger();
-            simulateCheckInForBusinessQueue(fastBagDrop,passenger);
-            generateBoardingPass(fastBagDrop.getDatabase(), passenger,flight);
-            fastBagDrop.getLeftSection().getDisplay().displayBoardingPass(passenger);
+            simulateCheckInForBusinessQueue(fastBagDrop,passenger,flight);
+            //generateBoardingPass(fastBagDrop.getDatabase(), passenger,flight);
+            //fastBagDrop.getLeftSection().getDisplay().displayBoardingPass(passenger);
         }
         while (!(fastBagDrop.getRightSection().getEconomyQueue().getEconomyQueue().isEmpty())){
             Passenger passenger_=fastBagDrop.getRightSection().getEconomyQueue().removePassenger();
-            simulateCheckInForEconomyQueue(fastBagDrop,passenger_);
-            generateBoardingPass(fastBagDrop.getDatabase(), passenger_,flight);
-            fastBagDrop.getRightSection().getDisplay().displayBoardingPass(passenger_);
+            simulateCheckInForEconomyQueue(fastBagDrop,passenger_,flight);
+            //generateBoardingPass(fastBagDrop.getDatabase(), passenger_,flight);
+            //fastBagDrop.getRightSection().getDisplay().displayBoardingPass(passenger_);
         }
     }
 
-    public void simulateCheckInForBusinessQueue(FastBagDrop fastBagDrop,Passenger passenger){
+    public void simulateCheckInForBusinessQueue(FastBagDrop fastBagDrop,Passenger passenger,Flight flight){
+        //the scanner uses the machine's database to find ticket id of the passenger-> 1 yes found, 0 not found
         boolean ifFound=fastBagDrop.getLeftSection().getPassportScanner().scanPassport(fastBagDrop.getDatabase(), passenger.getPassport());
+        //the display shows message whether ticket is found or not
         fastBagDrop.getLeftSection().getDisplay().showMessage(ifFound,passenger);
+        if(ifFound){
+            //the database uses the static FreeSeatSearcher method to search a non-reserved seat
+            Seat seat=fastBagDrop.getDatabase().searchForFreeSeat(flight,passenger);
+            fastBagDrop.getLeftSection().getDisplay().showTicketRelevantInformation(fastBagDrop.getDatabase(), passenger);
+            FlightSeatStatusUpdater.reserveSeat(seat,flight);
+        }
+
     }
 
-    public void simulateCheckInForEconomyQueue(FastBagDrop fastBagDrop,Passenger passenger){
+    public void simulateCheckInForEconomyQueue(FastBagDrop fastBagDrop,Passenger passenger,Flight flight){
         boolean ifFound=fastBagDrop.getRightSection().getPassportScanner().scanPassport(fastBagDrop.getDatabase(), passenger.getPassport());
         fastBagDrop.getRightSection().getDisplay().showMessage(ifFound,passenger);
+        if(ifFound){
+            //the database uses the static FreeSeatSearcher method to search a non-reserved seat
+            Seat seat=fastBagDrop.getDatabase().searchForFreeSeat(flight,passenger);
+            fastBagDrop.getRightSection().getDisplay().showTicketRelevantInformation(fastBagDrop.getDatabase(), passenger);
+            FlightSeatStatusUpdater.reserveSeat(seat,flight);
+        }
     }
 
     public void generateBoardingPass(Database database,Passenger passenger,Flight forFlight){
@@ -78,17 +91,4 @@ public class CheckIn {
         return rightBoardingPassPart;
     }
 
-    public BookingClass createBookingClass(String bookingClass){
-        if(bookingClass.equals("Business")){
-            return BookingClass.B;
-        }
-        if(bookingClass.equals("Premium Economy")){
-            return BookingClass.P;
-        }
-        if(bookingClass.equals("Economy")){
-            return BookingClass.E;
-        }
-
-        return null;
-    }
 }

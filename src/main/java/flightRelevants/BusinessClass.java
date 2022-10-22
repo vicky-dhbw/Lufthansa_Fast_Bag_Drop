@@ -12,6 +12,7 @@ public class BusinessClass {
             for(int j=0;j<numberOfColumnsBC;j++){
                 seats[i][j]=new Seat();
                 seats[i][j].setSeatId(setSeatID(i,j));
+                seats[i][j].setSeatClass(SeatClass.B);
             }
         }
     }
