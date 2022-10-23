@@ -21,10 +21,7 @@ import java.util.*;
 
 public class Import {
 
-    Queue<String> contents;
     public void executeImport(Flight forFlight, FastBagDrop fastBagDrop){
-        contents=new LinkedList<>();
-        getContentsToList();
 
         try {
             BufferedReader bufferedReader = new BufferedReader(new FileReader("src/main/java/Data/assignment.csv"));
@@ -57,14 +54,13 @@ public class Import {
 
                 fastBagDrop.getDatabase().getPassengerDatabase().put(key,databaseObjects);
                 Passenger passenger=createPassenger(line);
-                assignBaggageToPassenger(passenger,Integer.parseInt(entries[2]));
+                //assignBaggageToPassenger(passenger,Integer.parseInt(entries[2]));
                 if(bookingClass==BookingClass.B){
                     addPassengersToBusinessQueue(fastBagDrop,passenger);
                 }
                 else if(bookingClass==BookingClass.P|| bookingClass==BookingClass.E){
                     addPassengerToEconomyQueue(fastBagDrop,passenger);
                 }
-
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -80,32 +76,10 @@ public class Import {
         passenger.setName(entries[3]);
         passenger.getPassport().setId(entries[4]);
         passenger.setPassengerBookingClass(BookingClassCreator.createBookingClass(entries[1]));  //comparator relevant for queueing
+        passenger.setNumberOfBaggage(Integer.parseInt(entries[2]));
 
         return passenger;
     }
-
-    public void assignBaggageToPassenger(Passenger passenger,int numberOfBaggage){
-        for(int i=0;i<numberOfBaggage;i++){
-            Baggage baggage=new Baggage();
-            passenger.getBaggageList().add(baggage);
-            baggage.setContent(contents.poll());
-        }
-    }
-
-    public void getContentsToList(){
-        try{
-            BufferedReader bufferedReader=new BufferedReader(new FileReader("src/main/java/Data/baggage_content.txt"));
-            String line;
-
-            while ((line = bufferedReader.readLine()) != null){
-                contents.add(line);
-            }
-        }catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
-
 
     public void addPassengersToBusinessQueue(FastBagDrop fastBagDrop,Passenger passenger){
         //G queue=new BusinessQueue();

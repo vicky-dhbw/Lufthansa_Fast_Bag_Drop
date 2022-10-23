@@ -10,14 +10,20 @@ import identityRelevants.BookingClass;
 import identityRelevants.LeftBoardingPassPart;
 import identityRelevants.RightBoardingPassPart;
 import livingComponents.Passenger;
+import passengerRelevants.Baggage;
 
 import javax.xml.crypto.Data;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class CheckIn {
+    Queue<String> contents;
+    public CheckIn(){
+        contents=new LinkedList<>();
+        getContentsToList();
+    }
 
     public void executeCheckIn(FastBagDrop fastBagDrop,Flight flight){
         while (!(fastBagDrop.getLeftSection().getBusinessQueue().getBusinessQueue().isEmpty())){
@@ -43,7 +49,18 @@ public class CheckIn {
             //the database uses the static FreeSeatSearcher method to search a non-reserved seat
             Seat seat=fastBagDrop.getDatabase().searchForFreeSeat(flight,passenger);
             fastBagDrop.getLeftSection().getDisplay().showTicketRelevantInformation(fastBagDrop.getDatabase(), passenger);
-            FlightSeatStatusUpdater.reserveSeat(seat,flight);
+            boolean checkIn=fastBagDrop.getLeftSection().getDisplay().offerChoiceAndAcceptCheckInDecision(flight,passenger);
+            if(checkIn){
+                fastBagDrop.getLeftSection().getDisplay().showCheckInMessage();
+                int numberOfBaggage=fastBagDrop.getLeftSection().getDisplay().getNumberOfBaggage(passenger);
+                assignBaggageToPassenger(passenger,numberOfBaggage);
+                FlightSeatStatusUpdater.reserveSeat(seat,flight);
+                generateBoardingPass(fastBagDrop.getDatabase(), passenger,flight);
+            }
+            else{
+                fastBagDrop.getLeftSection().getDisplay().showCancellationMessage();
+            }
+
         }
 
     }
@@ -55,7 +72,17 @@ public class CheckIn {
             //the database uses the static FreeSeatSearcher method to search a non-reserved seat
             Seat seat=fastBagDrop.getDatabase().searchForFreeSeat(flight,passenger);
             fastBagDrop.getRightSection().getDisplay().showTicketRelevantInformation(fastBagDrop.getDatabase(), passenger);
-            FlightSeatStatusUpdater.reserveSeat(seat,flight);
+            boolean checkIn=fastBagDrop.getRightSection().getDisplay().offerChoiceAndAcceptCheckInDecision(flight,passenger);
+            if(checkIn){
+                fastBagDrop.getRightSection().getDisplay().showCheckInMessage();
+                int numberOfBaggage=fastBagDrop.getLeftSection().getDisplay().getNumberOfBaggage(passenger);
+                assignBaggageToPassenger(passenger,numberOfBaggage);
+                FlightSeatStatusUpdater.reserveSeat(seat,flight);
+                generateBoardingPass(fastBagDrop.getDatabase(), passenger,flight);
+            }
+            else{
+                fastBagDrop.getRightSection().getDisplay().showCancellationMessage();
+            }
         }
     }
 
@@ -89,6 +116,26 @@ public class CheckIn {
         //rightBoardingPassPart.setSequence(leftBoardingPassPart.getSequence());
 
         return rightBoardingPassPart;
+    }
+    public void assignBaggageToPassenger(Passenger passenger,int numberOfBaggage){
+        for(int i=0;i<numberOfBaggage;i++){
+            Baggage baggage=new Baggage();
+            passenger.getBaggageList().add(baggage);
+            baggage.setContent(contents.poll());
+        }
+    }
+
+    public void getContentsToList(){
+        try{
+            BufferedReader bufferedReader=new BufferedReader(new FileReader("src/main/java/Data/baggage_content.txt"));
+            String line;
+
+            while ((line = bufferedReader.readLine()) != null){
+                contents.add(line);
+            }
+        }catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
 }

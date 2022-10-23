@@ -9,7 +9,7 @@ public class FlightSeatStatusUpdater {
                     if(seat_!=null){
                         if(seat_.getSeatID().equals(seat.getSeatID())){
                             seat_.setSeatStatus(SeatStatus.RESERVED);
-                            System.out.println("Seat with ID: "+seat.getSeatID()+ "has been reserved for you!");
+                            System.out.println("Seat with ID: "+seat.getSeatID()+ " has been reserved for you!");
                         }
                     }
                 }
@@ -21,7 +21,7 @@ public class FlightSeatStatusUpdater {
                     if(seat_!=null){
                         if(seat_.getSeatID().equals(seat.getSeatID())){
                             seat_.setSeatStatus(SeatStatus.RESERVED);
-                            System.out.println("Seat with ID: "+seat.getSeatID()+ "has been reserved for you!");
+                            System.out.println("Seat with ID: "+seat.getSeatID()+ " has been reserved for you!");
                         }
                     }
                 }
@@ -33,7 +33,7 @@ public class FlightSeatStatusUpdater {
                     if(seat_!=null){
                         if(seat_.getSeatID().equals(seat.getSeatID())){
                             seat_.setSeatStatus(SeatStatus.RESERVED);
-                            System.out.println("Seat with ID: "+seat.getSeatID()+ "has been reserved for you!");
+                            System.out.println("Seat with ID: "+seat.getSeatID()+ " has been reserved for you!");
                         }
                     }
                 }

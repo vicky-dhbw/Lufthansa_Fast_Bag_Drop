@@ -9,6 +9,7 @@ import identityRelevants.BookingClass;
 import livingComponents.Passenger;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class Display {
 
@@ -27,6 +28,26 @@ public class Display {
             System.out.println("„Sorry. No registered ticket found for "+passenger.getName()+" and flight LH2121");
         }
     }
+
+    public boolean offerChoiceAndAcceptCheckInDecision(Flight flight,Passenger passenger){
+        System.out.println("Proceed with check-in for flight "+flight.getFlightID()+" ?");
+        System.out.println("Type YES to CHECK-IN or NO to cancel CHECK-IN");
+        TakeDecision decision=passenger.takeCheckInDecision();
+        return decision == TakeDecision.YES;
+    }
+
+    public void showCheckInMessage(){
+        System.out.println("Checking you in...............");
+    }
+
+    public int getNumberOfBaggage(Passenger passenger){
+        return passenger.getNumberOfBaggage();
+    }
+
+    public void showCancellationMessage(){
+        System.out.println("Check-In cancelled by user...");
+    }
+
 
     public void showTicketRelevantInformation(Database database,Passenger passenger){
         List<Object> ticketDetails=database.getListForKey(passenger.getPassport().getId());
@@ -49,7 +70,7 @@ public class Display {
         System.out.println("Boarding time: "+boardingTime);
         System.out.println("Ticket ID: "+ticketId);
         System.out.println("Booking Class: "+bookingClass.toString());
-        System.out.println("------------------------------------------");
+
 
     }
 

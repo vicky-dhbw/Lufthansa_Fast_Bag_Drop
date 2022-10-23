@@ -21,6 +21,8 @@ public class Passenger extends Human{
 
     private BookingClass passengerBookingClass;
 
+    private int numberOfBaggage;
+
     public Passenger(){
         passport=new Passport();
         baggageList=new ArrayList<>();
@@ -35,16 +37,15 @@ public class Passenger extends Human{
         return this.name;
     }
 
-    public void executeCheckIn(PassportScanner passportScanner, Passport passport){
 
+    public TakeDecision takeCheckInDecision(){
+        System.out.println(name+" is deciding whether to check-in or to go back home and sleep............");
+        System.out.println("YES CHECK-IN");
+        return TakeDecision.YES; //default decision
     }
 
-    public void takeCheckInDecision(TakeDecision decision){
-
-    }
-
-    public void enterNumberOfBaggage(Display display, int numberOfBaggage){
-
+    public int enterNumberOfBaggage(){
+        return this.numberOfBaggage;
     }
 
     public BoardingPass takeBoardingPass(){
@@ -78,5 +79,13 @@ public class Passenger extends Human{
 
     public void setPassengerBookingClass(BookingClass passengerBookingClass) {
         this.passengerBookingClass = passengerBookingClass;
+    }
+
+    public int getNumberOfBaggage() {
+        return numberOfBaggage;
+    }
+
+    public void setNumberOfBaggage(int numberOfBaggage) {
+        this.numberOfBaggage = numberOfBaggage;
     }
 }
