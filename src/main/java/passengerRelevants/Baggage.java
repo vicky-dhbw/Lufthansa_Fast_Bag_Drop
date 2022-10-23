@@ -1,6 +1,8 @@
 package passengerRelevants;
 
-public class Baggage {
+import automatComponents.IBaggageDetectorListener;
+
+public class Baggage implements IBaggageDetectorListener {
 
     private String content;
     private double weight;
@@ -34,5 +36,10 @@ public class Baggage {
 
     public void setBaggageTag(BaggageTag baggageTag) {
         this.baggageTag = baggageTag;
+    }
+
+    @Override
+    public void revealPresence() {
+        System.out.println("baggage weighs: "+weight);
     }
 }

@@ -88,4 +88,8 @@ public class Passenger extends Human{
     public void setNumberOfBaggage(int numberOfBaggage) {
         this.numberOfBaggage = numberOfBaggage;
     }
+    public void layBaggageOnConveyorBelt(Baggage baggage){
+
+    }
+
 }

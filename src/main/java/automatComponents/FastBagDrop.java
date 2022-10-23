@@ -49,4 +49,14 @@ public class FastBagDrop {
     public Database getDatabase() {
         return database;
     }
+
+    public FastBagDropSection getFastBagDropSection(Position position){
+        if(position==Position.LEFT){
+            return leftSection;
+        }
+        if(position==Position.RIGHT){
+            return rightSection;
+        }
+        return null;
+    }
 }

@@ -19,6 +19,8 @@ public class FastBagDropSection {
 
     private BusinessQueue businessQueue;
 
+    private final Position position;
+
     public FastBagDropSection(Position position){
         passportScanner=new PassportScanner();
         documentPrinter =new DocumentPrinter();
@@ -27,6 +29,7 @@ public class FastBagDropSection {
         baggageScanner=new BaggageScanner();
         idCardScanner =new IDCardScanner();
         display=new Display();
+        this.position=position;
 
         if(position==Position.LEFT){
             businessQueue=new BusinessQueue(); //new creation of left section creates only a new business Queue, --> note economyQueue is null for leftSection
@@ -106,5 +109,9 @@ public class FastBagDropSection {
 
     public void setBusinessQueue(BusinessQueue businessQueue) {
         this.businessQueue = businessQueue;
+    }
+
+    public Position getPosition() {
+        return position;
     }
 }
