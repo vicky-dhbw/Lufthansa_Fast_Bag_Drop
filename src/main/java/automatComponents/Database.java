@@ -28,6 +28,7 @@ public class Database {
     //the database should search a free seat for the passenger
     //for the ease of developing, the seat plan of the flight is stored in this database
     public Seat searchForFreeSeat(Flight flight, Passenger passenger){
+        System.out.println("----searching flight seat for "+passenger.getName()+"---------");
         return FreeSeatSearcher.getFreeSeatForClass(flight,passenger.getPassengerBookingClass());
     }
 

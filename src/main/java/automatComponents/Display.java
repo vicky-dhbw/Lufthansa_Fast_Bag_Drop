@@ -7,6 +7,7 @@ import flightRelevants.Gate;
 import flightRelevants.IATAAirportCodes;
 import identityRelevants.BookingClass;
 import livingComponents.Passenger;
+import passengerRelevants.Baggage;
 
 import java.util.List;
 import java.util.Scanner;
@@ -40,6 +41,10 @@ public class Display {
         System.out.println("Checking you in...............");
     }
 
+    public void showBaggageWeight(Baggage baggage){
+        System.out.println("Baggage weighs: "+baggage.getWeight()+ " kg");
+    }
+
     public int getNumberOfBaggage(Passenger passenger){
         return passenger.getNumberOfBaggage();
     }
@@ -70,6 +75,8 @@ public class Display {
         System.out.println("Boarding time: "+boardingTime);
         System.out.println("Ticket ID: "+ticketId);
         System.out.println("Booking Class: "+bookingClass.toString());
+        System.out.println("------------------------------------------");
+        System.out.println();
 
 
     }

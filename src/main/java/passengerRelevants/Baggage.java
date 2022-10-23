@@ -40,6 +40,7 @@ public class Baggage implements IBaggageDetectorListener {
 
     @Override
     public void revealPresence() {
-        System.out.println("baggage weighs: "+weight);
+        System.out.println("baggage is on conveyor belt-------");
+        System.out.println("---------baggage detected by sensor------------- ");
     }
 }

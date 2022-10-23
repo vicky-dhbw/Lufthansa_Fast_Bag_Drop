@@ -15,7 +15,7 @@ public class FreeSeatSearcher {
                 for(Seat seat:seats){
                     if(seat!=null){
                         if(seat.getSeatStatus()== SeatStatus.FREE){
-                            System.out.println("We found a seat with ID "+ seat.getSeatID()+ " for you.");
+                            System.out.println("Found a seat with ID "+ seat.getSeatID());
                             return seat;
                         }
                     }
@@ -28,7 +28,7 @@ public class FreeSeatSearcher {
                 for(Seat seat:seats){
                     if(seat!=null){
                         if(seat.getSeatStatus()== SeatStatus.FREE){
-                            System.out.println("We found a seat with ID "+ seat.getSeatID()+ " for you.");
+                            System.out.println("Found a seat with ID "+ seat.getSeatID());
                             return seat;
                         }
                     }
@@ -41,7 +41,7 @@ public class FreeSeatSearcher {
                 for(Seat seat:seats){
                     if(seat!=null){
                         if(seat.getSeatStatus()== SeatStatus.FREE){
-                            System.out.println("We found a seat with ID "+ seat.getSeatID()+ " for you.");
+                            System.out.println("Found a seat with ID "+ seat.getSeatID());
                             return seat;
                         }
                     }

@@ -14,9 +14,6 @@ import passengerRelevants.Baggage;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class Import {
@@ -54,7 +51,6 @@ public class Import {
 
                 fastBagDrop.getDatabase().getPassengerDatabase().put(key,databaseObjects);
                 Passenger passenger=createPassenger(line);
-                //assignBaggageToPassenger(passenger,Integer.parseInt(entries[2]));
                 if(bookingClass==BookingClass.B){
                     addPassengersToBusinessQueue(fastBagDrop,passenger);
                 }
@@ -77,12 +73,12 @@ public class Import {
         passenger.getPassport().setId(entries[4]);
         passenger.setPassengerBookingClass(BookingClassCreator.createBookingClass(entries[1]));  //comparator relevant for queueing
         passenger.setNumberOfBaggage(Integer.parseInt(entries[2]));
+        passenger.getPassport().setName(entries[3]);
 
         return passenger;
     }
 
     public void addPassengersToBusinessQueue(FastBagDrop fastBagDrop,Passenger passenger){
-        //G queue=new BusinessQueue();
        fastBagDrop.getLeftSection().getBusinessQueue().addPassenger(passenger);
 
     }
