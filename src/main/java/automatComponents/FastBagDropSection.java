@@ -2,6 +2,7 @@ package automatComponents;
 
 import automatComponents.*;
 import livingComponents.Passenger;
+import searchAlgorithms.StringMatchingAlgorithm;
 
 import java.util.Queue;
 
@@ -11,7 +12,7 @@ public class FastBagDropSection {
     private DocumentPrinter documentPrinter =new DocumentPrinter();
     private ConveyorBelt conveyorBelt=new ConveyorBelt();
     private Sensor sensor=new Sensor();
-    private BaggageScanner baggageScanner=new BaggageScanner();
+    private BaggageScanner baggageScanner;
     private IDCardScanner idCardScanner =new IDCardScanner();
     private Display display=new Display();
 
@@ -26,7 +27,6 @@ public class FastBagDropSection {
         documentPrinter =new DocumentPrinter();
         conveyorBelt=new ConveyorBelt();
         sensor=new Sensor();
-        baggageScanner=new BaggageScanner();
         idCardScanner =new IDCardScanner();
         display=new Display();
         this.position=position;

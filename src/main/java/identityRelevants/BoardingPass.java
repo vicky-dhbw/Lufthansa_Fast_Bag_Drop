@@ -1,8 +1,13 @@
 package identityRelevants;
 
 import flightRelevants.Flight;
+import passengerRelevants.BaggageTag;
+
+import java.util.List;
 
 public class BoardingPass{
+
+    private List<BaggageTag> baggageTagList;
     private RightBoardingPassPart rightBoardingPassPart=new RightBoardingPassPart();
     private LeftBoardingPassPart leftBoardingPassPart=new LeftBoardingPassPart();
 
@@ -21,4 +26,11 @@ public class BoardingPass{
         this.leftBoardingPassPart=leftBoardingPassPart;
     }
 
+    public List<BaggageTag> getBaggageTagList() {
+        return baggageTagList;
+    }
+
+    public void addBaggageToTagList(BaggageTag baggageTag) {
+        baggageTagList.add(baggageTag);
+    }
 }

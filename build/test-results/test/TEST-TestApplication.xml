@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestApplication" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-10-22T12:26:35" hostname="Vickys-MacBook-Pro.local" time="1.197">
+<testsuite name="TestApplication" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-10-24T07:20:38" hostname="Vickys-MacBook-Pro.local" time="1.452">
   <properties/>
-  <testcase name="testBusinessQueue()" classname="TestApplication" time="0.254"/>
-  <testcase name="assureBaggageContent()" classname="TestApplication" time="0.155"/>
-  <testcase name="checkIfNoOfContentsMatchNoOfBaggage()" classname="TestApplication" time="0.247"/>
-  <testcase name="assureBaggageListNotNull()" classname="TestApplication" time="0.149"/>
-  <testcase name="baggageCountIsPerfect()" classname="TestApplication" time="0.12"/>
-  <testcase name="importSuccess()" classname="TestApplication" time="0.147"/>
-  <testcase name="TestQueueNotEmpty()" classname="TestApplication" time="0.12"/>
+  <testcase name="testBusinessQueue()" classname="TestApplication" time="0.225"/>
+  <testcase name="assureBaggageContent()" classname="TestApplication" time="0.3"/>
+  <testcase name="checkIfNoOfContentsMatchNoOfBaggage()" classname="TestApplication" time="0.212"/>
+  <testcase name="assureBaggageListNotNull()" classname="TestApplication" time="0.218"/>
+  <testcase name="baggageCountIsPerfect()" classname="TestApplication" time="0.246"/>
+  <testcase name="importSuccess()" classname="TestApplication" time="0.124"/>
+  <testcase name="TestQueueNotEmpty()" classname="TestApplication" time="0.124"/>
   <system-out><![CDATA[Index 5 out of bounds for length 3
 Index 5 out of bounds for length 3
 Index 5 out of bounds for length 3

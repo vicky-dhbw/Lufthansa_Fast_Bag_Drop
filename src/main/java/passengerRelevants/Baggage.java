@@ -9,10 +9,6 @@ public class Baggage implements IBaggageDetectorListener {
 
     private BaggageTag baggageTag;
 
-    public Baggage(){
-        baggageTag=new BaggageTag();
-    }
-
 
     public String getContent() {
         return content;
@@ -35,7 +31,9 @@ public class Baggage implements IBaggageDetectorListener {
     }
 
     public void setBaggageTag(BaggageTag baggageTag) {
+        System.out.println("-- baggage Tag created for baggage..");
         this.baggageTag = baggageTag;
+
     }
 
     @Override
