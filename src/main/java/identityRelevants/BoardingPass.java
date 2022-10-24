@@ -7,6 +7,7 @@ import java.util.List;
 
 public class BoardingPass{
 
+
     private List<BaggageTag> baggageTagList;
     private RightBoardingPassPart rightBoardingPassPart=new RightBoardingPassPart();
     private LeftBoardingPassPart leftBoardingPassPart=new LeftBoardingPassPart();

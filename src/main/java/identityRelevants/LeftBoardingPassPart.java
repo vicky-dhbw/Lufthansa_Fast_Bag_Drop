@@ -12,6 +12,8 @@ public class LeftBoardingPassPart {
     private IATAAirportCodes destination;
     private String date;
     private String id;
+
+    private String seatId;
     private Integer sequence;
 
     private FlightID flightID;
@@ -77,5 +79,13 @@ public class LeftBoardingPassPart {
 
     public void setFlightID(FlightID flightID) {
         this.flightID = flightID;
+    }
+
+    public String getSeatId() {
+        return seatId;
+    }
+
+    public void setSeatId(String seatId) {
+        this.seatId = seatId;
     }
 }

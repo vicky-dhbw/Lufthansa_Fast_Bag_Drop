@@ -59,7 +59,7 @@ public class Import {
                 }
             }
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println();
         }
 
     }
@@ -72,7 +72,7 @@ public class Import {
         passenger.setName(entries[3]);
         passenger.getPassport().setId(entries[4]);
         passenger.setPassengerBookingClass(BookingClassCreator.createBookingClass(entries[1]));  //comparator relevant for queueing
-        passenger.setNumberOfBaggage(Integer.parseInt(entries[2]));
+        passenger.setNumberOfBaggage(Integer.parseInt(entries[2]));    //since a passenger knows how much luggage he is carrying
         passenger.getPassport().setName(entries[3]);
 
         return passenger;

@@ -2,7 +2,7 @@ package flightRelevants;
 
 public class FlightSeatStatusUpdater {
 
-    public static void reserveSeat(Seat seat,Flight flight){
+    public static String reserveSeat(Seat seat, Flight flight){
         if(seat.getSeatClass()==SeatClass.B){
             for(Seat[] seats: flight.getBusinessClass().getSeats()){
                 for(Seat seat_: seats){
@@ -10,6 +10,7 @@ public class FlightSeatStatusUpdater {
                         if(seat_.getSeatID().equals(seat.getSeatID())){
                             seat_.setSeatStatus(SeatStatus.RESERVED);
                             System.out.println("Seat with ID: "+seat.getSeatID()+ " has been reserved for you!");
+                            return seat_.getSeatID();
                         }
                     }
                 }
@@ -22,6 +23,7 @@ public class FlightSeatStatusUpdater {
                         if(seat_.getSeatID().equals(seat.getSeatID())){
                             seat_.setSeatStatus(SeatStatus.RESERVED);
                             System.out.println("Seat with ID: "+seat.getSeatID()+ " has been reserved for you!");
+                            return seat_.getSeatID();
                         }
                     }
                 }
@@ -34,10 +36,12 @@ public class FlightSeatStatusUpdater {
                         if(seat_.getSeatID().equals(seat.getSeatID())){
                             seat_.setSeatStatus(SeatStatus.RESERVED);
                             System.out.println("Seat with ID: "+seat.getSeatID()+ " has been reserved for you!");
+                            return seat_.getSeatID();
                         }
                     }
                 }
             }
         }
+        return null;
     }
 }

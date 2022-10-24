@@ -45,8 +45,9 @@ public class CheckInSimulator {
                 // the search of explosives occur over the scan baggage service where the baggage scanner scans baggage
                 fastBagDrop.getServices().getScanBaggage().scanBaggage(baggageQueue,fastBagDrop.getFastBagDropSection(position).getBaggageScanner());
                 //fastBagDrop.getFastBagDropSection(position).getConveyorBelt().removeBaggage(); //removes baggage from the conveyor belt
-                FlightSeatStatusUpdater.reserveSeat(seat,flight);
-                generateBoardingPass(fastBagDrop.getDatabase(), passenger,flight);
+                String seatId=FlightSeatStatusUpdater.reserveSeat(seat,flight);
+                generateBoardingPass(fastBagDrop.getDatabase(), passenger,flight,seatId);
+                fastBagDrop.getFastBagDropSection(position).getDisplay().displayBoardingPass(passenger);
             }
             else{
                 fastBagDrop.getFastBagDropSection(position).getDisplay().showCancellationMessage();
@@ -83,7 +84,7 @@ public class CheckInSimulator {
             System.out.println(e.getMessage());
         }
     }
-    public void generateBoardingPass(Database database, Passenger passenger, Flight forFlight){
+    public void generateBoardingPass(Database database, Passenger passenger, Flight forFlight,String seatId){
         //creates BoardingPass for Passenger from the Database created in Import
         List<Object> passengerFlightDetails=database.getListForKey(passenger.getPassport().getId());
         passenger.getBoardingPass().getLeftBoardingPassPart().setFlightID((FlightID) passengerFlightDetails.get(0));
@@ -92,6 +93,7 @@ public class CheckInSimulator {
         passenger.getBoardingPass().getLeftBoardingPassPart().setId((String) passengerFlightDetails.get(5));
         passenger.getBoardingPass().getLeftBoardingPassPart().setBookingClass((BookingClass) passengerFlightDetails.get(6));
         passenger.getBoardingPass().getLeftBoardingPassPart().setName((String) passengerFlightDetails.get(7));
+        passenger.getBoardingPass().getLeftBoardingPassPart().setSeatId(seatId);
         //passenger.getBoardingPass().getLeftBoardingPassPart().setSequence((Integer) passengerFlightDetails.get(8));
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd.MMM");
@@ -110,6 +112,7 @@ public class CheckInSimulator {
         rightBoardingPassPart.setDate(leftBoardingPassPart.getDate());
         rightBoardingPassPart.setGate(forFlight.getFlightGate());
         rightBoardingPassPart.setBoardingTime(forFlight.getBoardingTime());
+        rightBoardingPassPart.setSeatId(leftBoardingPassPart.getSeatId());
         //rightBoardingPassPart.setSequence(leftBoardingPassPart.getSequence());
 
         return rightBoardingPassPart;

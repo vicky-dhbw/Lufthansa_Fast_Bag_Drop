@@ -91,16 +91,19 @@ public class Display {
         String ticketId=passenger.getBoardingPass().getLeftBoardingPassPart().getId();
         String gate=passenger.getBoardingPass().getRightBoardingPassPart().getGate().toString();
         String time=passenger.getBoardingPass().getRightBoardingPassPart().getBoardingTime().toString();
+        String seatId=passenger.getBoardingPass().getLeftBoardingPassPart().getSeatId();
         int numberOfBaggage=passenger.getBaggageList().size();
         //String sequence=Integer.toString(passenger.getBoardingPass().getLeftBoardingPassPart().getSequence());
+        System.out.println();
+        System.out.println("BOARDING PASS FOR "+passenger.getName().toUpperCase());
         System.out.println("-----------------------------------------------------------------------------");
-        System.out.println("LUFTHANSA                      "+ticketId+" |  "+name);
+        System.out.println("LUFTHANSA                      "+ticketId+" |  "+name+"   "+ticketId);
         System.out.println(name);
         System.out.println(source+"   "+flightID+"   "+bookingClass+"  "+date+"                       |  "+ source);
         System.out.println(destination+"                                            |  "+ destination);
-        System.out.println("                                               |  "+flightID+" "+bookingClass+" "+date);
-        System.out.println("                                               | GATE: "+gate+"   "+time);
-        System.out.println("MAX "+numberOfBaggage+ "  HANDLUGGAGE");
+        System.out.println("SEAT ID: "+seatId +"                                   |  "+flightID+" "+bookingClass+" "+date);
+        System.out.println("                                               |  GATE: "+gate+"   "+time);
+        System.out.println("MAX "+numberOfBaggage+ "  HANDLUGGAGE/ LUGGAGE");
         System.out.println("-----------------------------------------------------------------------------");
     }
 }

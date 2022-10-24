@@ -17,7 +17,7 @@ public class ScanBaggage {
             if(baggage.getWeight()<=23.0){
                 boolean containsExplosives= baggageScanner.searchForExplosives(baggage);
                 if(!containsExplosives){
-                    System.out.println("Baggage contains no explosives");
+                    System.out.println("......../ Baggage contains no explosives");
                     BaggageTag baggageTag=new BaggageTag();
                     baggage.setBaggageTag(baggageTag);
                 }

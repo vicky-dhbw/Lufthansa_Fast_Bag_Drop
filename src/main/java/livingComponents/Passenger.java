@@ -8,6 +8,7 @@ import identityRelevants.BoardingPass;
 import identityRelevants.BookingClass;
 import identityRelevants.Passport;
 import passengerRelevants.Baggage;
+import passengerRelevants.Voucher;
 import services.CheckIn;
 
 import java.util.ArrayList;
@@ -20,6 +21,8 @@ public class Passenger extends Human{
     private BoardingPass boardingPass;
 
     private BookingClass passengerBookingClass;
+
+    private Voucher voucher;
 
     private int numberOfBaggage;
 
