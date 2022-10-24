@@ -95,4 +95,11 @@ public class Passenger extends Human{
 
     }
 
+    public Voucher getVoucher() {
+        return voucher;
+    }
+
+    public void setVoucher(Voucher voucher) {
+        this.voucher = voucher;
+    }
 }

@@ -1,6 +1,8 @@
 package services;
 
 import automatComponents.BaggageScanner;
+import identityRelevants.BoardingPass;
+import livingComponents.Passenger;
 import passengerRelevants.Baggage;
 import passengerRelevants.BaggageTag;
 import searchAlgorithms.StringMatchingAlgorithm;
@@ -8,7 +10,7 @@ import searchAlgorithms.StringMatchingAlgorithm;
 import java.util.Queue;
 
 public class ScanBaggage {
-    public void scanBaggage(Queue<Baggage> baggageQueue, BaggageScanner baggageScanner){
+    public void scanBaggage(Queue<Baggage> baggageQueue, BaggageScanner baggageScanner, BoardingPass boardingPass){
         baggageScanner = new BaggageScanner(StringMatchingAlgorithm.BF);   //scanner uses default brute force to scan baggage
         // you can try baggageScanner = new BaggageScanner(StringMatchingAlgorithm.BM);  <-- uses boyer moore
         // also try baggageScanner = new BaggageScanner(StringMatchingAlgorithm.KMP); <-- knuth-morris-algorithm
@@ -20,6 +22,7 @@ public class ScanBaggage {
                     System.out.println("......../ Baggage contains no explosives");
                     BaggageTag baggageTag=new BaggageTag();
                     baggage.setBaggageTag(baggageTag);
+                    boardingPass.addBaggageToTagList(baggageTag);
                 }
                 else {
                     System.out.println("Baggage contains explosives");

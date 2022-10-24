@@ -3,12 +3,13 @@ package identityRelevants;
 import flightRelevants.Flight;
 import passengerRelevants.BaggageTag;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BoardingPass{
 
 
-    private List<BaggageTag> baggageTagList;
+    private List<BaggageTag> baggageTagList=new ArrayList<>();
     private RightBoardingPassPart rightBoardingPassPart=new RightBoardingPassPart();
     private LeftBoardingPassPart leftBoardingPassPart=new LeftBoardingPassPart();
 

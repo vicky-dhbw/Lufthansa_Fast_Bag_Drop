@@ -33,6 +33,7 @@ public class CheckInSimulator {
             Seat seat=fastBagDrop.getDatabase().searchForFreeSeat(flight,passenger);
             fastBagDrop.getFastBagDropSection(position).getDisplay().showTicketRelevantInformation(fastBagDrop.getDatabase(), passenger);
             boolean checkIn=fastBagDrop.getFastBagDropSection(position).getDisplay().offerChoiceAndAcceptCheckInDecision(flight,passenger);
+
             if(checkIn){
                 fastBagDrop.getFastBagDropSection(position).getDisplay().showCheckInMessage();
                 // the passenger returns the number of baggage he has, through enterNumberOfBaggage method in Passenger Class
@@ -41,13 +42,17 @@ public class CheckInSimulator {
                 int numberOfBaggage=fastBagDrop.getFastBagDropSection(position).getDisplay().getNumberOfBaggage(passenger);
                 assignBaggageToPassenger(passenger,numberOfBaggage);
                 assignBaggageWeight(passenger);
+
                 Queue<Baggage> baggageQueue=fastBagDrop.getFastBagDropSection(position).getConveyorBelt().acceptBaggage(passenger.getBaggageList(),fastBagDrop.getFastBagDropSection(position).getSensor(),fastBagDrop.getFastBagDropSection(position).getDisplay());
                 // the search of explosives occur over the scan baggage service where the baggage scanner scans baggage
-                fastBagDrop.getServices().getScanBaggage().scanBaggage(baggageQueue,fastBagDrop.getFastBagDropSection(position).getBaggageScanner());
+                fastBagDrop.getServices().getScanBaggage().scanBaggage(baggageQueue,fastBagDrop.getFastBagDropSection(position).getBaggageScanner(),passenger.getBoardingPass());
                 //fastBagDrop.getFastBagDropSection(position).getConveyorBelt().removeBaggage(); //removes baggage from the conveyor belt
+
+
                 String seatId=FlightSeatStatusUpdater.reserveSeat(seat,flight);
                 generateBoardingPass(fastBagDrop.getDatabase(), passenger,flight,seatId);
                 fastBagDrop.getFastBagDropSection(position).getDisplay().displayBoardingPass(passenger);
+                fastBagDrop.getFastBagDropSection(position).getDocumentPrinter().printVoucher(passenger);
             }
             else{
                 fastBagDrop.getFastBagDropSection(position).getDisplay().showCancellationMessage();
