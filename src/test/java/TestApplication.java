@@ -1,5 +1,6 @@
 
 import automatComponents.BusinessQueue;
+import automatComponents.CheckInSimulator;
 import automatComponents.EconomyQueue;
 import automatComponents.FastBagDrop;
 import flightRelevants.Flight;
@@ -14,10 +15,7 @@ import passengerRelevants.Baggage;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Queue;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 public class TestApplication {
@@ -57,6 +55,10 @@ public class TestApplication {
     @Order(4)
     public void assureBaggageListNotNull(){
         Queue<Passenger> testQueue=fastBagDrop.getLeftSection().getBusinessQueue().getBusinessQueue();
+        CheckInSimulator checkInSimulator=new CheckInSimulator();
+        for(Passenger passenger: testQueue){
+            checkInSimulator.assignBaggageToPassenger(passenger,passenger.getNumberOfBaggage());
+        }
         for(Passenger passenger:testQueue){
             List<Baggage> testBList=passenger.getBaggageList();
             assertTrue(testBList.size()>=1);
@@ -67,9 +69,11 @@ public class TestApplication {
     @Order(5)
     public void assureBaggageContent(){
         Queue<Passenger> testQueue=fastBagDrop.getRightSection().getEconomyQueue().getEconomyQueue();
-        for(Passenger passenger:testQueue){
-            List<Baggage> testB=passenger.getBaggageList();
-            for(Baggage baggage:testB){
+        CheckInSimulator checkInSimulator=new CheckInSimulator();
+        while(!testQueue.isEmpty()){
+            Passenger passenger=testQueue.poll();
+            checkInSimulator.assignBaggageToPassenger(passenger,passenger.getNumberOfBaggage());
+            for(Baggage baggage:passenger.getBaggageList()){
                 assertTrue(baggage.getContent().length()>0);
             }
         }
@@ -80,6 +84,14 @@ public class TestApplication {
     public void baggageCountIsPerfect(){
         Queue<Passenger> businessQ=fastBagDrop.getLeftSection().getBusinessQueue().getBusinessQueue();
         Queue<Passenger> economyQ=fastBagDrop.getRightSection().getEconomyQueue().getEconomyQueue();
+        CheckInSimulator checkInSimulator=new CheckInSimulator();
+
+        for(Passenger passenger:businessQ){
+            checkInSimulator.assignBaggageToPassenger(passenger,passenger.getNumberOfBaggage());
+        }
+        for(Passenger passenger:economyQ){
+            checkInSimulator.assignBaggageToPassenger(passenger,passenger.getNumberOfBaggage());
+        }
 
         int counterBusinessBaggage=0;
         int counterEconomyBaggage=0;
