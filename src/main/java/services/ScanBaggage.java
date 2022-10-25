@@ -32,17 +32,17 @@ public class ScanBaggage {
                     baggage.setResult(Result.OK);
                     baggage.getBaggageTag().setQrCode();
                     baggage.getBaggageTag().setBaggageTagID(BaggageTagIDGenerator.createRandomBaggageTagID());
+
                     List<Object> baggageRecordsObjects=new ArrayList<>();
                     baggageRecordsObjects.add(boardingPass);   //Ticket -> BoardingPass
+                    baggageRecordsObjects.add(passenger.getPassport().getId());
+                    baggageRecordsObjects.add(baggage.getBaggageTag().getBaggageTagID());
                     baggageRecordsObjects.add(baggage.getResult());
                     baggageRecordsObjects.add(System.nanoTime());
 
                     export.getBaggageRecords().put(baggage.getBaggageTag().getBaggageTagID(),baggageRecordsObjects);  //Records
 
-
-
                     boardingPass.addBaggageToTagList(baggageTag);
-
                     passenger.getBaggageList().add(baggage);
                 }
                 else {

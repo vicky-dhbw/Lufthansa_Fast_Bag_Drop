@@ -25,7 +25,10 @@ public class Application {
         FederalPolice federalPolice=new FederalPolice();
         FastBagDrop fastBagDrop=new FastBagDrop();
         serviceAgent.executeImport(fastBagDrop.getServices().getImporter(),flight,fastBagDrop);
+        fastBagDrop.getServices().getExport().record();
+        System.out.println(fastBagDrop.getServices().getExport().getFileName().toAbsolutePath());
         fastBagDrop.getServices().getCheckIn().executeCheckIn(fastBagDrop,flight);
+        System.out.println("Hei");
 
     }
 
