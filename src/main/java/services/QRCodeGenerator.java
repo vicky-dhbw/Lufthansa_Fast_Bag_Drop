@@ -10,6 +10,7 @@ import com.google.zxing.qrcode.QRCodeWriter;
 import java.io.IOException;
 import java.nio.file.Paths;
 
+import configuration.Configuration;
 import flightRelevants.FlightID;
 import flightRelevants.IATAAirportCodes;
 
@@ -18,7 +19,7 @@ public class QRCodeGenerator {
     public static void generateQRCode() throws WriterException, IOException {
         try {
             String contents = IATAAirportCodes.FRA.toString()+" "+IATAAirportCodes.HKG.toString()+" "+FlightID.LH2121.toString();
-            String fileName = "src/main/java/baggageTags/baggageTag.jpg";
+            String fileName = Configuration.INSTANCE.qrCodeFile;
             int width = 500;
             int height = 500;
 
