@@ -1,5 +1,7 @@
 package passengerRelevants;
 
+import configuration.Configuration;
+
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -16,7 +18,7 @@ public class BaggageTag {
     }
 
     public void setQrCode() throws IOException {
-        qrCode= ImageIO.read(new File("src/main/java/baggageTags/baggageTag.jpg"));
+        qrCode= ImageIO.read(new File(Configuration.INSTANCE.qrCodeFile));
         System.out.println("baggage got a qr code with source destination and flight number"); //the qr code is same for all baggage
     }
 
