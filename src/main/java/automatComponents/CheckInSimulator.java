@@ -1,14 +1,17 @@
 package automatComponents;
 
+import com.google.zxing.WriterException;
 import flightRelevants.*;
 import identityRelevants.BookingClass;
 import identityRelevants.LeftBoardingPassPart;
 import identityRelevants.RightBoardingPassPart;
 import livingComponents.Passenger;
 import passengerRelevants.Baggage;
+import services.QRCodeGenerator;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -16,13 +19,13 @@ public class CheckInSimulator {
 
     static Queue<String> contents;
     static Queue<String> weights;
-    public CheckInSimulator(){
+    public CheckInSimulator() throws IOException, WriterException {
         contents=new LinkedList<>();
         weights=new LinkedList<>();
         getContentsToList();
         getBaggageWeightToQueue();
     }
-    public void simulateCheckIn(FastBagDrop fastBagDrop, Passenger passenger, Flight flight, Position position){
+    public void simulateCheckIn(FastBagDrop fastBagDrop, Passenger passenger, Flight flight, Position position) throws IOException {
         //the scanner uses the machine's database to find ticket id of the passenger-> 1 yes found, 0 not found
         boolean ifFound=fastBagDrop.getFastBagDropSection(position).getPassportScanner().scanPassport(fastBagDrop.getDatabase(), passenger.getPassport());
 

@@ -1,5 +1,9 @@
 package services;
 
+import com.google.zxing.WriterException;
+
+import java.io.IOException;
+
 public class Services {
 
     private final BaggageDrop baggageDrop;
@@ -15,7 +19,7 @@ public class Services {
     private final StartUp startUp;
     private final Unlock unlock;
 
-    public Services(){
+    public Services() throws IOException, WriterException {
         baggageDrop=new BaggageDrop();
         checkIn=new CheckIn();
         dataAnalytics=new DataAnalytics();

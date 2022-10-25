@@ -1,10 +1,12 @@
 package automatComponents;
 
 import automatComponents.FastBagDropSection;
+import com.google.zxing.WriterException;
 import flightRelevants.Flight;
 import services.BaggageDrop;
 import services.Services;
 
+import java.io.IOException;
 import java.util.UUID;
 
 public class FastBagDrop {
@@ -18,7 +20,7 @@ public class FastBagDrop {
 
     private final Services services=new Services();
 
-    public FastBagDrop() {
+    public FastBagDrop() throws IOException, WriterException {
         this.serialNumber = UUID.randomUUID();
     }
 

@@ -1,6 +1,7 @@
 import automatComponents.BusinessQueue;
 import automatComponents.EconomyQueue;
 import automatComponents.FastBagDrop;
+import com.google.zxing.WriterException;
 import flightRelevants.Flight;
 import flightRelevants.FlightID;
 import flightRelevants.Gate;
@@ -9,6 +10,7 @@ import livingComponents.FederalPolice;
 import livingComponents.Passenger;
 import livingComponents.ServiceAgent;
 import passengerRelevants.Baggage;
+import services.QRCodeGenerator;
 
 import java.io.*;
 import java.util.List;
@@ -16,7 +18,7 @@ import java.util.Map;
 import java.util.Queue;
 
 public class Application {
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException, WriterException {
 
         Flight flight=new Flight(FlightID.LH2121,"22:00", IATAAirportCodes.FRA,IATAAirportCodes.HKG,Gate.A05);
         ServiceAgent serviceAgent=new ServiceAgent();

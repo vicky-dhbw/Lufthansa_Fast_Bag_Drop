@@ -1,8 +1,5 @@
 
-import automatComponents.BusinessQueue;
-import automatComponents.CheckInSimulator;
-import automatComponents.EconomyQueue;
-import automatComponents.FastBagDrop;
+import automatComponents.*;
 import flightRelevants.Flight;
 import flightRelevants.FlightID;
 import flightRelevants.Gate;
@@ -13,8 +10,10 @@ import livingComponents.ServiceAgent;
 import org.junit.jupiter.api.*;
 import passengerRelevants.Baggage;
 
+import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -137,6 +136,21 @@ public class TestApplication {
         }
 
         assertEquals(counterBaggage-375,counterContent);
+    }
+    @Test
+    @Order(8)
+    public void checkBaggageQRCode() throws IOException {
+        CheckInSimulator checkInSimulator=new CheckInSimulator();
+        Queue<Passenger> businessQ=fastBagDrop.getLeftSection().getBusinessQueue().getBusinessQueue();
+
+        while(!businessQ.isEmpty()){
+            Passenger passenger=businessQ.poll();
+            checkInSimulator.simulateCheckIn(fastBagDrop,passenger,flight, Position.LEFT);
+            for(Baggage baggage: passenger.getBaggageList()){
+                assertNotNull(baggage.getBaggageTag().getQrCode());  //all checked in baggage have baggage Tag with qr code
+            }
+        }
+
     }
 
 

@@ -3,43 +3,32 @@ package services;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
+import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
-import com.google.zxing.*;
 import com.google.zxing.qrcode.QRCodeWriter;
-import java.lang.Object;
-import java.nio.file.Path;
+
+import java.io.IOException;
 import java.nio.file.Paths;
 
-import com.google.zxing.*;
 import flightRelevants.FlightID;
 import flightRelevants.IATAAirportCodes;
 
 public class QRCodeGenerator {
 
-    public void generateQRCode() throws WriterException {
+    public static void generateQRCode() throws WriterException, IOException {
         try {
-            String contents = "https://simplesolution.dev";
-            String fileName = "qrcode.png";
-            int width = 100;
-            int height = 100;
+            String contents = IATAAirportCodes.FRA.toString()+" "+IATAAirportCodes.HKG.toString()+" "+FlightID.LH2121.toString();
+            String fileName = "src/main/java/baggageTags/baggageTag.jpg";
+            int width = 500;
+            int height = 500;
 
-            // generate QR code
-            QRCodeWriter qrCodeWriter = new QRCodeWriter();
-            BitMatrix bitMatrix = qrCodeWriter.encode(contents, BarcodeFormat.QR_CODE, width, height);
+            BitMatrix matrix = new MultiFormatWriter().encode(contents, BarcodeFormat.QR_CODE, width, height);
+            MatrixToImageWriter.writeToPath(matrix,"jpg", Paths.get(fileName));
 
-            // write to file
-            Path filePath = Paths.get(fileName);
-            Object MatrixToImageWriter = new Object();
-            MatrixToImageWriter.writeToPath(bitMatrix, "PNG", filePath);
         } catch (WriterException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    }
-
-
 
 
 
