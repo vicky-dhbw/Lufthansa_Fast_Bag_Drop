@@ -16,6 +16,8 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.google.zxing:core:3.3.0'
+    compile group: 'com.google.zxing', name: 'core', version: '3.4.1'
+    compile group: 'com.google.zxing', name: 'javase', version: '3.4.1'
 }
 
 test {
