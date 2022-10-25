@@ -6,13 +6,14 @@ import java.util.Map;
 
 public class Export {
 
-    private final Map<String, List<Object>> passengerDatabase=new HashMap<>();
+    private final Map<String, List<Object>> baggageRecords=new HashMap<>();
 
     public void record(){
 
     }
 
-    public void addToRecord(){
 
+    public Map<String, List<Object>> getBaggageRecords() {
+        return baggageRecords;
     }
 }

@@ -11,6 +11,8 @@ import searchAlgorithms.StringMatchingAlgorithm;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Queue;
 
 public class ScanBaggage {
@@ -30,6 +32,14 @@ public class ScanBaggage {
                     baggage.setResult(Result.OK);
                     baggage.getBaggageTag().setQrCode();
                     baggage.getBaggageTag().setBaggageTagID(BaggageTagIDGenerator.createRandomBaggageTagID());
+                    List<Object> baggageRecordsObjects=new ArrayList<>();
+                    baggageRecordsObjects.add(boardingPass);   //Ticket -> BoardingPass
+                    baggageRecordsObjects.add(baggage.getResult());
+                    baggageRecordsObjects.add(System.nanoTime());
+
+                    export.getBaggageRecords().put(baggage.getBaggageTag().getBaggageTagID(),baggageRecordsObjects);  //Records
+
+
 
                     boardingPass.addBaggageToTagList(baggageTag);
 

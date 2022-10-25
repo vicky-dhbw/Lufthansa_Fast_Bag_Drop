@@ -18,9 +18,6 @@ public class Display {
         return true;
     }
 
-    public void searchBookingClassSeat(Flight flight){
-
-    }
     public void showMessage(boolean ifSuccessful, Passenger passenger){
         if(ifSuccessful){
             System.out.println("Ticket found for "+ passenger.getName()+ " and Flight LH2121");
