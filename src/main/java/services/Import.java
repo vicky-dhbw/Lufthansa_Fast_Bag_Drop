@@ -1,6 +1,7 @@
 package services;
 
 import automatComponents.*;
+import configuration.Configuration;
 import flightRelevants.Flight;
 import flightRelevants.FlightID;
 import flightRelevants.Gate;
@@ -21,7 +22,7 @@ public class Import {
     public void executeImport(Flight forFlight, FastBagDrop fastBagDrop){
 
         try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader("src/main/java/Data/assignment.csv"));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(Configuration.INSTANCE.assignmentFile));
             String line;
 
             while ((line = bufferedReader.readLine()) != null) {

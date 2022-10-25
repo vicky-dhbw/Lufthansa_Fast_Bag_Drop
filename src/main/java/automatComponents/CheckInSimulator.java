@@ -1,6 +1,7 @@
 package automatComponents;
 
 import com.google.zxing.WriterException;
+import configuration.Configuration;
 import flightRelevants.*;
 import identityRelevants.BookingClass;
 import identityRelevants.LeftBoardingPassPart;
@@ -48,7 +49,7 @@ public class CheckInSimulator {
 
                 Queue<Baggage> baggageQueue=fastBagDrop.getFastBagDropSection(position).getConveyorBelt().acceptBaggage(passenger.getBaggageList(),fastBagDrop.getFastBagDropSection(position).getSensor(),fastBagDrop.getFastBagDropSection(position).getDisplay());
                 // the search of explosives occur over the scan baggage service where the baggage scanner scans baggage
-                fastBagDrop.getServices().getScanBaggage().scanBaggage(baggageQueue,fastBagDrop.getFastBagDropSection(position).getBaggageScanner(),passenger.getBoardingPass());
+                fastBagDrop.getServices().getScanBaggage().scanBaggage(baggageQueue,fastBagDrop.getFastBagDropSection(position).getBaggageScanner(),passenger.getBoardingPass(),passenger,fastBagDrop.getServices().getExport());
                 //fastBagDrop.getFastBagDropSection(position).getConveyorBelt().removeBaggage(); //removes baggage from the conveyor belt
 
 
@@ -66,7 +67,7 @@ public class CheckInSimulator {
     }
     public void getContentsToList(){
         try{
-            BufferedReader bufferedReader=new BufferedReader(new FileReader("src/main/java/Data/baggage_content.txt"));
+            BufferedReader bufferedReader=new BufferedReader(new FileReader(Configuration.INSTANCE.baggageContents));
             String line;
 
             while ((line = bufferedReader.readLine()) != null){
@@ -79,7 +80,7 @@ public class CheckInSimulator {
 
     public void getBaggageWeightToQueue(){
         try{
-            BufferedReader bufferedReader=new BufferedReader(new FileReader("src/main/java/Data/baggage_weight.txt"));
+            BufferedReader bufferedReader=new BufferedReader(new FileReader(Configuration.INSTANCE.baggageWeights));
             String line;
             String[] entries = new String[375];
             while ((line = bufferedReader.readLine()) != null){

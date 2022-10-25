@@ -9,6 +9,8 @@ public class Baggage implements IBaggageDetectorListener {
 
     private BaggageTag baggageTag;
 
+    private Result result;
+
 
     public String getContent() {
         return content;
@@ -40,5 +42,13 @@ public class Baggage implements IBaggageDetectorListener {
     public void revealPresence() {
         System.out.println("baggage is on conveyor belt-------");
         System.out.println("---------baggage detected by sensor------------- ");
+    }
+
+    public Result getResult() {
+        return result;
+    }
+
+    public void setResult(Result result) {
+        this.result = result;
     }
 }

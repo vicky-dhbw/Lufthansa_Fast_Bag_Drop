@@ -1,16 +1,2641 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestApplication" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-10-24T21:04:16" hostname="Vickys-MacBook-Pro.local" time="1.672">
+<testsuite name="TestApplication" tests="8" skipped="0" failures="0" errors="0" timestamp="2022-10-25T12:26:20" hostname="Vickys-MacBook-Pro.local" time="2.656">
   <properties/>
-  <testcase name="testBusinessQueue()" classname="TestApplication" time="0.392"/>
-  <testcase name="assureBaggageContent()" classname="TestApplication" time="0.333"/>
-  <testcase name="checkIfNoOfContentsMatchNoOfBaggage()" classname="TestApplication" time="0.235"/>
-  <testcase name="assureBaggageListNotNull()" classname="TestApplication" time="0.233"/>
-  <testcase name="baggageCountIsPerfect()" classname="TestApplication" time="0.246"/>
-  <testcase name="importSuccess()" classname="TestApplication" time="0.115"/>
-  <testcase name="TestQueueNotEmpty()" classname="TestApplication" time="0.113"/>
+  <testcase name="testBusinessQueue()" classname="TestApplication" time="0.245"/>
+  <testcase name="assureBaggageContent()" classname="TestApplication" time="0.301"/>
+  <testcase name="checkIfNoOfContentsMatchNoOfBaggage()" classname="TestApplication" time="0.277"/>
+  <testcase name="checkBaggageQRCode()" classname="TestApplication" time="0.863"/>
+  <testcase name="assureBaggageListNotNull()" classname="TestApplication" time="0.417"/>
+  <testcase name="baggageCountIsPerfect()" classname="TestApplication" time="0.281"/>
+  <testcase name="importSuccess()" classname="TestApplication" time="0.152"/>
+  <testcase name="TestQueueNotEmpty()" classname="TestApplication" time="0.117"/>
   <system-out><![CDATA[
 
 
+
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: BIFO6D9JF
+searching for ticket in fast bag drop database..............
+Ticket found for Erik Wong and Flight LH2121
+----searching flight seat for Erik Wong---------
+Found a seat with ID 1A
+Below details were found in database
+------------------------------------------
+Name: Erik Wong
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: a5nzey7tihnrtgu
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Erik Wong is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 21.58 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 20.43 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 18.47 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 1A has been reserved for you!
+
+BOARDING PASS FOR ERIK WONG
+-----------------------------------------------------------------------------
+LUFTHANSA                      a5nzey7tihnrtgu /  Erik Wong
+Erik Wong                                     /  a5nzey7tihnrtgu
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 1A                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Erik Wong
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: 5T10YWT44
+searching for ticket in fast bag drop database..............
+Ticket found for Gladys Padilla and Flight LH2121
+----searching flight seat for Gladys Padilla---------
+Found a seat with ID 1C
+Below details were found in database
+------------------------------------------
+Name: Gladys Padilla
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: 8c3y2hb38cr7wzv
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Gladys Padilla is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 17.86 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 18.65 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.27 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 1C has been reserved for you!
+
+BOARDING PASS FOR GLADYS PADILLA
+-----------------------------------------------------------------------------
+LUFTHANSA                      8c3y2hb38cr7wzv /  Gladys Padilla
+Gladys Padilla                                     /  8c3y2hb38cr7wzv
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 1C                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Gladys Padilla
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: L1BRLLZPF
+searching for ticket in fast bag drop database..............
+Ticket found for Leigh Dougherty and Flight LH2121
+----searching flight seat for Leigh Dougherty---------
+Found a seat with ID 1D
+Below details were found in database
+------------------------------------------
+Name: Leigh Dougherty
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: e7zfjzaexwpsyde
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Leigh Dougherty is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 17.42 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.16 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.52 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 1D has been reserved for you!
+
+BOARDING PASS FOR LEIGH DOUGHERTY
+-----------------------------------------------------------------------------
+LUFTHANSA                      e7zfjzaexwpsyde /  Leigh Dougherty
+Leigh Dougherty                                     /  e7zfjzaexwpsyde
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 1D                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Leigh Dougherty
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: LV35JP0X9
+searching for ticket in fast bag drop database..............
+Ticket found for Avery Roman and Flight LH2121
+----searching flight seat for Avery Roman---------
+Found a seat with ID 1G
+Below details were found in database
+------------------------------------------
+Name: Avery Roman
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: byj7lesmbf257ve
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Avery Roman is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 17.51 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 17.38 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 18.67 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 1G has been reserved for you!
+
+BOARDING PASS FOR AVERY ROMAN
+-----------------------------------------------------------------------------
+LUFTHANSA                      byj7lesmbf257ve /  Avery Roman
+Avery Roman                                     /  byj7lesmbf257ve
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 1G                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Avery Roman
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: 3XVDTRRI1
+searching for ticket in fast bag drop database..............
+Ticket found for Mari Fisher and Flight LH2121
+----searching flight seat for Mari Fisher---------
+Found a seat with ID 1H
+Below details were found in database
+------------------------------------------
+Name: Mari Fisher
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: 33s5g74ilod2i32
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Mari Fisher is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 16.98 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 21.26 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 18.3 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 1H has been reserved for you!
+
+BOARDING PASS FOR MARI FISHER
+-----------------------------------------------------------------------------
+LUFTHANSA                      33s5g74ilod2i32 /  Mari Fisher
+Mari Fisher                                     /  33s5g74ilod2i32
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 1H                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Mari Fisher
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: 60OCYK1XP
+searching for ticket in fast bag drop database..............
+Ticket found for Franklin Kent and Flight LH2121
+----searching flight seat for Franklin Kent---------
+Found a seat with ID 1K
+Below details were found in database
+------------------------------------------
+Name: Franklin Kent
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: whc1nk7kcig8l3j
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Franklin Kent is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 16.81 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 20.91 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 1K has been reserved for you!
+
+BOARDING PASS FOR FRANKLIN KENT
+-----------------------------------------------------------------------------
+LUFTHANSA                      whc1nk7kcig8l3j /  Franklin Kent
+Franklin Kent                                     /  whc1nk7kcig8l3j
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 1K                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Franklin Kent
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: 166B07KLX
+searching for ticket in fast bag drop database..............
+Ticket found for Frieda Neal and Flight LH2121
+----searching flight seat for Frieda Neal---------
+Found a seat with ID 2A
+Below details were found in database
+------------------------------------------
+Name: Frieda Neal
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: 3rsrc03apc51dls
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Frieda Neal is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 21.21 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.69 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 18.67 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 2A has been reserved for you!
+
+BOARDING PASS FOR FRIEDA NEAL
+-----------------------------------------------------------------------------
+LUFTHANSA                      3rsrc03apc51dls /  Frieda Neal
+Frieda Neal                                     /  3rsrc03apc51dls
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 2A                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Frieda Neal
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: HNQGAXK43
+searching for ticket in fast bag drop database..............
+Ticket found for Chadwick Carpenter and Flight LH2121
+----searching flight seat for Chadwick Carpenter---------
+Found a seat with ID 2C
+Below details were found in database
+------------------------------------------
+Name: Chadwick Carpenter
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: m747zz3erat8wf7
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Chadwick Carpenter is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.12 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 16.42 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 2C has been reserved for you!
+
+BOARDING PASS FOR CHADWICK CARPENTER
+-----------------------------------------------------------------------------
+LUFTHANSA                      m747zz3erat8wf7 /  Chadwick Carpenter
+Chadwick Carpenter                                     /  m747zz3erat8wf7
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 2C                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Chadwick Carpenter
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: 2TUWFRNLO
+searching for ticket in fast bag drop database..............
+Ticket found for Emerson Marks and Flight LH2121
+----searching flight seat for Emerson Marks---------
+Found a seat with ID 2D
+Below details were found in database
+------------------------------------------
+Name: Emerson Marks
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: ywmbo4tdzkgwxwi
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Emerson Marks is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.17 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.0 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 2D has been reserved for you!
+
+BOARDING PASS FOR EMERSON MARKS
+-----------------------------------------------------------------------------
+LUFTHANSA                      ywmbo4tdzkgwxwi /  Emerson Marks
+Emerson Marks                                     /  ywmbo4tdzkgwxwi
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 2D                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Emerson Marks
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: 19D1BXE4V
+searching for ticket in fast bag drop database..............
+Ticket found for Mayra Steele and Flight LH2121
+----searching flight seat for Mayra Steele---------
+Found a seat with ID 2G
+Below details were found in database
+------------------------------------------
+Name: Mayra Steele
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: bgqztihklb5c17a
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Mayra Steele is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 18.78 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 20.31 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 2G has been reserved for you!
+
+BOARDING PASS FOR MAYRA STEELE
+-----------------------------------------------------------------------------
+LUFTHANSA                      bgqztihklb5c17a /  Mayra Steele
+Mayra Steele                                     /  bgqztihklb5c17a
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 2G                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Mayra Steele
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: JN50G850Q
+searching for ticket in fast bag drop database..............
+Ticket found for Jodi Goodwin and Flight LH2121
+----searching flight seat for Jodi Goodwin---------
+Found a seat with ID 2H
+Below details were found in database
+------------------------------------------
+Name: Jodi Goodwin
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: ib3iaw7ws5mrh8d
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Jodi Goodwin is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 21.25 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 18.87 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 2H has been reserved for you!
+
+BOARDING PASS FOR JODI GOODWIN
+-----------------------------------------------------------------------------
+LUFTHANSA                      ib3iaw7ws5mrh8d /  Jodi Goodwin
+Jodi Goodwin                                     /  ib3iaw7ws5mrh8d
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 2H                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Jodi Goodwin
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: W45PH6KVS
+searching for ticket in fast bag drop database..............
+Ticket found for Tracey Duarte and Flight LH2121
+----searching flight seat for Tracey Duarte---------
+Found a seat with ID 2K
+Below details were found in database
+------------------------------------------
+Name: Tracey Duarte
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: cqr782jb9a4iptf
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Tracey Duarte is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 16.25 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.94 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 16.88 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 2K has been reserved for you!
+
+BOARDING PASS FOR TRACEY DUARTE
+-----------------------------------------------------------------------------
+LUFTHANSA                      cqr782jb9a4iptf /  Tracey Duarte
+Tracey Duarte                                     /  cqr782jb9a4iptf
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 2K                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Tracey Duarte
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: 73618V9CA
+searching for ticket in fast bag drop database..............
+Ticket found for Gus Juarez and Flight LH2121
+----searching flight seat for Gus Juarez---------
+Found a seat with ID 3A
+Below details were found in database
+------------------------------------------
+Name: Gus Juarez
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: nkil02w8alkrkkm
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Gus Juarez is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 18.24 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 17.16 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.34 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 3A has been reserved for you!
+
+BOARDING PASS FOR GUS JUAREZ
+-----------------------------------------------------------------------------
+LUFTHANSA                      nkil02w8alkrkkm /  Gus Juarez
+Gus Juarez                                     /  nkil02w8alkrkkm
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 3A                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Gus Juarez
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: 94DOCLPBH
+searching for ticket in fast bag drop database..............
+Ticket found for Van Mcintosh and Flight LH2121
+----searching flight seat for Van Mcintosh---------
+Found a seat with ID 3C
+Below details were found in database
+------------------------------------------
+Name: Van Mcintosh
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: y000vitkkknivur
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Van Mcintosh is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 22.41 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 20.47 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 18.81 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 3C has been reserved for you!
+
+BOARDING PASS FOR VAN MCINTOSH
+-----------------------------------------------------------------------------
+LUFTHANSA                      y000vitkkknivur /  Van Mcintosh
+Van Mcintosh                                     /  y000vitkkknivur
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 3C                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Van Mcintosh
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: 8BWFQ0Q3K
+searching for ticket in fast bag drop database..............
+Ticket found for Darwin Mccann and Flight LH2121
+----searching flight seat for Darwin Mccann---------
+Found a seat with ID 3D
+Below details were found in database
+------------------------------------------
+Name: Darwin Mccann
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: 0yieihqos0x77uu
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Darwin Mccann is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 18.56 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 17.77 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 3D has been reserved for you!
+
+BOARDING PASS FOR DARWIN MCCANN
+-----------------------------------------------------------------------------
+LUFTHANSA                      0yieihqos0x77uu /  Darwin Mccann
+Darwin Mccann                                     /  0yieihqos0x77uu
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 3D                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Darwin Mccann
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: 8QRI1IKHQ
+searching for ticket in fast bag drop database..............
+Ticket found for Carolina Sharp and Flight LH2121
+----searching flight seat for Carolina Sharp---------
+Found a seat with ID 3G
+Below details were found in database
+------------------------------------------
+Name: Carolina Sharp
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: tzcfqdv5g4aefr3
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Carolina Sharp is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.32 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.21 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.13 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 3G has been reserved for you!
+
+BOARDING PASS FOR CAROLINA SHARP
+-----------------------------------------------------------------------------
+LUFTHANSA                      tzcfqdv5g4aefr3 /  Carolina Sharp
+Carolina Sharp                                     /  tzcfqdv5g4aefr3
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 3G                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Carolina Sharp
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: 7HFMGK50V
+searching for ticket in fast bag drop database..............
+Ticket found for Daron Glover and Flight LH2121
+----searching flight seat for Daron Glover---------
+Found a seat with ID 3H
+Below details were found in database
+------------------------------------------
+Name: Daron Glover
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: f28ohd7z4n4nftw
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Daron Glover is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 20.39 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 21.03 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 20.05 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 3H has been reserved for you!
+
+BOARDING PASS FOR DARON GLOVER
+-----------------------------------------------------------------------------
+LUFTHANSA                      f28ohd7z4n4nftw /  Daron Glover
+Daron Glover                                     /  f28ohd7z4n4nftw
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 3H                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Daron Glover
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: S0149IJII
+searching for ticket in fast bag drop database..............
+Ticket found for Britney Drake and Flight LH2121
+----searching flight seat for Britney Drake---------
+Found a seat with ID 3K
+Below details were found in database
+------------------------------------------
+Name: Britney Drake
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: as7q5jpescqma4l
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Britney Drake is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 21.92 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.37 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 20.35 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 3K has been reserved for you!
+
+BOARDING PASS FOR BRITNEY DRAKE
+-----------------------------------------------------------------------------
+LUFTHANSA                      as7q5jpescqma4l /  Britney Drake
+Britney Drake                                     /  as7q5jpescqma4l
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 3K                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Britney Drake
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: A6HU0BIFL
+searching for ticket in fast bag drop database..............
+Ticket found for Samantha Patrick and Flight LH2121
+----searching flight seat for Samantha Patrick---------
+Found a seat with ID 4A
+Below details were found in database
+------------------------------------------
+Name: Samantha Patrick
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: f7zph1r1zdn8fqq
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Samantha Patrick is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 18.73 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 20.33 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 4A has been reserved for you!
+
+BOARDING PASS FOR SAMANTHA PATRICK
+-----------------------------------------------------------------------------
+LUFTHANSA                      f7zph1r1zdn8fqq /  Samantha Patrick
+Samantha Patrick                                     /  f7zph1r1zdn8fqq
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 4A                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Samantha Patrick
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: VY5MH4S99
+searching for ticket in fast bag drop database..............
+Ticket found for Quinn Love and Flight LH2121
+----searching flight seat for Quinn Love---------
+Found a seat with ID 4C
+Below details were found in database
+------------------------------------------
+Name: Quinn Love
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: g4f8bofrzwopszc
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Quinn Love is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 22.01 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.27 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 21.18 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 4C has been reserved for you!
+
+BOARDING PASS FOR QUINN LOVE
+-----------------------------------------------------------------------------
+LUFTHANSA                      g4f8bofrzwopszc /  Quinn Love
+Quinn Love                                     /  g4f8bofrzwopszc
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 4C                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Quinn Love
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: WJTMWESGG
+searching for ticket in fast bag drop database..............
+Ticket found for Marian Crosby and Flight LH2121
+----searching flight seat for Marian Crosby---------
+Found a seat with ID 4D
+Below details were found in database
+------------------------------------------
+Name: Marian Crosby
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: zweaghgqu8c9obz
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Marian Crosby is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 17.16 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 20.04 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 4D has been reserved for you!
+
+BOARDING PASS FOR MARIAN CROSBY
+-----------------------------------------------------------------------------
+LUFTHANSA                      zweaghgqu8c9obz /  Marian Crosby
+Marian Crosby                                     /  zweaghgqu8c9obz
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 4D                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Marian Crosby
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: OP63BB68D
+searching for ticket in fast bag drop database..............
+Ticket found for Adolph Villa and Flight LH2121
+----searching flight seat for Adolph Villa---------
+Found a seat with ID 4G
+Below details were found in database
+------------------------------------------
+Name: Adolph Villa
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: dyxgi0zp4l0cwuq
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Adolph Villa is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 20.91 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 20.3 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 20.38 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 4G has been reserved for you!
+
+BOARDING PASS FOR ADOLPH VILLA
+-----------------------------------------------------------------------------
+LUFTHANSA                      dyxgi0zp4l0cwuq /  Adolph Villa
+Adolph Villa                                     /  dyxgi0zp4l0cwuq
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 4G                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Adolph Villa
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: GK68LOCU3
+searching for ticket in fast bag drop database..............
+Ticket found for Jordan Proctor and Flight LH2121
+----searching flight seat for Jordan Proctor---------
+Found a seat with ID 4H
+Below details were found in database
+------------------------------------------
+Name: Jordan Proctor
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: vf33uxrshphsezm
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Jordan Proctor is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 16.54 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 18.87 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 4H has been reserved for you!
+
+BOARDING PASS FOR JORDAN PROCTOR
+-----------------------------------------------------------------------------
+LUFTHANSA                      vf33uxrshphsezm /  Jordan Proctor
+Jordan Proctor                                     /  vf33uxrshphsezm
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 4H                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Jordan Proctor
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: 4BSF9V0EZ
+searching for ticket in fast bag drop database..............
+Ticket found for Joy Macias and Flight LH2121
+----searching flight seat for Joy Macias---------
+Found a seat with ID 4K
+Below details were found in database
+------------------------------------------
+Name: Joy Macias
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: 6k90nagu4m6ci7t
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Joy Macias is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 20.22 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 20.75 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 4K has been reserved for you!
+
+BOARDING PASS FOR JOY MACIAS
+-----------------------------------------------------------------------------
+LUFTHANSA                      6k90nagu4m6ci7t /  Joy Macias
+Joy Macias                                     /  6k90nagu4m6ci7t
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 4K                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Joy Macias
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: CTP1VVQHW
+searching for ticket in fast bag drop database..............
+Ticket found for Cordell Hahn and Flight LH2121
+----searching flight seat for Cordell Hahn---------
+Found a seat with ID 5A
+Below details were found in database
+------------------------------------------
+Name: Cordell Hahn
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: 51672frdk8qsujk
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Cordell Hahn is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 17.4 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 20.27 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 5A has been reserved for you!
+
+BOARDING PASS FOR CORDELL HAHN
+-----------------------------------------------------------------------------
+LUFTHANSA                      51672frdk8qsujk /  Cordell Hahn
+Cordell Hahn                                     /  51672frdk8qsujk
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 5A                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Cordell Hahn
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: ZDTVA0QO0
+searching for ticket in fast bag drop database..............
+Ticket found for Pierre Hurley and Flight LH2121
+----searching flight seat for Pierre Hurley---------
+Found a seat with ID 5C
+Below details were found in database
+------------------------------------------
+Name: Pierre Hurley
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: f7t71qik0zyyczx
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Pierre Hurley is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 17.04 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.84 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 5C has been reserved for you!
+
+BOARDING PASS FOR PIERRE HURLEY
+-----------------------------------------------------------------------------
+LUFTHANSA                      f7t71qik0zyyczx /  Pierre Hurley
+Pierre Hurley                                     /  f7t71qik0zyyczx
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 5C                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Pierre Hurley
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: JKEUK5AHI
+searching for ticket in fast bag drop database..............
+Ticket found for Bernadine Powell and Flight LH2121
+----searching flight seat for Bernadine Powell---------
+Found a seat with ID 5D
+Below details were found in database
+------------------------------------------
+Name: Bernadine Powell
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: 6b96c30tnx71wo8
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Bernadine Powell is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 17.34 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 18.75 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.12 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 5D has been reserved for you!
+
+BOARDING PASS FOR BERNADINE POWELL
+-----------------------------------------------------------------------------
+LUFTHANSA                      6b96c30tnx71wo8 /  Bernadine Powell
+Bernadine Powell                                     /  6b96c30tnx71wo8
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 5D                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Bernadine Powell
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: U6U7E8S6C
+searching for ticket in fast bag drop database..............
+Ticket found for Jamey Simpson and Flight LH2121
+----searching flight seat for Jamey Simpson---------
+Found a seat with ID 5G
+Below details were found in database
+------------------------------------------
+Name: Jamey Simpson
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: 4uh3cmqat91nrnr
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Jamey Simpson is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 18.29 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 17.94 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 5G has been reserved for you!
+
+BOARDING PASS FOR JAMEY SIMPSON
+-----------------------------------------------------------------------------
+LUFTHANSA                      4uh3cmqat91nrnr /  Jamey Simpson
+Jamey Simpson                                     /  4uh3cmqat91nrnr
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 5G                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Jamey Simpson
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: 8A9S3F2OC
+searching for ticket in fast bag drop database..............
+Ticket found for Corine Dawson and Flight LH2121
+----searching flight seat for Corine Dawson---------
+Found a seat with ID 5H
+Below details were found in database
+------------------------------------------
+Name: Corine Dawson
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: eiwirsy1vv8zdc8
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Corine Dawson is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.09 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 22.39 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 5H has been reserved for you!
+
+BOARDING PASS FOR CORINE DAWSON
+-----------------------------------------------------------------------------
+LUFTHANSA                      eiwirsy1vv8zdc8 /  Corine Dawson
+Corine Dawson                                     /  eiwirsy1vv8zdc8
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 5H                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Corine Dawson
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: JGDJ4DLOR
+searching for ticket in fast bag drop database..............
+Ticket found for Grant Becker and Flight LH2121
+----searching flight seat for Grant Becker---------
+Found a seat with ID 5K
+Below details were found in database
+------------------------------------------
+Name: Grant Becker
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: sxh51r5wl9544mi
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Grant Becker is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 21.23 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 17.56 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 18.37 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 5K has been reserved for you!
+
+BOARDING PASS FOR GRANT BECKER
+-----------------------------------------------------------------------------
+LUFTHANSA                      sxh51r5wl9544mi /  Grant Becker
+Grant Becker                                     /  sxh51r5wl9544mi
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 5K                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Grant Becker
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: NVVLGL6PY
+searching for ticket in fast bag drop database..............
+Ticket found for Jeanne Sawyer and Flight LH2121
+----searching flight seat for Jeanne Sawyer---------
+Found a seat with ID 6A
+Below details were found in database
+------------------------------------------
+Name: Jeanne Sawyer
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: rf3b8uyx7kw1mxm
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Jeanne Sawyer is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 21.4 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 20.25 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 6A has been reserved for you!
+
+BOARDING PASS FOR JEANNE SAWYER
+-----------------------------------------------------------------------------
+LUFTHANSA                      rf3b8uyx7kw1mxm /  Jeanne Sawyer
+Jeanne Sawyer                                     /  rf3b8uyx7kw1mxm
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 6A                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Jeanne Sawyer
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: 99Q0PPE8L
+searching for ticket in fast bag drop database..............
+Ticket found for Elvin Hunt and Flight LH2121
+----searching flight seat for Elvin Hunt---------
+Found a seat with ID 6C
+Below details were found in database
+------------------------------------------
+Name: Elvin Hunt
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: hnpizhtoehz6isf
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Elvin Hunt is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 23.0 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 17.01 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 6C has been reserved for you!
+
+BOARDING PASS FOR ELVIN HUNT
+-----------------------------------------------------------------------------
+LUFTHANSA                      hnpizhtoehz6isf /  Elvin Hunt
+Elvin Hunt                                     /  hnpizhtoehz6isf
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 6C                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Elvin Hunt
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: 0R617US8Y
+searching for ticket in fast bag drop database..............
+Ticket found for Misty Nguyen and Flight LH2121
+----searching flight seat for Misty Nguyen---------
+Found a seat with ID 6D
+Below details were found in database
+------------------------------------------
+Name: Misty Nguyen
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: erp9ql9ob0a3ygt
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Misty Nguyen is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 17.39 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 16.7 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 6D has been reserved for you!
+
+BOARDING PASS FOR MISTY NGUYEN
+-----------------------------------------------------------------------------
+LUFTHANSA                      erp9ql9ob0a3ygt /  Misty Nguyen
+Misty Nguyen                                     /  erp9ql9ob0a3ygt
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 6D                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Misty Nguyen
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: H7WACJGFG
+searching for ticket in fast bag drop database..............
+Ticket found for Debra Mason and Flight LH2121
+----searching flight seat for Debra Mason---------
+Found a seat with ID 6G
+Below details were found in database
+------------------------------------------
+Name: Debra Mason
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: spd8mpx6w6h7v9r
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Debra Mason is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 16.23 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.13 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 21.07 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 6G has been reserved for you!
+
+BOARDING PASS FOR DEBRA MASON
+-----------------------------------------------------------------------------
+LUFTHANSA                      spd8mpx6w6h7v9r /  Debra Mason
+Debra Mason                                     /  spd8mpx6w6h7v9r
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 6G                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Debra Mason
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: MZE18AXF0
+searching for ticket in fast bag drop database..............
+Ticket found for Noe Carney and Flight LH2121
+----searching flight seat for Noe Carney---------
+Found a seat with ID 6H
+Below details were found in database
+------------------------------------------
+Name: Noe Carney
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: 8otv3glxrcxdx1h
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Noe Carney is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 17.87 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.92 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 6H has been reserved for you!
+
+BOARDING PASS FOR NOE CARNEY
+-----------------------------------------------------------------------------
+LUFTHANSA                      8otv3glxrcxdx1h /  Noe Carney
+Noe Carney                                     /  8otv3glxrcxdx1h
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 6H                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Noe Carney
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: FFWBFLDPV
+searching for ticket in fast bag drop database..............
+Ticket found for Leandro Gillespie and Flight LH2121
+----searching flight seat for Leandro Gillespie---------
+Found a seat with ID 6K
+Below details were found in database
+------------------------------------------
+Name: Leandro Gillespie
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: jnkdjo12lmebz3c
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Leandro Gillespie is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.22 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 21.53 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 20.29 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 6K has been reserved for you!
+
+BOARDING PASS FOR LEANDRO GILLESPIE
+-----------------------------------------------------------------------------
+LUFTHANSA                      jnkdjo12lmebz3c /  Leandro Gillespie
+Leandro Gillespie                                     /  jnkdjo12lmebz3c
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 6K                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Leandro Gillespie
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: NA06OJVUW
+searching for ticket in fast bag drop database..............
+Ticket found for Malinda Jennings and Flight LH2121
+----searching flight seat for Malinda Jennings---------
+Found a seat with ID 7A
+Below details were found in database
+------------------------------------------
+Name: Malinda Jennings
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: hqvn67c30fs7rea
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Malinda Jennings is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.32 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 17.25 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 7A has been reserved for you!
+
+BOARDING PASS FOR MALINDA JENNINGS
+-----------------------------------------------------------------------------
+LUFTHANSA                      hqvn67c30fs7rea /  Malinda Jennings
+Malinda Jennings                                     /  hqvn67c30fs7rea
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 7A                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Malinda Jennings
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: RK69JQFC8
+searching for ticket in fast bag drop database..............
+Ticket found for Loren Wu and Flight LH2121
+----searching flight seat for Loren Wu---------
+Found a seat with ID 7C
+Below details were found in database
+------------------------------------------
+Name: Loren Wu
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: 99x4z636eqbqonk
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Loren Wu is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 21.3 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 16.79 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 7C has been reserved for you!
+
+BOARDING PASS FOR LOREN WU
+-----------------------------------------------------------------------------
+LUFTHANSA                      99x4z636eqbqonk /  Loren Wu
+Loren Wu                                     /  99x4z636eqbqonk
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 7C                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Loren Wu
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: J1MA51UL3
+searching for ticket in fast bag drop database..............
+Ticket found for Issac Frederick and Flight LH2121
+----searching flight seat for Issac Frederick---------
+Found a seat with ID 7D
+Below details were found in database
+------------------------------------------
+Name: Issac Frederick
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: av27y2bny4qxzei
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Issac Frederick is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.55 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 18.88 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 22.33 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 7D has been reserved for you!
+
+BOARDING PASS FOR ISSAC FREDERICK
+-----------------------------------------------------------------------------
+LUFTHANSA                      av27y2bny4qxzei /  Issac Frederick
+Issac Frederick                                     /  av27y2bny4qxzei
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 7D                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Issac Frederick
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: P4HSHJIKF
+searching for ticket in fast bag drop database..............
+Ticket found for Britt Key and Flight LH2121
+----searching flight seat for Britt Key---------
+Found a seat with ID 7G
+Below details were found in database
+------------------------------------------
+Name: Britt Key
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: a3tr14or0slxuak
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Britt Key is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 20.62 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.42 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 17.54 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 7G has been reserved for you!
+
+BOARDING PASS FOR BRITT KEY
+-----------------------------------------------------------------------------
+LUFTHANSA                      a3tr14or0slxuak /  Britt Key
+Britt Key                                     /  a3tr14or0slxuak
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 7G                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Britt Key
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: VO7P6Q7X7
+searching for ticket in fast bag drop database..............
+Ticket found for Lionel Kirby and Flight LH2121
+----searching flight seat for Lionel Kirby---------
+Found a seat with ID 7H
+Below details were found in database
+------------------------------------------
+Name: Lionel Kirby
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: h5mg4zb4ow7wg3t
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Lionel Kirby is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 21.51 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.46 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 7H has been reserved for you!
+
+BOARDING PASS FOR LIONEL KIRBY
+-----------------------------------------------------------------------------
+LUFTHANSA                      h5mg4zb4ow7wg3t /  Lionel Kirby
+Lionel Kirby                                     /  h5mg4zb4ow7wg3t
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 7H                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Lionel Kirby
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: 05HP58YH8
+searching for ticket in fast bag drop database..............
+Ticket found for Eloise Mccarty and Flight LH2121
+----searching flight seat for Eloise Mccarty---------
+Found a seat with ID 7K
+Below details were found in database
+------------------------------------------
+Name: Eloise Mccarty
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: u4gvir03h8p1crj
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Eloise Mccarty is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 17.83 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 17.75 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 17.44 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 7K has been reserved for you!
+
+BOARDING PASS FOR ELOISE MCCARTY
+-----------------------------------------------------------------------------
+LUFTHANSA                      u4gvir03h8p1crj /  Eloise Mccarty
+Eloise Mccarty                                     /  u4gvir03h8p1crj
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 7K                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Eloise Mccarty
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: RAG2F9MDD
+searching for ticket in fast bag drop database..............
+Ticket found for Stephen Sampson and Flight LH2121
+----searching flight seat for Stephen Sampson---------
+Found a seat with ID 8A
+Below details were found in database
+------------------------------------------
+Name: Stephen Sampson
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: fuz2y3chqj92wt4
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Stephen Sampson is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.53 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 17.51 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 18.2 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 8A has been reserved for you!
+
+BOARDING PASS FOR STEPHEN SAMPSON
+-----------------------------------------------------------------------------
+LUFTHANSA                      fuz2y3chqj92wt4 /  Stephen Sampson
+Stephen Sampson                                     /  fuz2y3chqj92wt4
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 8A                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Stephen Sampson
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: CTEZYD6ZB
+searching for ticket in fast bag drop database..............
+Ticket found for Jamie Espinoza and Flight LH2121
+----searching flight seat for Jamie Espinoza---------
+Found a seat with ID 8C
+Below details were found in database
+------------------------------------------
+Name: Jamie Espinoza
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: 4wypuxuermqnitv
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Jamie Espinoza is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 21.55 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.67 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.52 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 8C has been reserved for you!
+
+BOARDING PASS FOR JAMIE ESPINOZA
+-----------------------------------------------------------------------------
+LUFTHANSA                      4wypuxuermqnitv /  Jamie Espinoza
+Jamie Espinoza                                     /  4wypuxuermqnitv
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 8C                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Jamie Espinoza
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: 7RRYGMB05
+searching for ticket in fast bag drop database..............
+Ticket found for Bill Trujillo and Flight LH2121
+----searching flight seat for Bill Trujillo---------
+Found a seat with ID 8D
+Below details were found in database
+------------------------------------------
+Name: Bill Trujillo
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: uqaqer6798184ti
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Bill Trujillo is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 21.06 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 17.44 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.21 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 8D has been reserved for you!
+
+BOARDING PASS FOR BILL TRUJILLO
+-----------------------------------------------------------------------------
+LUFTHANSA                      uqaqer6798184ti /  Bill Trujillo
+Bill Trujillo                                     /  uqaqer6798184ti
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 8D                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Bill Trujillo
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: FBSL9YHSU
+searching for ticket in fast bag drop database..............
+Ticket found for Lacy Galloway and Flight LH2121
+----searching flight seat for Lacy Galloway---------
+Found a seat with ID 8G
+Below details were found in database
+------------------------------------------
+Name: Lacy Galloway
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: d8rn48xx55pztar
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Lacy Galloway is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 21.65 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.64 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 21.03 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 8G has been reserved for you!
+
+BOARDING PASS FOR LACY GALLOWAY
+-----------------------------------------------------------------------------
+LUFTHANSA                      d8rn48xx55pztar /  Lacy Galloway
+Lacy Galloway                                     /  d8rn48xx55pztar
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 8G                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 3  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Lacy Galloway
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: 1XGKASTS3
+searching for ticket in fast bag drop database..............
+Ticket found for Erin Maddox and Flight LH2121
+----searching flight seat for Erin Maddox---------
+Found a seat with ID 8H
+Below details were found in database
+------------------------------------------
+Name: Erin Maddox
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: tln26k4zxkm4kik
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Erin Maddox is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.76 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 21.01 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 8H has been reserved for you!
+
+BOARDING PASS FOR ERIN MADDOX
+-----------------------------------------------------------------------------
+LUFTHANSA                      tln26k4zxkm4kik /  Erin Maddox
+Erin Maddox                                     /  tln26k4zxkm4kik
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 8H                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Erin Maddox
+
+---------------------------------------------------------------------------------------------------------------
+scanning passport with passport id: GSZQV7M7K
+searching for ticket in fast bag drop database..............
+Ticket found for Jeanette Mcdaniel and Flight LH2121
+----searching flight seat for Jeanette Mcdaniel---------
+Found a seat with ID 8K
+Below details were found in database
+------------------------------------------
+Name: Jeanette Mcdaniel
+Flight ID: LH2121
+Source: FRA
+Destination: HKG
+Gate No: A05
+Boarding time: 22:00
+Ticket ID: q2qos167tcggmr7
+Booking Class: B
+------------------------------------------
+
+Proceed with check-in for flight LH2121 ?
+Type YES to CHECK-IN or NO to cancel CHECK-IN
+Jeanette Mcdaniel is deciding whether to check-in or to go back home and sleep............
+YES CHECK-IN
+Checking you in...............
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 19.11 kg
+baggage is on conveyor belt-------
+---------baggage detected by sensor------------- 
+Baggage weighs: 18.54 kg
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+searching for explosives in baggage /////----o---
+......../ searching with brute force algorithm
+......../ Baggage contains no explosives
+-- baggage Tag created for baggage..
+Seat with ID: 8K has been reserved for you!
+
+BOARDING PASS FOR JEANETTE MCDANIEL
+-----------------------------------------------------------------------------
+LUFTHANSA                      q2qos167tcggmr7 /  Jeanette Mcdaniel
+Jeanette Mcdaniel                                     /  q2qos167tcggmr7
+FRA   LH2121   B  25.Oct                       /  FRA
+HKG                                            /  HKG
+SEAT ID: 8K                                   /  LH2121 B 25.Oct
+                                               / GATE: A05   22:00
+MAX 2  HANDLUGGAGE/ LUGGAGE
+-----------------------------------------------------------------------------
+printing LOUNGE voucher for Jeanette Mcdaniel
 
 
 
