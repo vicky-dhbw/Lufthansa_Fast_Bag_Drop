@@ -30,7 +30,7 @@ public class Application {
 
         serviceAgent.executeImport(fastBagDrop.getServices().getImporter(),flight,fastBagDrop);
         fastBagDrop.getServices().getCheckIn().executeCheckIn(fastBagDrop,flight);
-        fastBagDrop.getServices().getExport().write(serviceAgent);
+        serviceAgent.executeExport(fastBagDrop.getServices().getExport());
         serviceAgent.executeDataAnalytics(fastBagDrop.getServices().getDataAnalytics(),fastBagDrop.getFastBagDropSection(Position.LEFT).getDisplay(), fastBagDrop.getDatabase());
     }
 

@@ -5,6 +5,7 @@ import automatComponents.Display;
 import automatComponents.FastBagDrop;
 import flightRelevants.Flight;
 import services.DataAnalytics;
+import services.Export;
 import services.Import;
 
 public class ServiceAgent extends Employee{
@@ -15,5 +16,8 @@ public class ServiceAgent extends Employee{
 
     public void executeDataAnalytics(DataAnalytics dataAnalytics, Display display,Database database){
         dataAnalytics.executeDataAnalysis(database,display);
+    }
+    public void executeExport(Export export){
+        export.write();
     }
 }

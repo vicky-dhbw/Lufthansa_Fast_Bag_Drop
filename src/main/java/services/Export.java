@@ -15,7 +15,7 @@ public class Export {
 
     private final Map<String, List<Object>> baggageRecords=new HashMap<>();
 
-    public void write(Human human){
+    public void write(){
 
         eraseFileContent();  //file needs to be empty first, otherwise there would be too many lines
         List<Object> objects;
