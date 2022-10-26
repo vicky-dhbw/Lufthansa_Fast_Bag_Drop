@@ -22,7 +22,8 @@ public class DataAnalytics {
 
     public void executeQuery01(Display display){
         Map<String,List<Record>> map01=recordList.stream().collect(Collectors.groupingBy(Record::getBookingClass));
-        display.showDataAnalytics(map01);
+        display.showDataAnalytics1(map01);
+
     }
 
     public void executeQuery02(Display display){
@@ -34,6 +35,8 @@ public class DataAnalytics {
         businessClass.sort(Comparator.comparing(Record::getSurname).reversed());
         premiumEconomyClass.sort(Comparator.comparing(Record::getSurname).reversed());
         economyClass.sort(Comparator.comparing(Record::getSurname).reversed());
+
+        display.showDataAnalytics2(businessClass,premiumEconomyClass,economyClass);
     }
 
 

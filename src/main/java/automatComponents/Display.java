@@ -104,10 +104,32 @@ public class Display {
         System.out.println("-----------------------------------------------------------------------------");
     }
 
-    public void showDataAnalytics(Map<String,List<Record>> map01){
+    public void showDataAnalytics1(Map<String,List<Record>> map01){
         System.out.println();
+        System.out.println("-------------------------------------------------------");
         System.out.println("----- SHOWING DATA ANALYTICS ON DISPLAY ---------");
+        System.out.println("-------------------------------------------------------");
         System.out.println("----- TOTAL WEIGHT OF BAGGAGE GROUPING BY BOOKING CLASS -----");
         map01.forEach((k,v)->System.out.println(k+" ["+"total weight: "+ v.stream().mapToDouble(Record::getBaggageWeight).sum()+" kg]"));
+    }
+    public void showDataAnalytics2(List<Record> businessClass,List<Record> premiumEconomyClass,List<Record> economyClass){
+        System.out.println();
+        System.out.println("----- PASSENGER LIST AND RELEVANT DETAILS GROUPING BY BOOKING CLASS -----");
+
+        System.out.println("BUSINESS CLASS SORTED BY DESCENDING SURNAME");
+        System.out.println();
+        System.out.println("---------  BUSINESS CLASS");
+        System.out.println();
+
+        businessClass.forEach(r->System.out.println(r.getName()+ " "+r.getBookingClass()+" "+r.getSeatId()+" "+r.getNumberOfBaggage()));
+        System.out.println();
+        System.out.println("----------  PREMIUM ECONOMY CLASS");
+        System.out.println();
+        economyClass.forEach(r->System.out.println(r.getName()+ " "+r.getBookingClass()+" "+r.getSeatId()+" "+r.getNumberOfBaggage()));
+        System.out.println();
+        System.out.println("---------- ECONOMY CLASS");
+        System.out.println();
+        premiumEconomyClass.forEach(r->System.out.println(r.getName()+ " "+r.getBookingClass()+" "+r.getSeatId()+" "+r.getNumberOfBaggage()));
+
     }
 }
