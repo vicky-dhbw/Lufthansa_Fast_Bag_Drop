@@ -1,5 +1,6 @@
 
 import automatComponents.*;
+import com.google.zxing.WriterException;
 import flightRelevants.Flight;
 import flightRelevants.FlightID;
 import flightRelevants.Gate;
@@ -23,10 +24,12 @@ public class TestApplication {
     ServiceAgent serviceAgent;
     Flight flight;
     @BeforeEach
-    public void setUp(){
+    public void setUp() throws IOException, WriterException {
         flight=new Flight(FlightID.LH2121,"22:00", IATAAirportCodes.FRA,IATAAirportCodes.HKG, Gate.A05);
         serviceAgent=new ServiceAgent();
         fastBagDrop=new FastBagDrop();
+        fastBagDrop.setServiceAgent(serviceAgent);
+        fastBagDrop.setFederalPolice(fastBagDrop.getFederalPolice());
         serviceAgent.executeImport(fastBagDrop.getServices().getImporter(),flight,fastBagDrop);
     }
 
@@ -52,7 +55,7 @@ public class TestApplication {
 
     @Test
     @Order(4)
-    public void assureBaggageListNotNull(){
+    public void assureBaggageListNotNull() throws IOException, WriterException {
         Queue<Passenger> testQueue=fastBagDrop.getLeftSection().getBusinessQueue().getBusinessQueue();
         CheckInSimulator checkInSimulator=new CheckInSimulator();
         for(Passenger passenger: testQueue){
@@ -66,7 +69,7 @@ public class TestApplication {
 
     @Test
     @Order(5)
-    public void assureBaggageContent(){
+    public void assureBaggageContent() throws IOException, WriterException {
         Queue<Passenger> testQueue=fastBagDrop.getRightSection().getEconomyQueue().getEconomyQueue();
         CheckInSimulator checkInSimulator=new CheckInSimulator();
         while(!testQueue.isEmpty()){
@@ -80,7 +83,7 @@ public class TestApplication {
 
     @Test
     @Order(6)
-    public void baggageCountIsPerfect(){
+    public void baggageCountIsPerfect() throws IOException, WriterException {
         Queue<Passenger> businessQ=fastBagDrop.getLeftSection().getBusinessQueue().getBusinessQueue();
         Queue<Passenger> economyQ=fastBagDrop.getRightSection().getEconomyQueue().getEconomyQueue();
         CheckInSimulator checkInSimulator=new CheckInSimulator();
@@ -139,7 +142,7 @@ public class TestApplication {
     }
     @Test
     @Order(8)
-    public void checkBaggageQRCode() throws IOException {
+    public void checkBaggageQRCode() throws IOException, WriterException {
         CheckInSimulator checkInSimulator=new CheckInSimulator();
         Queue<Passenger> businessQ=fastBagDrop.getLeftSection().getBusinessQueue().getBusinessQueue();
 
@@ -152,6 +155,5 @@ public class TestApplication {
         }
 
     }
-
 
 }

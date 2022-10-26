@@ -9,6 +9,7 @@ import identityRelevants.RightBoardingPassPart;
 import livingComponents.Passenger;
 import passengerRelevants.Baggage;
 import services.QRCodeGenerator;
+import services.Record;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -55,6 +56,10 @@ public class CheckInSimulator {
 
                 String seatId=FlightSeatStatusUpdater.reserveSeat(seat,flight);
                 generateBoardingPass(fastBagDrop.getDatabase(), passenger,flight,seatId);
+
+                Record record=new Record(passenger);
+                fastBagDrop.getDatabase().getRecordList().add(record);
+
                 fastBagDrop.getFastBagDropSection(position).getDisplay().displayBoardingPass(passenger);
                 fastBagDrop.getFastBagDropSection(position).getDocumentPrinter().printVoucher(passenger);
             }

@@ -21,7 +21,6 @@ public class Import {
 
     public void executeImport(Flight forFlight, FastBagDrop fastBagDrop){
 
-        fastBagDrop.getServices().getExport().eraseFileContent();  //the file needs to be erased to take new records....otherwise the file could be very large
         try {
             BufferedReader bufferedReader = new BufferedReader(new FileReader(Configuration.INSTANCE.assignmentFile));
             String line;

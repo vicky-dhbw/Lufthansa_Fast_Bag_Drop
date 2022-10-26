@@ -1,6 +1,7 @@
 import automatComponents.BusinessQueue;
 import automatComponents.EconomyQueue;
 import automatComponents.FastBagDrop;
+import automatComponents.Position;
 import com.google.zxing.WriterException;
 import flightRelevants.Flight;
 import flightRelevants.FlightID;
@@ -30,6 +31,7 @@ public class Application {
         serviceAgent.executeImport(fastBagDrop.getServices().getImporter(),flight,fastBagDrop);
         fastBagDrop.getServices().getCheckIn().executeCheckIn(fastBagDrop,flight);
         fastBagDrop.getServices().getExport().write(serviceAgent);
+        serviceAgent.executeDataAnalytics(fastBagDrop.getServices().getDataAnalytics(),fastBagDrop.getFastBagDropSection(Position.LEFT).getDisplay(), fastBagDrop.getDatabase());
     }
 
 }

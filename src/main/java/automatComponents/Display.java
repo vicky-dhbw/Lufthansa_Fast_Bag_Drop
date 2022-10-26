@@ -1,6 +1,5 @@
 package automatComponents;
 
-import com.sun.source.tree.LambdaExpressionTree;
 import flightRelevants.Flight;
 import flightRelevants.FlightID;
 import flightRelevants.Gate;
@@ -8,9 +7,10 @@ import flightRelevants.IATAAirportCodes;
 import identityRelevants.BookingClass;
 import livingComponents.Passenger;
 import passengerRelevants.Baggage;
+import services.Record;
 
 import java.util.List;
-import java.util.Scanner;
+import java.util.Map;
 
 public class Display {
 
@@ -102,5 +102,12 @@ public class Display {
         System.out.println("                                               / GATE: "+gate+"   "+time);
         System.out.println("MAX "+numberOfBaggage+ "  HANDLUGGAGE/ LUGGAGE");
         System.out.println("-----------------------------------------------------------------------------");
+    }
+
+    public void showDataAnalytics(Map<String,List<Record>> map01){
+        System.out.println();
+        System.out.println("----- SHOWING DATA ANALYTICS ON DISPLAY ---------");
+        System.out.println("----- TOTAL WEIGHT OF BAGGAGE GROUPING BY BOOKING CLASS -----");
+        map01.forEach((k,v)->System.out.println(k+" ["+"total weight: "+ v.stream().mapToDouble(Record::getBaggageWeight).sum()+" kg]"));
     }
 }

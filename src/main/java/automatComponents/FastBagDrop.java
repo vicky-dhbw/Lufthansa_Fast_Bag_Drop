@@ -83,4 +83,5 @@ public class FastBagDrop {
     public void setFederalPolice(FederalPolice federalPolice1){
         this.federalPolice=federalPolice1;
     }
+
 }

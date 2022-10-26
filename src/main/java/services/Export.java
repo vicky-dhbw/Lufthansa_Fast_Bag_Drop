@@ -17,6 +17,7 @@ public class Export {
 
     public void write(Human human){
 
+        eraseFileContent();  //file needs to be empty first, otherwise there would be too many lines
         List<Object> objects;
 
         for (var entry : baggageRecords.entrySet()) {
