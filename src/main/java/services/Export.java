@@ -29,6 +29,18 @@ public class Export {
         }
     }
 
+    public void eraseFileContent(){
+        try (FileWriter fileWriter = new FileWriter(Configuration.INSTANCE.baggageLogs))
+        {
+            fileWriter.write("");
+            //fileWriter.append(line);
+        }
+        catch (IOException ioException)
+        {
+            ioException.printStackTrace();
+        }
+    }
+
     public Map<String, List<Object>> getBaggageRecords() {
         return baggageRecords;
     }
