@@ -1,6 +1,7 @@
 
 import automatComponents.*;
 import com.google.zxing.WriterException;
+import configuration.Configuration;
 import flightRelevants.Flight;
 import flightRelevants.FlightID;
 import flightRelevants.Gate;
@@ -117,7 +118,7 @@ public class TestApplication {
         List<String> entries_=new ArrayList<>();
         int counterBaggage=0;
         try{
-            BufferedReader bufferedReader=new BufferedReader(new FileReader("src/main/java/Data/assignment.csv"));
+            BufferedReader bufferedReader=new BufferedReader(new FileReader(Configuration.INSTANCE.assignmentFile));
             String line;
 
             while ((line = bufferedReader.readLine()) != null){
@@ -130,7 +131,7 @@ public class TestApplication {
 
         int counterContent=0;
         try{
-            BufferedReader bufferedReader=new BufferedReader(new FileReader("src/main/java/Data/baggage_content.txt"));
+            BufferedReader bufferedReader=new BufferedReader(new FileReader(Configuration.INSTANCE.baggageContents));
             while ((bufferedReader.readLine())!= null){
                 counterContent++;
             }
