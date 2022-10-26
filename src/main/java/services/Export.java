@@ -16,36 +16,18 @@ import java.util.Map;
 public class Export {
 
     private final Map<String, List<Object>> baggageRecords=new HashMap<>();
-    Path fileName= Path.of("configuration/fast_bag_drop.csv");
 
-    public void record() throws IOException {
-
-        Iterator<Map.Entry<String, List<Object>>> it = baggageRecords.entrySet().iterator();
-        while (it.hasNext()) {
-            Map.Entry<String, List<Object>> pair = it.next();
-            List<Object> recordObjects=pair.getValue();
-            //System.out.println(pair.getKey() + " = " + pair.getValue());
-            BoardingPass boardingPass= (BoardingPass) recordObjects.get(0);
-            String passportId= (String) recordObjects.get(1);
-            String baggageTagId= (String) recordObjects.get(2);
-            Result result= (Result) recordObjects.get(3);
-
-            String bookingClass=boardingPass.getLeftBoardingPassPart().getBookingClass().toString();
-            String name=boardingPass.getLeftBoardingPassPart().getName();
-            String ticketId=boardingPass.getLeftBoardingPassPart().getId();
-            String addLine=pair.getKey()+";"+name+";"+bookingClass+";"+passportId+";"+ticketId+";"+baggageTagId+ Configuration.INSTANCE.lineSeparator;
-
-
-            BufferedWriter writer = new BufferedWriter(new FileWriter(String.valueOf(fileName)));
-            writer.append(addLine);
-
-            writer.close();
-            System.out.println(addLine);
-            it.remove(); // avoids a ConcurrentModificationException
+    public void write(String line){
+        try (FileWriter fileWriter = new FileWriter(Configuration.INSTANCE.baggageLogs,true))
+        {
+            fileWriter.write(line);
+            //fileWriter.append(line);
         }
-
+        catch (IOException ioException)
+        {
+            ioException.printStackTrace();
+        }
     }
-
 
     public Map<String, List<Object>> getBaggageRecords() {
         return baggageRecords;
@@ -53,7 +35,5 @@ public class Export {
     public List<Object> getListForKey(String baggageId){
         return baggageRecords.get(baggageId);
     }
-    public Path getFileName(){
-        return fileName;
-    }
+
 }

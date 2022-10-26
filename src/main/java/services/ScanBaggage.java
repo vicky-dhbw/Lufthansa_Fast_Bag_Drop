@@ -1,6 +1,8 @@
 package services;
 
 import automatComponents.BaggageScanner;
+import automatComponents.Database;
+import configuration.Configuration;
 import identityRelevants.BoardingPass;
 import livingComponents.Passenger;
 import passengerRelevants.Baggage;
@@ -16,7 +18,7 @@ import java.util.List;
 import java.util.Queue;
 
 public class ScanBaggage {
-    public void scanBaggage(Queue<Baggage> baggageQueue, BaggageScanner baggageScanner, BoardingPass boardingPass,Passenger passenger,Export export) throws IOException {
+    public void scanBaggage(Queue<Baggage> baggageQueue, BaggageScanner baggageScanner, BoardingPass boardingPass, Passenger passenger, Export export, Database database) throws IOException {
         baggageScanner = new BaggageScanner(StringMatchingAlgorithm.BF);   //scanner uses default brute force to scan baggage
         // you can try baggageScanner = new BaggageScanner(StringMatchingAlgorithm.BM);  <-- uses boyer moore
         // also try baggageScanner = new BaggageScanner(StringMatchingAlgorithm.KMP); <-- knuth-morris-algorithm
@@ -42,6 +44,17 @@ public class ScanBaggage {
 
                     export.getBaggageRecords().put(baggage.getBaggageTag().getBaggageTagID(),baggageRecordsObjects);  //Records
 
+                    String passportId= passenger.getPassport().getId();
+                    String baggageTagId=baggageTag.getBaggageTagID();
+                    String result= baggage.getResult().toString();
+
+                    String bookingClass=passenger.getPassengerBookingClass().toString();
+                    String name=passenger.getName();
+                    String ticketId= (String) database.getListForKey(passportId).get(5);
+                    String addLine = System.nanoTime() + ";" + name + ";" + bookingClass + ";" + passportId + ";" + ticketId + ";" + baggageTagId + ";" + result + Configuration.INSTANCE.lineSeparator;
+
+
+                    export.write(addLine);
                     boardingPass.addBaggageToTagList(baggageTag);
                     passenger.getBaggageList().add(baggage);
                 }

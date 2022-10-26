@@ -49,7 +49,7 @@ public class CheckInSimulator {
 
                 Queue<Baggage> baggageQueue=fastBagDrop.getFastBagDropSection(position).getConveyorBelt().acceptBaggage(passenger.getBaggageList(),fastBagDrop.getFastBagDropSection(position).getSensor(),fastBagDrop.getFastBagDropSection(position).getDisplay());
                 // the search of explosives occur over the scan baggage service where the baggage scanner scans baggage
-                fastBagDrop.getServices().getScanBaggage().scanBaggage(baggageQueue,fastBagDrop.getFastBagDropSection(position).getBaggageScanner(),passenger.getBoardingPass(),passenger,fastBagDrop.getServices().getExport());
+                fastBagDrop.getServices().getScanBaggage().scanBaggage(baggageQueue,fastBagDrop.getFastBagDropSection(position).getBaggageScanner(),passenger.getBoardingPass(),passenger,fastBagDrop.getServices().getExport(), fastBagDrop.getDatabase());
                 //fastBagDrop.getFastBagDropSection(position).getConveyorBelt().removeBaggage(); //removes baggage from the conveyor belt
 
 
