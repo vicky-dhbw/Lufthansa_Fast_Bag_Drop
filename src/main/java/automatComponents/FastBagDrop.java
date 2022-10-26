@@ -3,6 +3,8 @@ package automatComponents;
 import automatComponents.FastBagDropSection;
 import com.google.zxing.WriterException;
 import flightRelevants.Flight;
+import livingComponents.FederalPolice;
+import livingComponents.ServiceAgent;
 import services.BaggageDrop;
 import services.Services;
 
@@ -17,6 +19,10 @@ public class FastBagDrop {
     private final FastBagDropSection rightSection=new FastBagDropSection(Position.RIGHT);
     private final FastBagDropSection leftSection=new FastBagDropSection(Position.LEFT);
     private final Database database=new Database();
+
+    private ServiceAgent serviceAgent=new ServiceAgent();
+    private FederalPolice federalPolice=new FederalPolice();
+
 
     private final Services services=new Services();
 
@@ -60,5 +66,21 @@ public class FastBagDrop {
             return rightSection;
         }
         return null;
+    }
+
+    public ServiceAgent getServiceAgent() {
+        return serviceAgent;
+    }
+
+    public FederalPolice getFederalPolice() {
+        return federalPolice;
+    }
+
+    public void setServiceAgent(ServiceAgent serviceAgent1){
+        this.serviceAgent=serviceAgent1;
+    }
+
+    public void setFederalPolice(FederalPolice federalPolice1){
+        this.federalPolice=federalPolice1;
     }
 }

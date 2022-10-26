@@ -4,7 +4,9 @@ import automatComponents.BaggageScanner;
 import automatComponents.Database;
 import configuration.Configuration;
 import identityRelevants.BoardingPass;
+import livingComponents.Human;
 import livingComponents.Passenger;
+import livingComponents.ServiceAgent;
 import passengerRelevants.Baggage;
 import passengerRelevants.BaggageTag;
 import passengerRelevants.BaggageTagIDGenerator;
@@ -35,26 +37,25 @@ public class ScanBaggage {
                     baggage.getBaggageTag().setQrCode();
                     baggage.getBaggageTag().setBaggageTagID(BaggageTagIDGenerator.createRandomBaggageTagID());
 
-                    List<Object> baggageRecordsObjects=new ArrayList<>();
-                    baggageRecordsObjects.add(boardingPass);   //Ticket -> BoardingPass
-                    baggageRecordsObjects.add(passenger.getPassport().getId());
-                    baggageRecordsObjects.add(baggage.getBaggageTag().getBaggageTagID());
-                    baggageRecordsObjects.add(baggage.getResult());
-                    baggageRecordsObjects.add(System.nanoTime());
-
-                    export.getBaggageRecords().put(baggage.getBaggageTag().getBaggageTagID(),baggageRecordsObjects);  //Records
-
                     String passportId= passenger.getPassport().getId();
                     String baggageTagId=baggageTag.getBaggageTagID();
                     String result= baggage.getResult().toString();
-
                     String bookingClass=passenger.getPassengerBookingClass().toString();
                     String name=passenger.getName();
                     String ticketId= (String) database.getListForKey(passportId).get(5);
-                    String addLine = System.nanoTime() + ";" + name + ";" + bookingClass + ";" + passportId + ";" + ticketId + ";" + baggageTagId + ";" + result + Configuration.INSTANCE.lineSeparator;
 
+                    List<Object> baggageRecordsObjects=new ArrayList<>();
+                    // baggageRecordsObjects.add(boardingPass);   //Ticket -> BoardingPass  // boardingPass is still empty, can only be issued after successful baggage checkIN
+                    // Ticket is not realised as Object
+                    baggageRecordsObjects.add(name);
+                    baggageRecordsObjects.add(bookingClass);
+                    baggageRecordsObjects.add(passportId);
+                    baggageRecordsObjects.add(ticketId);
+                    baggageRecordsObjects.add(System.nanoTime());
+                    baggageRecordsObjects.add(result);
 
-                    export.write(addLine);
+                    export.getBaggageRecords().put(baggageTagId,baggageRecordsObjects);  //Records
+
                     boardingPass.addBaggageToTagList(baggageTag);
                     passenger.getBaggageList().add(baggage);
                 }

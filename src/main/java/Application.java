@@ -24,11 +24,12 @@ public class Application {
         ServiceAgent serviceAgent=new ServiceAgent();
         FederalPolice federalPolice=new FederalPolice();
         FastBagDrop fastBagDrop=new FastBagDrop();
+        fastBagDrop.setServiceAgent(serviceAgent);
+        fastBagDrop.setFederalPolice(federalPolice);
+
         serviceAgent.executeImport(fastBagDrop.getServices().getImporter(),flight,fastBagDrop);
-
         fastBagDrop.getServices().getCheckIn().executeCheckIn(fastBagDrop,flight);
-        Map<String, List<Object>> obs=fastBagDrop.getServices().getExport().getBaggageRecords();
-
+        fastBagDrop.getServices().getExport().write(serviceAgent);
     }
 
 }
