@@ -1,32 +1,39 @@
-import automatComponents.BusinessQueue;
-import automatComponents.EconomyQueue;
 import automatComponents.FastBagDrop;
 import automatComponents.Position;
-import com.google.zxing.WriterException;
 import flightRelevants.Flight;
 import flightRelevants.FlightID;
 import flightRelevants.Gate;
 import flightRelevants.IATAAirportCodes;
 import livingComponents.FederalPolice;
-import livingComponents.Passenger;
 import livingComponents.ServiceAgent;
-import passengerRelevants.Baggage;
-import services.QRCodeGenerator;
-
-import java.io.*;
-import java.util.List;
-import java.util.Map;
-import java.util.Queue;
 
 public class Application {
-    public static void main(String[] args) throws IOException, WriterException {
+    public static void main(String[] args) throws Exception {
 
         Flight flight=new Flight(FlightID.LH2121,"22:00", IATAAirportCodes.FRA,IATAAirportCodes.HKG,Gate.A05);
+
+        FastBagDrop fastBagDrop=new FastBagDrop();
         ServiceAgent serviceAgent=new ServiceAgent();
         FederalPolice federalPolice=new FederalPolice();
-        FastBagDrop fastBagDrop=new FastBagDrop();
-        fastBagDrop.setServiceAgent(serviceAgent);
+
+        // for ease, employees can start / shutdown / lock and unlock only through leftSection
+        // service agent and federal police are issued valid id card that contains encrypted pin
+        // the encrypted pins are store as decrypted in log in database in encryption manager in ID card scanner
+
+        fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().setUpCard(serviceAgent.getIdCard());
+        fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().setUpCard(federalPolice.getIdCard());
+
+        String decryptedPINForSA=fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().getMachineDES().decrypt(serviceAgent.getIdCard().getRfid_chip().getPIN());
+        String decryptedPINForFPO=fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().getMachineDES().decrypt(federalPolice.getIdCard().getRfid_chip().getPIN());
+
+        // their passwords must be saved to database
+
+        //fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().
+
+        fastBagDrop.setServiceAgent(serviceAgent);   // service agent and federal police is a part fast bag drop simulation processes
         fastBagDrop.setFederalPolice(federalPolice);
+
+        serviceAgent.startUpMachine(fastBagDrop,serviceAgent.getIdCard());
 
         serviceAgent.executeImport(fastBagDrop.getServices().getImporter(),flight,fastBagDrop);
         fastBagDrop.getServices().getCheckIn().executeCheckIn(fastBagDrop,flight);

@@ -22,7 +22,7 @@ public class FastBagDropSection {
 
     private final Position position;
 
-    public FastBagDropSection(Position position){
+    public FastBagDropSection(Position position) throws Exception {
         passportScanner=new PassportScanner();
         documentPrinter =new DocumentPrinter();
         conveyorBelt=new ConveyorBelt();

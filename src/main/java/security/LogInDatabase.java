@@ -1,16 +1,18 @@
 package security;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.UUID;
 
 public class LogInDatabase {
-    private final HashMap<UUID,String> uuidPinDatabase=new HashMap<>();
+    private List<String> pins=new ArrayList<>();
 
-    public HashMap<UUID,String> getUuidPinDatabase(){
-        return uuidPinDatabase;
+    public List<String> getPins() {
+        return pins;
     }
 
-    public void addToDatabase(UUID uuid,String pin){
-        uuidPinDatabase.put(uuid,pin);
+    public void setPins(List<String> pins) {
+        this.pins = pins;
     }
 }

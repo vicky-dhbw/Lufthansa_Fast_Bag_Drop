@@ -3,5 +3,6 @@ package automatComponents;
 public enum FastBagDropState {
     ON,
     OFF,
-    LOCKED
+    LOCKED,
+    UNLOCKED
 }

@@ -1,24 +1,13 @@
 package identityRelevants;
 
-import security.AES;
 import security.PinGenerator;
 
 public class RFIDChip {
-    private String PIN;
-    private AES cardAES;
-
-    public RFIDChip() throws Exception {
-        PIN= PinGenerator.createRandomPIN();
-        cardAES=new AES();
-    }
-
-    public AES getCardAES(){
-        return cardAES;
-    }
-    public String getPIN() {
+    private byte[] PIN;
+    public byte[] getPIN() {
         return PIN;
     }
-    public void setPIN(String PIN) {
+    public void setPIN(byte[] PIN) {
         this.PIN = PIN;
     }
 }

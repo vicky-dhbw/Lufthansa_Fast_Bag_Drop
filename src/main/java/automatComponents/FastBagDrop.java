@@ -26,8 +26,9 @@ public class FastBagDrop {
 
     private final Services services=new Services();
 
-    public FastBagDrop() throws IOException, WriterException {
+    public FastBagDrop() throws Exception {
         this.serialNumber = UUID.randomUUID();
+        this.currentState=FastBagDropState.OFF;
     }
 
     public UUID getSerialNumber() {
