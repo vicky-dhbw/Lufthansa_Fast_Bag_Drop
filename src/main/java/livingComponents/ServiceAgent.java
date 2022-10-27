@@ -28,4 +28,8 @@ public class ServiceAgent extends Employee{
     public void startUpMachine(FastBagDrop fastBagDrop, IDCard idCard){
         fastBagDrop.getServices().getStartUp().executeStartUp(fastBagDrop,idCard);
     }
+
+    public void shutDownMachine(FastBagDrop fastBagDrop, IDCard idCard){
+        fastBagDrop.getServices().getShutdown().executeShutDown(fastBagDrop,idCard);
+    }
 }

@@ -9,7 +9,8 @@ public class StartUp {
     public void executeStartUp(FastBagDrop fastBagDrop, IDCard idCard){
         System.out.println();
         System.out.println("service agent trying to start up fast baggage drop machine with his id card...........");
-        boolean authenticationSuccessful=fastBagDrop.getLeftSection().getIdCardScanner().authenticateIdCard(idCard);
+
+        boolean authenticationSuccessful=fastBagDrop.getLeftSection().getIdCardScanner().authenticateIdCard(idCard,fastBagDrop.getLeftSection().getDisplay());
 
         if(authenticationSuccessful){
             fastBagDrop.setCurrentState(FastBagDropState.ON);

@@ -23,10 +23,6 @@ public class Application {
         fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().setUpCard(serviceAgent.getIdCard());
         fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().setUpCard(federalPolice.getIdCard());
 
-        String decryptedPINForSA=fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().getMachineDES().decrypt(serviceAgent.getIdCard().getRfid_chip().getPIN());
-        String decryptedPINForFPO=fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().getMachineDES().decrypt(federalPolice.getIdCard().getRfid_chip().getPIN());
-
-        // their passwords must be saved to database
 
         //fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().
 
@@ -39,6 +35,8 @@ public class Application {
         fastBagDrop.getServices().getCheckIn().executeCheckIn(fastBagDrop,flight);
         serviceAgent.executeExport(fastBagDrop.getServices().getExport());
         serviceAgent.executeDataAnalytics(fastBagDrop.getServices().getDataAnalytics(),fastBagDrop.getFastBagDropSection(Position.LEFT).getDisplay(), fastBagDrop.getDatabase());
+
+        serviceAgent.shutDownMachine(fastBagDrop,serviceAgent.getIdCard());
     }
 
 }

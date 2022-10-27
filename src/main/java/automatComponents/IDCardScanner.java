@@ -10,10 +10,12 @@ public class IDCardScanner {
     public IDCardScanner() throws Exception {
     }
 
-    public boolean authenticateIdCard(IDCard idCard){
+    public boolean authenticateIdCard(IDCard idCard,Display display){
+
+        byte[] encryptedPIN=display.acceptPINForStartUpShutDown(idCard);
         String decryptedPin;
         try {
-            decryptedPin= encryptionManager.getMachineDES().decrypt(idCard.getRfid_chip().getPIN());   //service officer giving pin over id card scanner
+            decryptedPin= encryptionManager.getMachineDES().decrypt(encryptedPIN);   //service officer giving pin over id card scanner
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

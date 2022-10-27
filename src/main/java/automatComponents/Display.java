@@ -5,6 +5,7 @@ import flightRelevants.FlightID;
 import flightRelevants.Gate;
 import flightRelevants.IATAAirportCodes;
 import identityRelevants.BookingClass;
+import identityRelevants.IDCard;
 import livingComponents.Passenger;
 import passengerRelevants.Baggage;
 import services.Record;
@@ -130,6 +131,12 @@ public class Display {
         System.out.println("---------- ECONOMY CLASS");
         System.out.println();
         premiumEconomyClass.forEach(r->System.out.println(r.getName()+ " "+r.getBookingClass()+" "+r.getSeatId()+" "+r.getNumberOfBaggage()));
+
+    }
+
+    public byte[] acceptPINForStartUpShutDown(IDCard idCard){
+
+        return idCard.getRfid_chip().getPIN();
 
     }
 }
