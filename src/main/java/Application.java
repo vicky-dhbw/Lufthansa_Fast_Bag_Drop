@@ -45,9 +45,9 @@ public class Application {
         //fast bag drop state may also be LOCKED if authentication fails <--authenticates using id scanner
         fastBagDrop.getServices().getCheckIn().executeCheckIn(fastBagDrop,flight);
         serviceAgent.executeExport(fastBagDrop.getServices().getExport());
-        serviceAgent.shutDownMachine(fastBagDrop,serviceAgent.getIdCard());
 
         serviceAgent.executeDataAnalytics(fastBagDrop.getServices().getDataAnalytics(),fastBagDrop.getFastBagDropSection(Position.LEFT).getDisplay(), fastBagDrop.getDatabase());
+        serviceAgent.shutDownMachine(fastBagDrop,serviceAgent.getIdCard());
 
 
 

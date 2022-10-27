@@ -12,3 +12,5 @@ S03
 
 PLease find QR Code generated for baggage for Flight LH2121 from FRA to HKG in src folder  src/baggageTag.jpg
 Records for baggage Scan is in Data/fast_bag_drop.csv
+
+Repository : https://github.com/vicky-dhbw/Lufthansa_Fast_Bag_Drop.git

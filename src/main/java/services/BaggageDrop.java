@@ -57,6 +57,7 @@ public class BaggageDrop {
                 //fastBagDrop.getFastBagDropSection(position).getConveyorBelt().removeBaggage(); //removes baggage from the conveyor belt
 
 
+
                 String seatId=FlightSeatStatusUpdater.reserveSeat(seat,flight);
                 generateBoardingPass(fastBagDrop.getDatabase(), passenger,flight,seatId);
 

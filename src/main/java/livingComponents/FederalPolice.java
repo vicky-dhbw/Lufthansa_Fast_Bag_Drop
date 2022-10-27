@@ -1,6 +1,7 @@
 package livingComponents;
 
 import automatComponents.FastBagDrop;
+import automatComponents.FastBagDropSection;
 import automatComponents.FastBagDropState;
 import identityRelevants.IDCard;
 
@@ -16,4 +17,9 @@ public class FederalPolice extends Employee{
         System.out.println("federal police trying to lock machine......");
         fastBagDrop.setCurrentState(FastBagDropState.LOCKED);
     }
+
+    public void assertPassenger(Passenger passenger){
+        System.out.println("arresting : "+passenger.getName());
+    }
+
 }

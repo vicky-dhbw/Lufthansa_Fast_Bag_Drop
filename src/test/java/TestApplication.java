@@ -27,7 +27,7 @@ public class TestApplication {
     public void setUp() throws Exception {
         flight=new Flight(FlightID.LH2121,"22:00", IATAAirportCodes.FRA,IATAAirportCodes.HKG, Gate.A05);
         serviceAgent=new ServiceAgent();
-        fastBagDrop=new FastBagDrop();
+        fastBagDrop=new FastBagDrop(Manufacturer.SMITH);
         fastBagDrop.setServiceAgent(serviceAgent);
         fastBagDrop.setFederalPolice(fastBagDrop.getFederalPolice());
         serviceAgent.executeImport(fastBagDrop.getServices().getImporter(),flight,fastBagDrop);
