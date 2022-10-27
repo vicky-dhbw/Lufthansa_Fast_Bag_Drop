@@ -135,8 +135,10 @@ public class Display {
     }
 
     public byte[] acceptPINForStartUpShutDown(IDCard idCard){
-
         return idCard.getRfid_chip().getPIN();
-
     }
+    public void showAuthenticationError(){
+        System.out.println("machine could not be unlocked");
+    }
+
 }

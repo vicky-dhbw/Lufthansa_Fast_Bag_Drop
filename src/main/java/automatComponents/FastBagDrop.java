@@ -28,7 +28,7 @@ public class FastBagDrop {
 
     public FastBagDrop() throws Exception {
         this.serialNumber = UUID.randomUUID();
-        this.currentState=FastBagDropState.OFF;
+        this.currentState=FastBagDropState.ON;
     }
 
     public UUID getSerialNumber() {

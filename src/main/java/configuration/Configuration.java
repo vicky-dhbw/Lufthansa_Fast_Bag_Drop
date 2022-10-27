@@ -17,6 +17,7 @@ public enum Configuration {
 
     public final String baggageLogs="src"+fileSeparator+"main"+fileSeparator+"java"+fileSeparator+"Data"+fileSeparator+"fast_bag_drop.csv";
 
+    public final int numberOfTries=3;
 
     public final String qrCodeFile1="./baggageTags/baggageTag.jpg";
     public final String qrCodeFile2="";

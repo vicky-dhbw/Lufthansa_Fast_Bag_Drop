@@ -3,6 +3,7 @@ package livingComponents;
 import automatComponents.Database;
 import automatComponents.Display;
 import automatComponents.FastBagDrop;
+import automatComponents.FastBagDropState;
 import flightRelevants.Flight;
 import identityRelevants.IDCard;
 import services.DataAnalytics;
@@ -30,6 +31,7 @@ public class ServiceAgent extends Employee{
     }
 
     public void shutDownMachine(FastBagDrop fastBagDrop, IDCard idCard){
-        fastBagDrop.getServices().getShutdown().executeShutDown(fastBagDrop,idCard);
+        fastBagDrop .getServices().getShutdown().executeShutDown(fastBagDrop,idCard); // the service agent starts the startUp over the display  ---> see display.serviceAgentStartsMachine
     }
+
 }

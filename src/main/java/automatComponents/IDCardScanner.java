@@ -35,4 +35,8 @@ public class IDCardScanner {
         return this.encryptionManager;
     }
 
+    public void failAuthenticationMessage(Display display){
+        display.showAuthenticationError();
+    }
+
 }
