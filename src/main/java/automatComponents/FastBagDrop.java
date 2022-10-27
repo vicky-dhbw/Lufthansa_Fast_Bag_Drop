@@ -1,14 +1,9 @@
 package automatComponents;
 
-import automatComponents.FastBagDropSection;
-import com.google.zxing.WriterException;
-import flightRelevants.Flight;
 import livingComponents.FederalPolice;
 import livingComponents.ServiceAgent;
-import services.BaggageDrop;
 import services.Services;
 
-import java.io.IOException;
 import java.util.UUID;
 
 public class FastBagDrop {

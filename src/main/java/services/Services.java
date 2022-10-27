@@ -6,7 +6,6 @@ import java.io.IOException;
 
 public class Services {
 
-    private final BaggageDrop baggageDrop;
     private final CheckIn checkIn;
     private final DataAnalytics dataAnalytics;
     private final DetermineWeight determineWeight;
@@ -20,7 +19,6 @@ public class Services {
     private final Unlock unlock;
 
     public Services() throws IOException, WriterException {
-        baggageDrop=new BaggageDrop();
         checkIn=new CheckIn();
         dataAnalytics=new DataAnalytics();
         determineWeight=new DetermineWeight();
@@ -34,10 +32,6 @@ public class Services {
         unlock=new Unlock();
     }
 
-
-    public BaggageDrop getBaggageDrop() {
-        return baggageDrop;
-    }
 
     public CheckIn getCheckIn() {
         return checkIn;

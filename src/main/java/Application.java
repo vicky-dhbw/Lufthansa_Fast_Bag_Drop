@@ -24,6 +24,12 @@ public class Application {
         fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().setUpCard(serviceAgent.getIdCard());    // card with rfid chip will be created with encrypted pin by the encryption manager in id scard scanner
         fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().setUpCard(federalPolice.getIdCard());
 
+        // credentials are copied to the log in database of the id card reader
+        // both sections must have the same encryption decryption algorithm
+        // overriding new des and log in database of id card scanner in right fast bag drop section
+        fastBagDrop.getRightSection().getIdCardScanner().getEncryptionManager().setDes(fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().getMachineDES());
+        fastBagDrop.getRightSection().getIdCardScanner().getEncryptionManager().setLogInDatabase(fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().getLogInDatabase());
+
         fastBagDrop.setServiceAgent(serviceAgent);   // service agent and federal police is a part fast bag drop simulation processes
         fastBagDrop.setFederalPolice(federalPolice);
 

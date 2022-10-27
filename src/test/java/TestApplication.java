@@ -6,13 +6,12 @@ import flightRelevants.Flight;
 import flightRelevants.FlightID;
 import flightRelevants.Gate;
 import flightRelevants.IATAAirportCodes;
-import livingComponents.FederalPolice;
 import livingComponents.Passenger;
 import livingComponents.ServiceAgent;
 import org.junit.jupiter.api.*;
 import passengerRelevants.Baggage;
+import services.BaggageDrop;
 
-import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -25,7 +24,7 @@ public class TestApplication {
     ServiceAgent serviceAgent;
     Flight flight;
     @BeforeEach
-    public void setUp() throws IOException, WriterException {
+    public void setUp() throws Exception {
         flight=new Flight(FlightID.LH2121,"22:00", IATAAirportCodes.FRA,IATAAirportCodes.HKG, Gate.A05);
         serviceAgent=new ServiceAgent();
         fastBagDrop=new FastBagDrop();
@@ -58,9 +57,9 @@ public class TestApplication {
     @Order(4)
     public void assureBaggageListNotNull() throws IOException, WriterException {
         Queue<Passenger> testQueue=fastBagDrop.getLeftSection().getBusinessQueue().getBusinessQueue();
-        CheckInSimulator checkInSimulator=new CheckInSimulator();
+        BaggageDrop baggageDrop =new BaggageDrop();
         for(Passenger passenger: testQueue){
-            checkInSimulator.assignBaggageToPassenger(passenger,passenger.getNumberOfBaggage());
+            baggageDrop.assignBaggageToPassenger(passenger,passenger.getNumberOfBaggage());
         }
         for(Passenger passenger:testQueue){
             List<Baggage> testBList=passenger.getBaggageList();
@@ -72,10 +71,10 @@ public class TestApplication {
     @Order(5)
     public void assureBaggageContent() throws IOException, WriterException {
         Queue<Passenger> testQueue=fastBagDrop.getRightSection().getEconomyQueue().getEconomyQueue();
-        CheckInSimulator checkInSimulator=new CheckInSimulator();
+        BaggageDrop baggageDrop =new BaggageDrop();
         while(!testQueue.isEmpty()){
             Passenger passenger=testQueue.poll();
-            checkInSimulator.assignBaggageToPassenger(passenger,passenger.getNumberOfBaggage());
+            baggageDrop.assignBaggageToPassenger(passenger,passenger.getNumberOfBaggage());
             for(Baggage baggage:passenger.getBaggageList()){
                 assertTrue(baggage.getContent().length()>0);
             }
@@ -87,13 +86,13 @@ public class TestApplication {
     public void baggageCountIsPerfect() throws IOException, WriterException {
         Queue<Passenger> businessQ=fastBagDrop.getLeftSection().getBusinessQueue().getBusinessQueue();
         Queue<Passenger> economyQ=fastBagDrop.getRightSection().getEconomyQueue().getEconomyQueue();
-        CheckInSimulator checkInSimulator=new CheckInSimulator();
+        BaggageDrop baggageDrop =new BaggageDrop();
 
         for(Passenger passenger:businessQ){
-            checkInSimulator.assignBaggageToPassenger(passenger,passenger.getNumberOfBaggage());
+            baggageDrop.assignBaggageToPassenger(passenger,passenger.getNumberOfBaggage());
         }
         for(Passenger passenger:economyQ){
-            checkInSimulator.assignBaggageToPassenger(passenger,passenger.getNumberOfBaggage());
+            baggageDrop.assignBaggageToPassenger(passenger,passenger.getNumberOfBaggage());
         }
 
         int counterBusinessBaggage=0;
@@ -144,12 +143,12 @@ public class TestApplication {
     @Test
     @Order(8)
     public void checkBaggageQRCode() throws IOException, WriterException {
-        CheckInSimulator checkInSimulator=new CheckInSimulator();
+        BaggageDrop baggageDrop =new BaggageDrop();
         Queue<Passenger> businessQ=fastBagDrop.getLeftSection().getBusinessQueue().getBusinessQueue();
 
         while(!businessQ.isEmpty()){
             Passenger passenger=businessQ.poll();
-            checkInSimulator.simulateCheckIn(fastBagDrop,passenger,flight, Position.LEFT);
+            baggageDrop.simulateCheckIn(fastBagDrop,passenger,flight, Position.LEFT);
             for(Baggage baggage: passenger.getBaggageList()){
                 assertNotNull(baggage.getBaggageTag().getQrCode());  //all checked in baggage have baggage Tag with qr code
             }

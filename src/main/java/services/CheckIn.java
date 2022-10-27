@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class CheckIn {
 
-    CheckInSimulator checkInSimulator=new CheckInSimulator();
+    BaggageDrop baggageDrop =new BaggageDrop();
 
     public CheckIn() throws IOException, WriterException {
         QRCodeGenerator.generateQRCode();
@@ -19,12 +19,12 @@ public class CheckIn {
     public void executeCheckIn(FastBagDrop fastBagDrop,Flight flight) throws IOException {
         while (!(fastBagDrop.getLeftSection().getBusinessQueue().getBusinessQueue().isEmpty())){
             Passenger passenger=fastBagDrop.getLeftSection().getBusinessQueue().removePassenger();
-            checkInSimulator.simulateCheckIn(fastBagDrop,passenger,flight,Position.LEFT);
+            baggageDrop.simulateCheckIn(fastBagDrop,passenger,flight,Position.LEFT);
 
         }
         while (!(fastBagDrop.getRightSection().getEconomyQueue().getEconomyQueue().isEmpty())){
             Passenger passenger_=fastBagDrop.getRightSection().getEconomyQueue().removePassenger();
-            checkInSimulator.simulateCheckIn(fastBagDrop,passenger_,flight,Position.LEFT);
+            baggageDrop.simulateCheckIn(fastBagDrop,passenger_,flight,Position.LEFT);
 
         }
     }

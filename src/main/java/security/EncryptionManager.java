@@ -6,8 +6,8 @@ import java.util.UUID;
 
 public class EncryptionManager {
 
-    private final DES des=new DES();
-    private final LogInDatabase logInDatabase=new LogInDatabase();
+    private DES des=new DES();
+    private LogInDatabase logInDatabase=new LogInDatabase();
 
     public LogInDatabase getLogInDatabase(){
         return logInDatabase;
@@ -15,6 +15,14 @@ public class EncryptionManager {
 
     private IDCard IDCard;
     public EncryptionManager() throws Exception {
+    }
+
+    public void setDes(DES des){
+        this.des=des;
+    }
+
+    public void setLogInDatabase(LogInDatabase logInDatabase){
+        this.logInDatabase=logInDatabase;
     }
 
     public DES getMachineDES(){
@@ -27,6 +35,7 @@ public class EncryptionManager {
         String decryptedPIN=des.decrypt(idCard.getRfid_chip().getPIN());  // decryption of pin is needed to store the pin as string into log in database
         logInDatabase.getPins().add(decryptedPIN);
     }
+
 
     public IDCard getIdCard() {
         return IDCard;

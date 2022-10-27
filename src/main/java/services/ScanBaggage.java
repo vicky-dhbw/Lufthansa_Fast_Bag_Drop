@@ -1,7 +1,6 @@
 package services;
 
-import automatComponents.BaggageScanner;
-import automatComponents.Database;
+import automatComponents.*;
 import configuration.Configuration;
 import identityRelevants.BoardingPass;
 import livingComponents.Human;
@@ -20,15 +19,13 @@ import java.util.List;
 import java.util.Queue;
 
 public class ScanBaggage {
-    public void scanBaggage(Queue<Baggage> baggageQueue, BaggageScanner baggageScanner, BoardingPass boardingPass, Passenger passenger, Export export, Database database) throws IOException {
-        baggageScanner = new BaggageScanner(StringMatchingAlgorithm.BF);   //scanner uses default brute force to scan baggage
-        // you can try baggageScanner = new BaggageScanner(StringMatchingAlgorithm.BM);  <-- uses boyer moore
-        // also try baggageScanner = new BaggageScanner(StringMatchingAlgorithm.KMP); <-- knuth-morris-algorithm
+    public void scanBaggage(Queue<Baggage> baggageQueue, FastBagDrop fastBagDrop, Position position, BoardingPass boardingPass, Passenger passenger, Database database) throws IOException {
+
         while(!baggageQueue.isEmpty()){
             Baggage baggage=baggageQueue.poll();
             passenger.getBaggageList().remove(baggage);
             if(baggage.getWeight()<=23.0){
-                boolean containsExplosives= baggageScanner.searchForExplosives(baggage);
+                boolean containsExplosives= fastBagDrop.getServices().getExplosivesInvestigation().searchForExplosives(fastBagDrop.getFastBagDropSection(position),baggage);
                 if(!containsExplosives){
                     System.out.println("......../ Baggage contains no explosives");
                     BaggageTag baggageTag=new BaggageTag();
@@ -54,7 +51,7 @@ public class ScanBaggage {
                     baggageRecordsObjects.add(System.nanoTime());
                     baggageRecordsObjects.add(result);
 
-                    export.getBaggageRecords().put(baggageTagId,baggageRecordsObjects);  //Records
+                    fastBagDrop.getServices().getExport().getBaggageRecords().put(baggageTagId,baggageRecordsObjects);  //Records
 
                     boardingPass.addBaggageToTagList(baggageTag);
                     passenger.getBaggageList().add(baggage);
