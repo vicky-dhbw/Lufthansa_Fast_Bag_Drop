@@ -1,5 +1,5 @@
 import automatComponents.FastBagDrop;
-import automatComponents.FastBagDropState;
+import automatComponents.Manufacturer;
 import automatComponents.Position;
 import flightRelevants.Flight;
 import flightRelevants.FlightID;
@@ -13,11 +13,11 @@ public class Application {
 
         Flight flight=new Flight(FlightID.LH2121,"22:00", IATAAirportCodes.FRA,IATAAirportCodes.HKG,Gate.A05);
 
-        FastBagDrop fastBagDrop=new FastBagDrop();
+        FastBagDrop fastBagDrop=new FastBagDrop(Manufacturer.SMITH);
         ServiceAgent serviceAgent=new ServiceAgent();
         FederalPolice federalPolice=new FederalPolice();
 
-        // for ease, employees can start / shutdown / lock and unlock only through leftSection
+        // for ease, employees can start / shutdown / lock and unlock only through leftSection <---- could also log in from right section
         // service agent and federal police are issued valid id card that contains encrypted pin
         // the encrypted pins are store as decrypted in log in database in encryption manager in ID card scanner
 
@@ -26,7 +26,7 @@ public class Application {
 
         // credentials are copied to the log in database of the id card reader
         // both sections must have the same encryption decryption algorithm
-        // overriding new des and log in database of id card scanner in right fast bag drop section
+        // overriding des and log in database of id card scanner in right fast bag drop section
         fastBagDrop.getRightSection().getIdCardScanner().getEncryptionManager().setDes(fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().getMachineDES());
         fastBagDrop.getRightSection().getIdCardScanner().getEncryptionManager().setLogInDatabase(fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().getLogInDatabase());
 

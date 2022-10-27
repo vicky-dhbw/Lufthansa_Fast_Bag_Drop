@@ -42,47 +42,36 @@ public class FastBagDropSection {
     public PassportScanner getPassportScanner() {
         return passportScanner;
     }
-
     public void setPassportScanner(PassportScanner passportScanner) {
         this.passportScanner = passportScanner;
     }
-
     public DocumentPrinter getDocumentPrinter() {
         return documentPrinter;
     }
-
     public void setDocumentPrinter(DocumentPrinter documentPrinter) {
         this.documentPrinter = documentPrinter;
     }
-
     public ConveyorBelt getConveyorBelt() {
         return conveyorBelt;
     }
-
     public void setConveyorBelt(ConveyorBelt conveyorBelt) {
         this.conveyorBelt = conveyorBelt;
     }
-
     public Sensor getSensor() {
         return sensor;
     }
-
     public void setSensor(Sensor sensor) {
         this.sensor = sensor;
     }
-
     public BaggageScanner getBaggageScanner() {
         return baggageScanner;
     }
-
     public void setBaggageScanner(BaggageScanner baggageScanner) {
         this.baggageScanner = baggageScanner;
     }
-
     public IDCardScanner getIdCardScanner() {
         return idCardScanner;
     }
-
     public void setIdCardScanner(IDCardScanner idCardScanner) {
         this.idCardScanner = idCardScanner;
     }
@@ -94,23 +83,18 @@ public class FastBagDropSection {
     public void setDisplay(Display display) {
         this.display = display;
     }
-
     public EconomyQueue getEconomyQueue() {
         return economyQueue;
     }
-
     public void setEconomyQueue(EconomyQueue economyQueue) {
         this.economyQueue = economyQueue;
     }
-
     public BusinessQueue getBusinessQueue() {
         return businessQueue;
     }
-
     public void setBusinessQueue(BusinessQueue businessQueue) {
         this.businessQueue = businessQueue;
     }
-
     public Position getPosition() {
         return position;
     }

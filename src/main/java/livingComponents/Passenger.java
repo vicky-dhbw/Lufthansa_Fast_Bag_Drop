@@ -19,13 +19,9 @@ public class Passenger extends Human{
     private final Passport passport;
     private final List<Baggage> baggageList;
     private BoardingPass boardingPass;
-
     private BookingClass passengerBookingClass;
-
     private Voucher voucher;
-
     private int numberOfBaggage;
-
     public Passenger(){
         passport=new Passport();
         baggageList=new ArrayList<>();

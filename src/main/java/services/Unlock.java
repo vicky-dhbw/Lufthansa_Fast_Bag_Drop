@@ -8,7 +8,7 @@ import security.IDCardStatus;
 
 public class Unlock {
 
-    public FastBagDropState unlockMachine(FastBagDrop fastBagDrop, IDCard idCard){
+    public void unlockMachine(FastBagDrop fastBagDrop, IDCard idCard){
         System.out.println();
 
         boolean authenticationSuccess=false;
@@ -32,6 +32,6 @@ public class Unlock {
             }
         }
 
-        return fastBagDrop.getCurrentState();
     }
+
 }

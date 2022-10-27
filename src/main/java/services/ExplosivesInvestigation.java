@@ -12,6 +12,7 @@ public class ExplosivesInvestigation {
         //scanner uses default brute force to scan baggage
         // you can try baggageScanner = new BaggageScanner(StringMatchingAlgorithm.BM);  <-- uses boyer moore
         // also try baggageScanner = new BaggageScanner(StringMatchingAlgorithm.KMP); <-- knuth-morris-algorithm
+
         fastBagDropSection.setBaggageScanner(new BaggageScanner(StringMatchingAlgorithm.BF));
         return fastBagDropSection.getBaggageScanner().searchForExplosives(baggage);
     }

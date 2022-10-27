@@ -12,7 +12,6 @@ public class BaggageTag {
     private String baggageTagID;
     private BufferedImage qrCode;
 
-
     public BufferedImage getQrCode() {
         return qrCode;
     }

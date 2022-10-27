@@ -9,7 +9,7 @@ import java.util.UUID;
 public class FastBagDrop {
 
     private final UUID serialNumber;
-    private Manufacturer manufacturer;
+    private final Manufacturer manufacturer;
     private FastBagDropState currentState;
     private final FastBagDropSection rightSection=new FastBagDropSection(Position.RIGHT);
     private final FastBagDropSection leftSection=new FastBagDropSection(Position.LEFT);
@@ -21,9 +21,10 @@ public class FastBagDrop {
 
     private final Services services=new Services();
 
-    public FastBagDrop() throws Exception {
+    public FastBagDrop(Manufacturer manufacturer) throws Exception {
         this.serialNumber = UUID.randomUUID();
         this.currentState=FastBagDropState.ON;
+        this.manufacturer=manufacturer;
     }
 
     public UUID getSerialNumber() {
@@ -78,6 +79,10 @@ public class FastBagDrop {
 
     public void setFederalPolice(FederalPolice federalPolice1){
         this.federalPolice=federalPolice1;
+    }
+
+    public Manufacturer getManufacturer() {
+        return manufacturer;
     }
 
 }
