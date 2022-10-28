@@ -1,19 +1,14 @@
 package services;
 
 import automatComponents.*;
-import configuration.Configuration;
 import identityRelevants.BoardingPass;
 import identityRelevants.IDCard;
-import livingComponents.Human;
 import livingComponents.Passenger;
-import livingComponents.ServiceAgent;
 import passengerRelevants.Baggage;
 import passengerRelevants.BaggageTag;
 import passengerRelevants.BaggageTagIDGenerator;
 import passengerRelevants.Result;
-import searchAlgorithms.StringMatchingAlgorithm;
 
-import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -61,9 +56,12 @@ public class ScanBaggage {
                     else {
                         System.out.println("Baggage contains explosives");
                         fastBagDrop.getFederalPolice().lockMachine(fastBagDrop);
-                        fastBagDrop.getFederalPolice().assertPassenger(passenger);
+                        fastBagDrop.getFederalPolice().arrestPassenger(passenger);   //federal police declares passenger as criminal
+
+
                         IDCard federalPoliceIDCard=fastBagDrop.getFederalPolice().getIdCard();
                         fastBagDrop.getFederalPolice().unlockMachine(fastBagDrop,federalPoliceIDCard);
+
                     }
                 }
                 else{
@@ -75,7 +73,6 @@ public class ScanBaggage {
 
             }
         }
-
 
     }
 }

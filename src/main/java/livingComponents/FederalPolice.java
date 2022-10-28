@@ -1,9 +1,9 @@
 package livingComponents;
 
 import automatComponents.FastBagDrop;
-import automatComponents.FastBagDropSection;
 import automatComponents.FastBagDropState;
 import identityRelevants.IDCard;
+import passengerRelevants.Baggage;
 
 public class FederalPolice extends Employee{
     public FederalPolice() throws Exception {
@@ -18,8 +18,14 @@ public class FederalPolice extends Employee{
         fastBagDrop.setCurrentState(FastBagDropState.LOCKED);
     }
 
-    public void assertPassenger(Passenger passenger){
+    public void arrestPassenger(Passenger passenger){
         System.out.println("arresting : "+passenger.getName());
+        for(Baggage baggage:passenger.getBaggageList()){
+            baggage.setContent("");
+            baggage.setWeight(0.0);
+        }
+        passenger.setCriminal(true);
     }
+
 
 }

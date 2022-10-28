@@ -22,10 +22,13 @@ public class Passenger extends Human{
     private BookingClass passengerBookingClass;
     private Voucher voucher;
     private int numberOfBaggage;
+
+    private boolean isCriminal;
     public Passenger(){
         passport=new Passport();
         baggageList=new ArrayList<>();
         boardingPass=new BoardingPass();
+        isCriminal=false;     // assume passengers are not criminal
     }
 
     public void setName(String name){
@@ -97,5 +100,13 @@ public class Passenger extends Human{
 
     public void setVoucher(Voucher voucher) {
         this.voucher = voucher;
+    }
+
+    public boolean isCriminal() {
+        return isCriminal;
+    }
+
+    public void setCriminal(boolean criminal) {
+        isCriminal = criminal;
     }
 }

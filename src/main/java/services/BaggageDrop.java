@@ -56,18 +56,20 @@ public class BaggageDrop {
                 // the search of explosives occur over the scan baggage service where the baggage scanner scans baggage
 
                 fastBagDrop.getServices().getScanBaggage().scanBaggage(baggageQueue,fastBagDrop,position,passenger.getBoardingPass(),passenger, fastBagDrop.getDatabase());
-                //fastBagDrop.getFastBagDropSection(position).getConveyorBelt().removeBaggage(); //removes baggage from the conveyor belt
 
+                // passenger who is a criminal will not get a seat or be issued a boarding pass
 
+                if(!passenger.isCriminal()){ // <----- passengers who are not criminals
+                    String seatId=FlightSeatStatusUpdater.reserveSeat(seat,flight);
+                    BoardingPassGenerator.generateBoardingPass(fastBagDrop.getDatabase(), passenger,flight,seatId);
 
-                String seatId=FlightSeatStatusUpdater.reserveSeat(seat,flight);
-                BoardingPassGenerator.generateBoardingPass(fastBagDrop.getDatabase(), passenger,flight,seatId);
+                    Record record=new Record(passenger);
+                    fastBagDrop.getDatabase().getRecordList().add(record);
 
-                Record record=new Record(passenger);
-                fastBagDrop.getDatabase().getRecordList().add(record);
+                    fastBagDrop.getFastBagDropSection(position).getDisplay().displayBoardingPass(passenger);
+                    fastBagDrop.getFastBagDropSection(position).getDocumentPrinter().printVoucher(passenger);
+                }
 
-                fastBagDrop.getFastBagDropSection(position).getDisplay().displayBoardingPass(passenger);
-                fastBagDrop.getFastBagDropSection(position).getDocumentPrinter().printVoucher(passenger);
             }
             else{
                 fastBagDrop.getFastBagDropSection(position).getDisplay().showCancellationMessage();
