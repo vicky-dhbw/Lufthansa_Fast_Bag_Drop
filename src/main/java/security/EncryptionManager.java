@@ -6,6 +6,7 @@ import java.util.UUID;
 
 public class EncryptionManager {
 
+    // the encryption manager is a part of id card scanner
     private DES des=new DES();
     private LogInDatabase logInDatabase=new LogInDatabase();
 
@@ -28,6 +29,8 @@ public class EncryptionManager {
     public DES getMachineDES(){
         return des;
     }
+
+    // set up card is relevant for service agent and federal police
     public void setUpCard(IDCard idCard) throws Exception {
         String randomPIN=PinGenerator.createRandomPIN();
         byte[] encryptedPIN= des.encrypt(randomPIN);  //random String pins are decrypted by DES and as PIN (bytes[]) for RFID chips
