@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestApplication" tests="8" skipped="0" failures="0" errors="0" timestamp="2022-10-27T19:19:14" hostname="Vickys-MacBook-Pro.local" time="3.275">
+<testsuite name="TestApplication" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-28T18:40:21" hostname="TIM" time="3.566">
   <properties/>
-  <testcase name="testBusinessQueue()" classname="TestApplication" time="0.527"/>
-  <testcase name="assureBaggageContent()" classname="TestApplication" time="0.521"/>
-  <testcase name="checkIfNoOfContentsMatchNoOfBaggage()" classname="TestApplication" time="0.306"/>
-  <testcase name="checkBaggageQRCode()" classname="TestApplication" time="1.044"/>
-  <testcase name="assureBaggageListNotNull()" classname="TestApplication" time="0.316"/>
-  <testcase name="baggageCountIsPerfect()" classname="TestApplication" time="0.266"/>
-  <testcase name="importSuccess()" classname="TestApplication" time="0.151"/>
-  <testcase name="TestQueueNotEmpty()" classname="TestApplication" time="0.138"/>
+  <testcase name="checkBaggageQRCode()" classname="TestApplication" time="3.566"/>
   <system-out><![CDATA[
-
-
-
 
 ---------------------------------------------------------------------------------------------------------------
 scanning passport with passport id: BIFO6D9JF
@@ -51,29 +41,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG23161666
+baggage tag got a baggage id: BAG87587794
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG06079876
+baggage tag got a baggage id: BAG71054277
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG59668405
+baggage tag got a baggage id: BAG51288789
 Seat with ID: 1A has been reserved for you!
 
 BOARDING PASS FOR ERIK WONG
 -----------------------------------------------------------------------------
 LUFTHANSA                      a5nzey7tihnrtgu /  Erik Wong
 Erik Wong                                     /  a5nzey7tihnrtgu
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 1A                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 1A                                   /  LH2121 B 28.Okt.
+SEQ: 1                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Erik Wong
@@ -115,29 +105,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG57100183
+baggage tag got a baggage id: BAG86699916
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG86369656
+baggage tag got a baggage id: BAG28942740
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG16777949
+baggage tag got a baggage id: BAG20354393
 Seat with ID: 1C has been reserved for you!
 
 BOARDING PASS FOR GLADYS PADILLA
 -----------------------------------------------------------------------------
 LUFTHANSA                      8c3y2hb38cr7wzv /  Gladys Padilla
 Gladys Padilla                                     /  8c3y2hb38cr7wzv
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 1C                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 1C                                   /  LH2121 B 28.Okt.
+SEQ: 2                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Gladys Padilla
@@ -179,29 +169,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG70833492
+baggage tag got a baggage id: BAG24485916
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG79161874
+baggage tag got a baggage id: BAG42708914
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG57486972
+baggage tag got a baggage id: BAG94997267
 Seat with ID: 1D has been reserved for you!
 
 BOARDING PASS FOR LEIGH DOUGHERTY
 -----------------------------------------------------------------------------
 LUFTHANSA                      e7zfjzaexwpsyde /  Leigh Dougherty
 Leigh Dougherty                                     /  e7zfjzaexwpsyde
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 1D                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 1D                                   /  LH2121 B 28.Okt.
+SEQ: 3                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Leigh Dougherty
@@ -243,29 +233,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG38645815
+baggage tag got a baggage id: BAG44229124
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG95205571
+baggage tag got a baggage id: BAG70624574
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG86232710
+baggage tag got a baggage id: BAG09848042
 Seat with ID: 1G has been reserved for you!
 
 BOARDING PASS FOR AVERY ROMAN
 -----------------------------------------------------------------------------
 LUFTHANSA                      byj7lesmbf257ve /  Avery Roman
 Avery Roman                                     /  byj7lesmbf257ve
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 1G                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 1G                                   /  LH2121 B 28.Okt.
+SEQ: 4                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Avery Roman
@@ -307,29 +297,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG73081343
+baggage tag got a baggage id: BAG82129594
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG18007601
+baggage tag got a baggage id: BAG02655113
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG91893926
+baggage tag got a baggage id: BAG57850079
 Seat with ID: 1H has been reserved for you!
 
 BOARDING PASS FOR MARI FISHER
 -----------------------------------------------------------------------------
 LUFTHANSA                      33s5g74ilod2i32 /  Mari Fisher
 Mari Fisher                                     /  33s5g74ilod2i32
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 1H                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 1H                                   /  LH2121 B 28.Okt.
+SEQ: 5                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Mari Fisher
@@ -368,23 +358,23 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG76558093
+baggage tag got a baggage id: BAG06371037
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG66302610
+baggage tag got a baggage id: BAG92148641
 Seat with ID: 1K has been reserved for you!
 
 BOARDING PASS FOR FRANKLIN KENT
 -----------------------------------------------------------------------------
 LUFTHANSA                      whc1nk7kcig8l3j /  Franklin Kent
 Franklin Kent                                     /  whc1nk7kcig8l3j
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 1K                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 1K                                   /  LH2121 B 28.Okt.
+SEQ: 6                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Franklin Kent
@@ -426,29 +416,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG97930000
+baggage tag got a baggage id: BAG40901630
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG07406919
+baggage tag got a baggage id: BAG70897326
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG69410707
+baggage tag got a baggage id: BAG88070730
 Seat with ID: 2A has been reserved for you!
 
 BOARDING PASS FOR FRIEDA NEAL
 -----------------------------------------------------------------------------
 LUFTHANSA                      3rsrc03apc51dls /  Frieda Neal
 Frieda Neal                                     /  3rsrc03apc51dls
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 2A                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 2A                                   /  LH2121 B 28.Okt.
+SEQ: 7                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Frieda Neal
@@ -487,23 +477,23 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG42856027
+baggage tag got a baggage id: BAG58644952
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG59265220
+baggage tag got a baggage id: BAG73539986
 Seat with ID: 2C has been reserved for you!
 
 BOARDING PASS FOR CHADWICK CARPENTER
 -----------------------------------------------------------------------------
 LUFTHANSA                      m747zz3erat8wf7 /  Chadwick Carpenter
 Chadwick Carpenter                                     /  m747zz3erat8wf7
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 2C                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 2C                                   /  LH2121 B 28.Okt.
+SEQ: 8                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Chadwick Carpenter
@@ -542,23 +532,23 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG44283221
+baggage tag got a baggage id: BAG66008388
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG50202493
+baggage tag got a baggage id: BAG76278456
 Seat with ID: 2D has been reserved for you!
 
 BOARDING PASS FOR EMERSON MARKS
 -----------------------------------------------------------------------------
 LUFTHANSA                      ywmbo4tdzkgwxwi /  Emerson Marks
 Emerson Marks                                     /  ywmbo4tdzkgwxwi
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 2D                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 2D                                   /  LH2121 B 28.Okt.
+SEQ: 9                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Emerson Marks
@@ -597,23 +587,23 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG97283561
+baggage tag got a baggage id: BAG89203613
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG16522002
+baggage tag got a baggage id: BAG67710006
 Seat with ID: 2G has been reserved for you!
 
 BOARDING PASS FOR MAYRA STEELE
 -----------------------------------------------------------------------------
 LUFTHANSA                      bgqztihklb5c17a /  Mayra Steele
 Mayra Steele                                     /  bgqztihklb5c17a
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 2G                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 2G                                   /  LH2121 B 28.Okt.
+SEQ: 10                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Mayra Steele
@@ -652,23 +642,23 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG05708106
+baggage tag got a baggage id: BAG93054194
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG52380611
+baggage tag got a baggage id: BAG89377903
 Seat with ID: 2H has been reserved for you!
 
 BOARDING PASS FOR JODI GOODWIN
 -----------------------------------------------------------------------------
 LUFTHANSA                      ib3iaw7ws5mrh8d /  Jodi Goodwin
 Jodi Goodwin                                     /  ib3iaw7ws5mrh8d
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 2H                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 2H                                   /  LH2121 B 28.Okt.
+SEQ: 11                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Jodi Goodwin
@@ -710,29 +700,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG88588239
+baggage tag got a baggage id: BAG62612931
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG05999319
+baggage tag got a baggage id: BAG21628377
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG13015924
+baggage tag got a baggage id: BAG69877307
 Seat with ID: 2K has been reserved for you!
 
 BOARDING PASS FOR TRACEY DUARTE
 -----------------------------------------------------------------------------
 LUFTHANSA                      cqr782jb9a4iptf /  Tracey Duarte
 Tracey Duarte                                     /  cqr782jb9a4iptf
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 2K                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 2K                                   /  LH2121 B 28.Okt.
+SEQ: 12                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Tracey Duarte
@@ -774,29 +764,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG73676887
+baggage tag got a baggage id: BAG51177638
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG91931868
+baggage tag got a baggage id: BAG15667298
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG39195434
+baggage tag got a baggage id: BAG35237720
 Seat with ID: 3A has been reserved for you!
 
 BOARDING PASS FOR GUS JUAREZ
 -----------------------------------------------------------------------------
 LUFTHANSA                      nkil02w8alkrkkm /  Gus Juarez
 Gus Juarez                                     /  nkil02w8alkrkkm
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 3A                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 3A                                   /  LH2121 B 28.Okt.
+SEQ: 13                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Gus Juarez
@@ -838,29 +828,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG85085854
+baggage tag got a baggage id: BAG52844019
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG94047114
+baggage tag got a baggage id: BAG28567378
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG97824290
+baggage tag got a baggage id: BAG04479707
 Seat with ID: 3C has been reserved for you!
 
 BOARDING PASS FOR VAN MCINTOSH
 -----------------------------------------------------------------------------
 LUFTHANSA                      y000vitkkknivur /  Van Mcintosh
 Van Mcintosh                                     /  y000vitkkknivur
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 3C                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 3C                                   /  LH2121 B 28.Okt.
+SEQ: 14                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Van Mcintosh
@@ -899,23 +889,23 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG67355205
+baggage tag got a baggage id: BAG89862066
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG10379099
+baggage tag got a baggage id: BAG73187063
 Seat with ID: 3D has been reserved for you!
 
 BOARDING PASS FOR DARWIN MCCANN
 -----------------------------------------------------------------------------
 LUFTHANSA                      0yieihqos0x77uu /  Darwin Mccann
 Darwin Mccann                                     /  0yieihqos0x77uu
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 3D                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 3D                                   /  LH2121 B 28.Okt.
+SEQ: 15                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Darwin Mccann
@@ -957,29 +947,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG12495193
+baggage tag got a baggage id: BAG37560130
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG55406013
+baggage tag got a baggage id: BAG84312867
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG23002189
+baggage tag got a baggage id: BAG85304283
 Seat with ID: 3G has been reserved for you!
 
 BOARDING PASS FOR CAROLINA SHARP
 -----------------------------------------------------------------------------
 LUFTHANSA                      tzcfqdv5g4aefr3 /  Carolina Sharp
 Carolina Sharp                                     /  tzcfqdv5g4aefr3
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 3G                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 3G                                   /  LH2121 B 28.Okt.
+SEQ: 16                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Carolina Sharp
@@ -1021,29 +1011,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG75906317
+baggage tag got a baggage id: BAG34965650
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG73864201
+baggage tag got a baggage id: BAG35959236
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG79247739
+baggage tag got a baggage id: BAG46070420
 Seat with ID: 3H has been reserved for you!
 
 BOARDING PASS FOR DARON GLOVER
 -----------------------------------------------------------------------------
 LUFTHANSA                      f28ohd7z4n4nftw /  Daron Glover
 Daron Glover                                     /  f28ohd7z4n4nftw
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 3H                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 3H                                   /  LH2121 B 28.Okt.
+SEQ: 17                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Daron Glover
@@ -1085,29 +1075,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG58716783
+baggage tag got a baggage id: BAG06951439
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG66910068
+baggage tag got a baggage id: BAG27732544
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG14362679
+baggage tag got a baggage id: BAG17128330
 Seat with ID: 3K has been reserved for you!
 
 BOARDING PASS FOR BRITNEY DRAKE
 -----------------------------------------------------------------------------
 LUFTHANSA                      as7q5jpescqma4l /  Britney Drake
 Britney Drake                                     /  as7q5jpescqma4l
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 3K                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 3K                                   /  LH2121 B 28.Okt.
+SEQ: 18                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Britney Drake
@@ -1146,23 +1136,23 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG85899967
+baggage tag got a baggage id: BAG28606708
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG43895018
+baggage tag got a baggage id: BAG00345082
 Seat with ID: 4A has been reserved for you!
 
 BOARDING PASS FOR SAMANTHA PATRICK
 -----------------------------------------------------------------------------
 LUFTHANSA                      f7zph1r1zdn8fqq /  Samantha Patrick
 Samantha Patrick                                     /  f7zph1r1zdn8fqq
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 4A                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 4A                                   /  LH2121 B 28.Okt.
+SEQ: 19                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Samantha Patrick
@@ -1204,29 +1194,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG59472037
+baggage tag got a baggage id: BAG37985921
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG58491477
+baggage tag got a baggage id: BAG62649911
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG29170610
+baggage tag got a baggage id: BAG98215388
 Seat with ID: 4C has been reserved for you!
 
 BOARDING PASS FOR QUINN LOVE
 -----------------------------------------------------------------------------
 LUFTHANSA                      g4f8bofrzwopszc /  Quinn Love
 Quinn Love                                     /  g4f8bofrzwopszc
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 4C                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 4C                                   /  LH2121 B 28.Okt.
+SEQ: 20                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Quinn Love
@@ -1265,23 +1255,23 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG74532614
+baggage tag got a baggage id: BAG84099603
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG86017482
+baggage tag got a baggage id: BAG63038591
 Seat with ID: 4D has been reserved for you!
 
 BOARDING PASS FOR MARIAN CROSBY
 -----------------------------------------------------------------------------
 LUFTHANSA                      zweaghgqu8c9obz /  Marian Crosby
 Marian Crosby                                     /  zweaghgqu8c9obz
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 4D                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 4D                                   /  LH2121 B 28.Okt.
+SEQ: 21                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Marian Crosby
@@ -1323,29 +1313,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG29306994
+baggage tag got a baggage id: BAG77197728
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG39124914
+baggage tag got a baggage id: BAG20836634
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG76144091
+baggage tag got a baggage id: BAG77626948
 Seat with ID: 4G has been reserved for you!
 
 BOARDING PASS FOR ADOLPH VILLA
 -----------------------------------------------------------------------------
 LUFTHANSA                      dyxgi0zp4l0cwuq /  Adolph Villa
 Adolph Villa                                     /  dyxgi0zp4l0cwuq
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 4G                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 4G                                   /  LH2121 B 28.Okt.
+SEQ: 22                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Adolph Villa
@@ -1384,23 +1374,23 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG90308717
+baggage tag got a baggage id: BAG59318134
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG71111399
+baggage tag got a baggage id: BAG24239421
 Seat with ID: 4H has been reserved for you!
 
 BOARDING PASS FOR JORDAN PROCTOR
 -----------------------------------------------------------------------------
 LUFTHANSA                      vf33uxrshphsezm /  Jordan Proctor
 Jordan Proctor                                     /  vf33uxrshphsezm
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 4H                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 4H                                   /  LH2121 B 28.Okt.
+SEQ: 23                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Jordan Proctor
@@ -1439,23 +1429,23 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG76785095
+baggage tag got a baggage id: BAG01534526
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG31666342
+baggage tag got a baggage id: BAG11400385
 Seat with ID: 4K has been reserved for you!
 
 BOARDING PASS FOR JOY MACIAS
 -----------------------------------------------------------------------------
 LUFTHANSA                      6k90nagu4m6ci7t /  Joy Macias
 Joy Macias                                     /  6k90nagu4m6ci7t
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 4K                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 4K                                   /  LH2121 B 28.Okt.
+SEQ: 24                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Joy Macias
@@ -1494,23 +1484,23 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG94469594
+baggage tag got a baggage id: BAG04824759
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG08782910
+baggage tag got a baggage id: BAG60028557
 Seat with ID: 5A has been reserved for you!
 
 BOARDING PASS FOR CORDELL HAHN
 -----------------------------------------------------------------------------
 LUFTHANSA                      51672frdk8qsujk /  Cordell Hahn
 Cordell Hahn                                     /  51672frdk8qsujk
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 5A                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 5A                                   /  LH2121 B 28.Okt.
+SEQ: 25                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Cordell Hahn
@@ -1549,23 +1539,23 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG93139926
+baggage tag got a baggage id: BAG75853340
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG20878662
+baggage tag got a baggage id: BAG25470806
 Seat with ID: 5C has been reserved for you!
 
 BOARDING PASS FOR PIERRE HURLEY
 -----------------------------------------------------------------------------
 LUFTHANSA                      f7t71qik0zyyczx /  Pierre Hurley
 Pierre Hurley                                     /  f7t71qik0zyyczx
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 5C                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 5C                                   /  LH2121 B 28.Okt.
+SEQ: 26                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Pierre Hurley
@@ -1607,29 +1597,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG69976030
+baggage tag got a baggage id: BAG17553994
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG56206247
+baggage tag got a baggage id: BAG73889629
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG18421760
+baggage tag got a baggage id: BAG42157746
 Seat with ID: 5D has been reserved for you!
 
 BOARDING PASS FOR BERNADINE POWELL
 -----------------------------------------------------------------------------
 LUFTHANSA                      6b96c30tnx71wo8 /  Bernadine Powell
 Bernadine Powell                                     /  6b96c30tnx71wo8
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 5D                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 5D                                   /  LH2121 B 28.Okt.
+SEQ: 27                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Bernadine Powell
@@ -1668,23 +1658,23 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG41616459
+baggage tag got a baggage id: BAG39634519
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG83729987
+baggage tag got a baggage id: BAG73489532
 Seat with ID: 5G has been reserved for you!
 
 BOARDING PASS FOR JAMEY SIMPSON
 -----------------------------------------------------------------------------
 LUFTHANSA                      4uh3cmqat91nrnr /  Jamey Simpson
 Jamey Simpson                                     /  4uh3cmqat91nrnr
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 5G                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 5G                                   /  LH2121 B 28.Okt.
+SEQ: 28                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Jamey Simpson
@@ -1723,23 +1713,23 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG99438976
+baggage tag got a baggage id: BAG08890393
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG26159050
+baggage tag got a baggage id: BAG16615001
 Seat with ID: 5H has been reserved for you!
 
 BOARDING PASS FOR CORINE DAWSON
 -----------------------------------------------------------------------------
 LUFTHANSA                      eiwirsy1vv8zdc8 /  Corine Dawson
 Corine Dawson                                     /  eiwirsy1vv8zdc8
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 5H                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 5H                                   /  LH2121 B 28.Okt.
+SEQ: 29                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Corine Dawson
@@ -1781,29 +1771,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG99771530
+baggage tag got a baggage id: BAG97859003
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG92175830
+baggage tag got a baggage id: BAG99785392
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG26823842
+baggage tag got a baggage id: BAG63167410
 Seat with ID: 5K has been reserved for you!
 
 BOARDING PASS FOR GRANT BECKER
 -----------------------------------------------------------------------------
 LUFTHANSA                      sxh51r5wl9544mi /  Grant Becker
 Grant Becker                                     /  sxh51r5wl9544mi
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 5K                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 5K                                   /  LH2121 B 28.Okt.
+SEQ: 30                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Grant Becker
@@ -1842,23 +1832,23 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG75707223
+baggage tag got a baggage id: BAG43494953
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG09872179
+baggage tag got a baggage id: BAG73387639
 Seat with ID: 6A has been reserved for you!
 
 BOARDING PASS FOR JEANNE SAWYER
 -----------------------------------------------------------------------------
 LUFTHANSA                      rf3b8uyx7kw1mxm /  Jeanne Sawyer
 Jeanne Sawyer                                     /  rf3b8uyx7kw1mxm
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 6A                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 6A                                   /  LH2121 B 28.Okt.
+SEQ: 31                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Jeanne Sawyer
@@ -1897,23 +1887,23 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG55736992
+baggage tag got a baggage id: BAG14248120
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG58916962
+baggage tag got a baggage id: BAG77269473
 Seat with ID: 6C has been reserved for you!
 
 BOARDING PASS FOR ELVIN HUNT
 -----------------------------------------------------------------------------
 LUFTHANSA                      hnpizhtoehz6isf /  Elvin Hunt
 Elvin Hunt                                     /  hnpizhtoehz6isf
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 6C                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 6C                                   /  LH2121 B 28.Okt.
+SEQ: 32                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Elvin Hunt
@@ -1952,23 +1942,23 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG90568160
+baggage tag got a baggage id: BAG93815975
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG14308383
+baggage tag got a baggage id: BAG94780039
 Seat with ID: 6D has been reserved for you!
 
 BOARDING PASS FOR MISTY NGUYEN
 -----------------------------------------------------------------------------
 LUFTHANSA                      erp9ql9ob0a3ygt /  Misty Nguyen
 Misty Nguyen                                     /  erp9ql9ob0a3ygt
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 6D                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 6D                                   /  LH2121 B 28.Okt.
+SEQ: 33                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Misty Nguyen
@@ -2010,29 +2000,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG43711883
+baggage tag got a baggage id: BAG03956856
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG47771711
+baggage tag got a baggage id: BAG60232121
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG74578736
+baggage tag got a baggage id: BAG41251638
 Seat with ID: 6G has been reserved for you!
 
 BOARDING PASS FOR DEBRA MASON
 -----------------------------------------------------------------------------
 LUFTHANSA                      spd8mpx6w6h7v9r /  Debra Mason
 Debra Mason                                     /  spd8mpx6w6h7v9r
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 6G                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 6G                                   /  LH2121 B 28.Okt.
+SEQ: 34                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Debra Mason
@@ -2071,23 +2061,23 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG90044260
+baggage tag got a baggage id: BAG83713589
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG06529398
+baggage tag got a baggage id: BAG77755538
 Seat with ID: 6H has been reserved for you!
 
 BOARDING PASS FOR NOE CARNEY
 -----------------------------------------------------------------------------
 LUFTHANSA                      8otv3glxrcxdx1h /  Noe Carney
 Noe Carney                                     /  8otv3glxrcxdx1h
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 6H                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 6H                                   /  LH2121 B 28.Okt.
+SEQ: 35                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Noe Carney
@@ -2129,29 +2119,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG30864492
+baggage tag got a baggage id: BAG82564253
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG69674642
+baggage tag got a baggage id: BAG07527983
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG70203043
+baggage tag got a baggage id: BAG34197498
 Seat with ID: 6K has been reserved for you!
 
 BOARDING PASS FOR LEANDRO GILLESPIE
 -----------------------------------------------------------------------------
 LUFTHANSA                      jnkdjo12lmebz3c /  Leandro Gillespie
 Leandro Gillespie                                     /  jnkdjo12lmebz3c
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 6K                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 6K                                   /  LH2121 B 28.Okt.
+SEQ: 36                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Leandro Gillespie
@@ -2190,23 +2180,23 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG68710528
+baggage tag got a baggage id: BAG82341489
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG57257897
+baggage tag got a baggage id: BAG31644710
 Seat with ID: 7A has been reserved for you!
 
 BOARDING PASS FOR MALINDA JENNINGS
 -----------------------------------------------------------------------------
 LUFTHANSA                      hqvn67c30fs7rea /  Malinda Jennings
 Malinda Jennings                                     /  hqvn67c30fs7rea
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 7A                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 7A                                   /  LH2121 B 28.Okt.
+SEQ: 37                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Malinda Jennings
@@ -2245,23 +2235,23 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG55286259
+baggage tag got a baggage id: BAG76578462
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG70394225
+baggage tag got a baggage id: BAG64563101
 Seat with ID: 7C has been reserved for you!
 
 BOARDING PASS FOR LOREN WU
 -----------------------------------------------------------------------------
 LUFTHANSA                      99x4z636eqbqonk /  Loren Wu
 Loren Wu                                     /  99x4z636eqbqonk
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 7C                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 7C                                   /  LH2121 B 28.Okt.
+SEQ: 38                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Loren Wu
@@ -2303,29 +2293,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG67475488
+baggage tag got a baggage id: BAG40126974
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG78823701
+baggage tag got a baggage id: BAG54659240
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG24889108
+baggage tag got a baggage id: BAG21865357
 Seat with ID: 7D has been reserved for you!
 
 BOARDING PASS FOR ISSAC FREDERICK
 -----------------------------------------------------------------------------
 LUFTHANSA                      av27y2bny4qxzei /  Issac Frederick
 Issac Frederick                                     /  av27y2bny4qxzei
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 7D                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 7D                                   /  LH2121 B 28.Okt.
+SEQ: 39                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Issac Frederick
@@ -2367,29 +2357,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG05729450
+baggage tag got a baggage id: BAG00672577
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG18436179
+baggage tag got a baggage id: BAG28053093
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG97092344
+baggage tag got a baggage id: BAG49062235
 Seat with ID: 7G has been reserved for you!
 
 BOARDING PASS FOR BRITT KEY
 -----------------------------------------------------------------------------
 LUFTHANSA                      a3tr14or0slxuak /  Britt Key
 Britt Key                                     /  a3tr14or0slxuak
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 7G                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 7G                                   /  LH2121 B 28.Okt.
+SEQ: 40                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Britt Key
@@ -2428,23 +2418,23 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG45199018
+baggage tag got a baggage id: BAG29706133
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG43576557
+baggage tag got a baggage id: BAG15623547
 Seat with ID: 7H has been reserved for you!
 
 BOARDING PASS FOR LIONEL KIRBY
 -----------------------------------------------------------------------------
 LUFTHANSA                      h5mg4zb4ow7wg3t /  Lionel Kirby
 Lionel Kirby                                     /  h5mg4zb4ow7wg3t
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 7H                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 7H                                   /  LH2121 B 28.Okt.
+SEQ: 41                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Lionel Kirby
@@ -2486,29 +2476,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG53006650
+baggage tag got a baggage id: BAG51656820
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG85802333
+baggage tag got a baggage id: BAG32207043
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG62453952
+baggage tag got a baggage id: BAG23080840
 Seat with ID: 7K has been reserved for you!
 
 BOARDING PASS FOR ELOISE MCCARTY
 -----------------------------------------------------------------------------
 LUFTHANSA                      u4gvir03h8p1crj /  Eloise Mccarty
 Eloise Mccarty                                     /  u4gvir03h8p1crj
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 7K                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 7K                                   /  LH2121 B 28.Okt.
+SEQ: 42                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Eloise Mccarty
@@ -2550,29 +2540,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG70936560
+baggage tag got a baggage id: BAG68851745
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG15516650
+baggage tag got a baggage id: BAG70080733
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG11199162
+baggage tag got a baggage id: BAG21913333
 Seat with ID: 8A has been reserved for you!
 
 BOARDING PASS FOR STEPHEN SAMPSON
 -----------------------------------------------------------------------------
 LUFTHANSA                      fuz2y3chqj92wt4 /  Stephen Sampson
 Stephen Sampson                                     /  fuz2y3chqj92wt4
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 8A                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 8A                                   /  LH2121 B 28.Okt.
+SEQ: 43                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Stephen Sampson
@@ -2614,29 +2604,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG66488517
+baggage tag got a baggage id: BAG79270985
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG72855218
+baggage tag got a baggage id: BAG63043652
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG44785746
+baggage tag got a baggage id: BAG07033190
 Seat with ID: 8C has been reserved for you!
 
 BOARDING PASS FOR JAMIE ESPINOZA
 -----------------------------------------------------------------------------
 LUFTHANSA                      4wypuxuermqnitv /  Jamie Espinoza
 Jamie Espinoza                                     /  4wypuxuermqnitv
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 8C                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 8C                                   /  LH2121 B 28.Okt.
+SEQ: 44                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Jamie Espinoza
@@ -2678,29 +2668,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG32201549
+baggage tag got a baggage id: BAG08113183
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG03698246
+baggage tag got a baggage id: BAG12469245
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG83645874
+baggage tag got a baggage id: BAG25294563
 Seat with ID: 8D has been reserved for you!
 
 BOARDING PASS FOR BILL TRUJILLO
 -----------------------------------------------------------------------------
 LUFTHANSA                      uqaqer6798184ti /  Bill Trujillo
 Bill Trujillo                                     /  uqaqer6798184ti
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 8D                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 8D                                   /  LH2121 B 28.Okt.
+SEQ: 45                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Bill Trujillo
@@ -2742,29 +2732,29 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG51484040
+baggage tag got a baggage id: BAG85614280
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG44580790
+baggage tag got a baggage id: BAG22979438
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG22496578
+baggage tag got a baggage id: BAG35618252
 Seat with ID: 8G has been reserved for you!
 
 BOARDING PASS FOR LACY GALLOWAY
 -----------------------------------------------------------------------------
 LUFTHANSA                      d8rn48xx55pztar /  Lacy Galloway
 Lacy Galloway                                     /  d8rn48xx55pztar
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 8G                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 8G                                   /  LH2121 B 28.Okt.
+SEQ: 46                                      / GATE: A05   22:00
 MAX 3  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Lacy Galloway
@@ -2803,23 +2793,23 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG99931158
+baggage tag got a baggage id: BAG85511167
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG09218913
+baggage tag got a baggage id: BAG44075203
 Seat with ID: 8H has been reserved for you!
 
 BOARDING PASS FOR ERIN MADDOX
 -----------------------------------------------------------------------------
 LUFTHANSA                      tln26k4zxkm4kik /  Erin Maddox
 Erin Maddox                                     /  tln26k4zxkm4kik
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 8H                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 8H                                   /  LH2121 B 28.Okt.
+SEQ: 47                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Erin Maddox
@@ -2858,30 +2848,26 @@ searching for explosives in baggage /////----o---
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG35046772
+baggage tag got a baggage id: BAG91320205
 searching for explosives in baggage /////----o---
 ......../ searching with brute force algorithm
 ......../ Baggage contains no explosives
 -- baggage Tag created for baggage..
 baggage got a qr code with source destination and flight number
-baggage tag got a baggage id: BAG67186485
+baggage tag got a baggage id: BAG29342540
 Seat with ID: 8K has been reserved for you!
 
 BOARDING PASS FOR JEANETTE MCDANIEL
 -----------------------------------------------------------------------------
 LUFTHANSA                      q2qos167tcggmr7 /  Jeanette Mcdaniel
 Jeanette Mcdaniel                                     /  q2qos167tcggmr7
-FRA   LH2121   B  27.Oct                       /  FRA
+FRA   LH2121   B  28.Okt.                       /  FRA
 HKG                                            /  HKG
-SEAT ID: 8K                                   /  LH2121 B 27.Oct
-                                               / GATE: A05   22:00
+SEAT ID: 8K                                   /  LH2121 B 28.Okt.
+SEQ: 48                                      / GATE: A05   22:00
 MAX 2  HANDLUGGAGE/ LUGGAGE
 -----------------------------------------------------------------------------
 printing LOUNGE voucher for Jeanette Mcdaniel
-
-
-
-
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

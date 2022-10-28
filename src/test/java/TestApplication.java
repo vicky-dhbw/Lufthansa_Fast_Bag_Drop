@@ -6,10 +6,13 @@ import flightRelevants.Flight;
 import flightRelevants.FlightID;
 import flightRelevants.Gate;
 import flightRelevants.IATAAirportCodes;
+import identityRelevants.IDCard;
+import livingComponents.FederalPolice;
 import livingComponents.Passenger;
 import livingComponents.ServiceAgent;
 import org.junit.jupiter.api.*;
 import passengerRelevants.Baggage;
+import searchAlgorithms.StringMatchingAlgorithm;
 import services.BaggageDrop;
 
 import java.io.BufferedReader;
@@ -22,15 +25,24 @@ public class TestApplication {
 
     FastBagDrop fastBagDrop;
     ServiceAgent serviceAgent;
+    FederalPolice federalPolice;
     Flight flight;
     @BeforeEach
     public void setUp() throws Exception {
         flight=new Flight(FlightID.LH2121,"22:00", IATAAirportCodes.FRA,IATAAirportCodes.HKG, Gate.A05);
         serviceAgent=new ServiceAgent();
+        federalPolice= new FederalPolice();
         fastBagDrop=new FastBagDrop(Manufacturer.SMITH);
         fastBagDrop.setServiceAgent(serviceAgent);
         fastBagDrop.setFederalPolice(fastBagDrop.getFederalPolice());
         serviceAgent.executeImport(fastBagDrop.getServices().getImporter(),flight,fastBagDrop);
+
+
+        fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().setUpCard(serviceAgent.getIdCard());    // card with rfid chip will be created with encrypted pin by the encryption manager in id scard scanner
+        fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().setUpCard(federalPolice.getIdCard());
+
+        fastBagDrop.getRightSection().getIdCardScanner().getEncryptionManager().setDes(fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().getMachineDES());
+        fastBagDrop.getRightSection().getIdCardScanner().getEncryptionManager().setLogInDatabase(fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().getLogInDatabase());
     }
 
     @Test
@@ -142,7 +154,7 @@ public class TestApplication {
     }
     @Test
     @Order(8)
-    public void checkBaggageQRCode() throws IOException, WriterException {
+    public void checkBaggageTag() throws IOException, WriterException {
         BaggageDrop baggageDrop =new BaggageDrop();
         Queue<Passenger> businessQ=fastBagDrop.getLeftSection().getBusinessQueue().getBusinessQueue();
 
@@ -150,10 +162,53 @@ public class TestApplication {
             Passenger passenger=businessQ.poll();
             baggageDrop.simulateCheckIn(fastBagDrop,passenger,flight, Position.LEFT);
             for(Baggage baggage: passenger.getBaggageList()){
+                assertNotNull(baggage.getBaggageTag());
                 assertNotNull(baggage.getBaggageTag().getQrCode());  //all checked in baggage have baggage Tag with qr code
             }
         }
 
     }
+
+    @Test
+    @Order(9)
+    public void checkManagementAdministration() {
+
+        IDCard serviceAgentIdCard=federalPolice.getIdCard();
+
+        serviceAgent.startUpMachine(fastBagDrop,serviceAgentIdCard);
+        assertEquals(FastBagDropState.ON,fastBagDrop.getCurrentState());
+
+
+    }
+    @Test
+    @Order(10)
+    public void testStartUp() {
+
+        IDCard serviceAgentIdCard=serviceAgent.getIdCard();
+        serviceAgent.startUpMachine(fastBagDrop,serviceAgentIdCard);
+        assertEquals(FastBagDropState.ON,fastBagDrop.getCurrentState());
+    }
+    @Test
+    @Order(11)
+    public void testShutdown() {
+
+        IDCard serviceAgentIdCard=serviceAgent.getIdCard();
+        serviceAgent.shutDownMachine(fastBagDrop,serviceAgentIdCard);
+        assertEquals(FastBagDropState.OFF,fastBagDrop.getCurrentState());
+    }
+    @Test
+    @Order(12)
+    public void testCheckIn() throws IOException, WriterException {
+
+        Baggage baggage = new Baggage();
+        baggage.setContent("explosives");
+
+        BaggageScanner baggageScanner = new BaggageScanner(StringMatchingAlgorithm.BM);
+        baggageScanner.searchForExplosives(baggage);
+
+
+
+    }
+
 
 }

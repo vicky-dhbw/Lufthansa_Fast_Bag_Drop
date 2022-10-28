@@ -10,7 +10,7 @@ public class PinGenerator {
 
         for (int i = 0; i < 6; i++) {
 
-            int randomAlpha = new Random().nextInt(0, pool.length);
+            int randomAlpha = new Random().nextInt(pool.length);
             personalNumberChar[i] = pool[randomAlpha];
         }
 
