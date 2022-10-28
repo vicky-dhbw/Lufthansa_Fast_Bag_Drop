@@ -1,11 +1,10 @@
 package services;
 
 import automatComponents.BaggageScanner;
-import automatComponents.FastBagDrop;
 import automatComponents.FastBagDropSection;
 import automatComponents.Position;
 import passengerRelevants.Baggage;
-import searchAlgorithms.StringMatchingAlgorithm;
+import security.searchAlgorithms.StringMatchingAlgorithm;
 
 public class ExplosivesInvestigation {
 

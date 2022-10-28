@@ -1,4 +1,4 @@
-package searchAlgorithms;
+package security.searchAlgorithms;
 
 public class KnuthMorrisPratt implements IStringMatching {
     public int search(String text, String pattern) {

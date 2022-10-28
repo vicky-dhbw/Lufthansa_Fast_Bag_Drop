@@ -6,6 +6,8 @@ import flightRelevants.Flight;
 import flightRelevants.FlightID;
 import flightRelevants.Gate;
 import flightRelevants.IATAAirportCodes;
+import identityRelevants.IDCard;
+import livingComponents.FederalPolice;
 import livingComponents.Passenger;
 import livingComponents.ServiceAgent;
 import org.junit.jupiter.api.*;
@@ -22,15 +24,25 @@ public class TestApplication {
 
     FastBagDrop fastBagDrop;
     ServiceAgent serviceAgent;
+
+    FederalPolice federalPolice;
     Flight flight;
     @BeforeEach
     public void setUp() throws Exception {
         flight=new Flight(FlightID.LH2121,"22:00", IATAAirportCodes.FRA,IATAAirportCodes.HKG, Gate.A05);
         serviceAgent=new ServiceAgent();
+        federalPolice=new FederalPolice();
+
         fastBagDrop=new FastBagDrop(Manufacturer.SMITH);
         fastBagDrop.setServiceAgent(serviceAgent);
         fastBagDrop.setFederalPolice(fastBagDrop.getFederalPolice());
         serviceAgent.executeImport(fastBagDrop.getServices().getImporter(),flight,fastBagDrop);
+
+        fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().setUpCard(serviceAgent.getIdCard());    // card with rfid chip will be created with encrypted pin by the encryption manager in id scard scanner
+        fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().setUpCard(federalPolice.getIdCard());
+
+        fastBagDrop.getRightSection().getIdCardScanner().getEncryptionManager().setDes(fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().getMachineDES());
+        fastBagDrop.getRightSection().getIdCardScanner().getEncryptionManager().setLogInDatabase(fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().getLogInDatabase());
     }
 
     @Test
@@ -154,6 +166,15 @@ public class TestApplication {
             }
         }
 
+    }
+
+    @Test
+    @Order(9)
+
+    public void checkStateOfMachine(){
+        IDCard serviceAgentIdCard=serviceAgent.getIdCard();
+        serviceAgent.startUpMachine(fastBagDrop,serviceAgentIdCard);
+        assertEquals(FastBagDropState.ON,fastBagDrop.getCurrentState());
     }
 
 }

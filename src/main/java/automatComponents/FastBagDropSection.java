@@ -1,11 +1,5 @@
 package automatComponents;
 
-import automatComponents.*;
-import livingComponents.Passenger;
-import searchAlgorithms.StringMatchingAlgorithm;
-
-import java.util.Queue;
-
 public class FastBagDropSection {
 
     private PassportScanner passportScanner=new PassportScanner();

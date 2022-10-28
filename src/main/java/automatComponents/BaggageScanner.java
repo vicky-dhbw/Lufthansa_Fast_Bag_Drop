@@ -1,10 +1,8 @@
 package automatComponents;
 
 import passengerRelevants.Baggage;
-import searchAlgorithms.*;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
+import security.searchAlgorithms.*;
 
 public class BaggageScanner {
 
