@@ -11,6 +11,8 @@ public class BaggageTagIDGenerator {
         for (int i = 0; i < 8; i++) {
 
             int randomAlpha = new Random().nextInt(pool.length);
+
+            int randomAlpha = new Random().nextInt(pool.length);
             baggageTagID[i] = pool[randomAlpha];
         }
 
