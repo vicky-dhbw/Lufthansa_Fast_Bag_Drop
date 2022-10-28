@@ -2,11 +2,13 @@ package livingComponents;
 
 import automatComponents.FastBagDrop;
 import automatComponents.FastBagDropState;
+import identityRelevants.CardPurpose;
 import identityRelevants.IDCard;
 import passengerRelevants.Baggage;
 
 public class FederalPolice extends Employee{
     public FederalPolice() throws Exception {
+        this.getIdCard().setCardPurpose(CardPurpose.LOCK_UNLOCK);
     }
     public void unlockMachine(FastBagDrop fastBagDrop, IDCard idCard){
         System.out.println("federal police trying to unlock machine......");

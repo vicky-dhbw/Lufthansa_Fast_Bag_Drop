@@ -5,6 +5,7 @@ import automatComponents.Display;
 import automatComponents.FastBagDrop;
 import automatComponents.FastBagDropState;
 import flightRelevants.Flight;
+import identityRelevants.CardPurpose;
 import identityRelevants.IDCard;
 import services.DataAnalytics;
 import services.Export;
@@ -13,6 +14,7 @@ import services.Import;
 public class ServiceAgent extends Employee{
 
     public ServiceAgent() throws Exception {
+        this.getIdCard().setCardPurpose(CardPurpose.ON_OFF);
     }
 
     public void executeImport(Import importer, Flight flight, FastBagDrop fastBagDrop){

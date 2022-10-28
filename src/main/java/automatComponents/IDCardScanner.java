@@ -1,5 +1,6 @@
 package automatComponents;
 
+import identityRelevants.CardPurpose;
 import identityRelevants.IDCard;
 import security.EncryptionManager;
 
@@ -20,12 +21,23 @@ public class IDCardScanner {
             throw new RuntimeException(e);
         }
 
-        for(String pins:encryptionManager.getLogInDatabase().getPins()){
-            if(pins.equals(decryptedPin)){
-                System.out.println("AUTHENTICATION SUCCESSFUL");
-                return true;
+        if(idCard.getCardPurpose()== CardPurpose.ON_OFF){
+            for(String pins:encryptionManager.getLogInDatabase().getPinsForOnOff()){
+                if(pins.equals(decryptedPin)){
+                    System.out.println("AUTHENTICATION SUCCESSFUL");
+                    return true;
+                }
             }
         }
+        if(idCard.getCardPurpose()== CardPurpose.LOCK_UNLOCK){
+            for(String pins:encryptionManager.getLogInDatabase().getPinsForLockUnlock()){
+                if(pins.equals(decryptedPin)){
+                    System.out.println("AUTHENTICATION SUCCESSFUL");
+                    return true;
+                }
+            }
+        }
+
         System.out.println("AUTHENTICATION FAILED");
 
         return false;

@@ -12,7 +12,7 @@ import livingComponents.Passenger;
 import livingComponents.ServiceAgent;
 import org.junit.jupiter.api.*;
 import passengerRelevants.Baggage;
-import searchAlgorithms.StringMatchingAlgorithm;
+//import searchAlgorithms.StringMatchingAlgorithm;
 import services.BaggageDrop;
 import services.ScanBaggage;
 
@@ -215,10 +215,38 @@ public class TestApplication {
         Baggage baggage = new Baggage();
         baggage.setContent("explosives");
 
-        BaggageScanner baggageScanner = new BaggageScanner(StringMatchingAlgorithm.BM);
-        baggageScanner.searchForExplosives(baggage);
+        //BaggageScanner baggageScanner = new BaggageScanner(StringMatchingAlgorithm.BM);
+       // baggageScanner.searchForExplosives(baggage);
     }
 
+    @Test
+    @Order(14)
+    public void startUpOnlyThroughServiceAgent(){
+// <---- play this
+        // machine cannot be started with id card of federal police which is only authorized to lock and unlock machine
+
+        // to start up machine ,one needs a id card with id card purpose for on off, which the service agent has
+        IDCard federalPoliceIdCard=federalPolice.getIdCard();
+        System.out.println(federalPoliceIdCard.getCardPurpose().toString());
+        serviceAgent.startUpMachine(fastBagDrop,federalPoliceIdCard);  //<---- service agent tries to start up machine with id card of the federal police
+        assertNotEquals(FastBagDropState.ON,fastBagDrop.getCurrentState());    // expected state of machine after should be on, but the current state of machine is OFF
+    }
+
+    @Test
+    @Order(15)
+    public void shutDownOnlyThroughServiceAgent(){
+        // <---- play this
+        // machine cannot be shut down with id card of federal police which is only authorized to lock and unlock machine
+
+        // to start up machine ,one needs a id card with id card purpose for on off
+        IDCard serviceAgentIdCard=serviceAgent.getIdCard();
+        serviceAgent.startUpMachine(fastBagDrop,serviceAgentIdCard);   // the machine must be started for testing off successful shutdown
+
+        IDCard federalPoliceIdCard=federalPolice.getIdCard();
+        System.out.println(federalPoliceIdCard.getCardPurpose().toString());
+        serviceAgent.shutDownMachine(fastBagDrop,federalPoliceIdCard);
+        assertNotEquals(FastBagDropState.OFF,fastBagDrop.getCurrentState());    // expected state of machine after should be off, but the current state of machine is ON
+    }
 
 
 

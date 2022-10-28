@@ -6,13 +6,26 @@ import java.util.List;
 import java.util.UUID;
 
 public class LogInDatabase {
-    private List<String> pins=new ArrayList<>();
+    private List<String> pinsForOnOff=new ArrayList<>();
 
-    public List<String> getPins() {
-        return pins;
+    private List<String> pinsForLockUnlock=new ArrayList<>();
+
+
+    public List<String> getPinsForOnOff() {
+        return pinsForOnOff;
     }
 
-    public void setPins(List<String> pins) {
-        this.pins = pins;
+    public void setPinsForOnOff(List<String> pinsForOnOff) {
+        this.pinsForOnOff = pinsForOnOff;
     }
+
+    public List<String> getPinsForLockUnlock() {
+        return pinsForLockUnlock;
+    }
+
+    public void setPinsForLockUnlock(List<String> pinsForLockUnlock) {
+        this.pinsForLockUnlock = pinsForLockUnlock;
+    }
+
+
 }

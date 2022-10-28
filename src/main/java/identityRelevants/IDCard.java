@@ -8,6 +8,8 @@ public class IDCard {
     private UUID uuid;
     private final RFIDChip rfid_chip=new RFIDChip();
 
+    private CardPurpose cardPurpose;
+
     private IDCardStatus idCardStatus;
     public IDCard() throws Exception {
         uuid=UUID.randomUUID();
@@ -28,5 +30,13 @@ public class IDCard {
 
     public RFIDChip getRfid_chip(){
         return rfid_chip;
+    }
+
+    public CardPurpose getCardPurpose() {
+        return cardPurpose;
+    }
+
+    public void setCardPurpose(CardPurpose cardPurpose) {
+        this.cardPurpose = cardPurpose;
     }
 }

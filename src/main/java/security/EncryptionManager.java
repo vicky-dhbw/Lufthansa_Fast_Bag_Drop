@@ -1,5 +1,6 @@
 package security;
 
+import identityRelevants.CardPurpose;
 import identityRelevants.IDCard;
 
 import java.util.UUID;
@@ -36,7 +37,15 @@ public class EncryptionManager {
         byte[] encryptedPIN= des.encrypt(randomPIN);  //random String pins are decrypted by DES and as PIN (bytes[]) for RFID chips
         idCard.getRfid_chip().setPIN(encryptedPIN);
         String decryptedPIN=des.decrypt(idCard.getRfid_chip().getPIN());  // decryption of pin is needed to store the pin as string into log in database
-        logInDatabase.getPins().add(decryptedPIN);
+
+        if(idCard.getCardPurpose()== CardPurpose.ON_OFF){
+            logInDatabase.getPinsForOnOff().add(decryptedPIN);
+        }
+
+        if(idCard.getCardPurpose()==CardPurpose.LOCK_UNLOCK){
+            logInDatabase.getPinsForLockUnlock().add(decryptedPIN);
+        }
+
     }
 
 
