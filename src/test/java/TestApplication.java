@@ -14,6 +14,7 @@ import org.junit.jupiter.api.*;
 import passengerRelevants.Baggage;
 import searchAlgorithms.StringMatchingAlgorithm;
 import services.BaggageDrop;
+import services.ScanBaggage;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -196,19 +197,29 @@ public class TestApplication {
         serviceAgent.shutDownMachine(fastBagDrop,serviceAgentIdCard);
         assertEquals(FastBagDropState.OFF,fastBagDrop.getCurrentState());
     }
+
     @Test
     @Order(12)
     public void testCheckIn() throws IOException, WriterException {
+
+    }
+
+
+
+
+
+    @Test
+    @Order(13)
+    public void testCheckInWthExplosives() throws IOException, WriterException {
 
         Baggage baggage = new Baggage();
         baggage.setContent("explosives");
 
         BaggageScanner baggageScanner = new BaggageScanner(StringMatchingAlgorithm.BM);
         baggageScanner.searchForExplosives(baggage);
-
-
-
     }
+
+
 
 
 }
