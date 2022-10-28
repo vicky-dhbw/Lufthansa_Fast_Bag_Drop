@@ -126,11 +126,12 @@ public class Display {
         System.out.println();
         System.out.println("----------  PREMIUM ECONOMY CLASS");
         System.out.println();
-        economyClass.forEach(r->System.out.println(r.getName()+ " "+r.getBookingClass()+" "+r.getSeatId()+" "+r.getNumberOfBaggage()));
+        premiumEconomyClass.forEach(r->System.out.println(r.getName()+ " "+r.getBookingClass()+" "+r.getSeatId()+" "+r.getNumberOfBaggage()));
         System.out.println();
         System.out.println("---------- ECONOMY CLASS");
         System.out.println();
-        premiumEconomyClass.forEach(r->System.out.println(r.getName()+ " "+r.getBookingClass()+" "+r.getSeatId()+" "+r.getNumberOfBaggage()));
+        economyClass.forEach(r->System.out.println(r.getName()+ " "+r.getBookingClass()+" "+r.getSeatId()+" "+r.getNumberOfBaggage()));
+
 
     }
 
