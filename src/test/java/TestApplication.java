@@ -236,6 +236,7 @@ public class TestApplication {
 
     }
 
+    // test 14 here
     @Test
     @Order(14)
     public void startUpOnlyThroughServiceAgent(){
@@ -249,6 +250,7 @@ public class TestApplication {
         assertNotEquals(FastBagDropState.ON,fastBagDrop.getCurrentState());    // expected state of machine after should be on, but the current state of machine is OFF
     }
 
+    // test 15 here
     @Test
     @Order(15)
     public void shutDownOnlyThroughServiceAgent(){
