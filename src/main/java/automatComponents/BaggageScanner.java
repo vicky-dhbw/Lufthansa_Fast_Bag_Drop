@@ -11,6 +11,7 @@ public class BaggageScanner {
 
     public boolean searchForExplosives(Baggage baggage){
         System.out.println("searching for explosives in baggage /////----o---");
+
         int contains=search("explosives",baggage.getContent());
         if(contains==-1){
             return false;

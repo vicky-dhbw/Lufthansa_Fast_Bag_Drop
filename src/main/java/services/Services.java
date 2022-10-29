@@ -17,6 +17,7 @@ public class Services {
     private final Shutdown shutdown;
     private final StartUp startUp;
     private final Unlock unlock;
+    private final BaggageDrop baggageDrop;
 
     public Services() throws IOException, WriterException {
         checkIn=new CheckIn();
@@ -30,6 +31,8 @@ public class Services {
         shutdown=new Shutdown();
         startUp=new StartUp();
         unlock=new Unlock();
+        baggageDrop=new BaggageDrop();
+
     }
 
 

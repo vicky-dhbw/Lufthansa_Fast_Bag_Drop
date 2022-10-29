@@ -21,8 +21,8 @@ import java.util.*;
 
 public class BaggageDrop {
 
-    static Queue<String> contents;
-    static Queue<String> weights;
+    Queue<String> contents;
+    Queue<String> weights;
 
     static int sequenceNumber=1;
     public BaggageDrop() throws IOException, WriterException {

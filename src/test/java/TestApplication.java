@@ -96,6 +96,19 @@ public class TestApplication {
     }
 
     @Test
+    @Order(5)
+    public void assureBaggageContent_() throws IOException, WriterException {
+        Queue<Passenger> testQueue=fastBagDrop.getLeftSection().getBusinessQueue().getBusinessQueue();
+        BaggageDrop baggageDrop =new BaggageDrop();
+        while(!testQueue.isEmpty()){
+            Passenger passenger=testQueue.poll();
+            baggageDrop.assignBaggageToPassenger(passenger,passenger.getNumberOfBaggage());
+            for(Baggage baggage:passenger.getBaggageList()){
+                assertTrue(baggage.getContent().length()>0);
+            }
+        }
+    }
+    @Test
     @Order(6)
     public void baggageCountIsPerfect() throws IOException, WriterException {
         Queue<Passenger> businessQ=fastBagDrop.getLeftSection().getBusinessQueue().getBusinessQueue();
@@ -261,11 +274,11 @@ public class TestApplication {
     @Order(17)
     public void dataAnalyticsOnlyThroughServiceAgent() throws IOException {
         serviceAgent.startUpMachine(fastBagDrop,serviceAgent.getIdCard());
-        serviceAgent.executeImport(fastBagDrop.getServices().getImporter(),flight,fastBagDrop);
+
         fastBagDrop.getServices().getCheckIn().executeCheckIn(fastBagDrop,flight);
         serviceAgent.executeExport(fastBagDrop.getServices().getExport());
         assertTrue(serviceAgent.executeDataAnalytics(fastBagDrop.getServices().getDataAnalytics(),fastBagDrop.getFastBagDropSection(Position.LEFT).getDisplay(), fastBagDrop.getDatabase()));
-      //  assertFalse(federalPolice.executeDataAnalytics(fastBagDrop.getServices().getDataAnalytics(),fastBagDrop.getFastBagDropSection(Position.LEFT).getDisplay(), fastBagDrop.getDatabase()));
+        assertFalse(federalPolice.executeDataAnalytics(fastBagDrop.getServices().getDataAnalytics(),fastBagDrop.getFastBagDropSection(Position.LEFT).getDisplay(), fastBagDrop.getDatabase()));
     }
 
 
