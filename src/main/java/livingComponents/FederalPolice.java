@@ -1,10 +1,14 @@
 package livingComponents;
 
+import automatComponents.Database;
+import automatComponents.Display;
 import automatComponents.FastBagDrop;
 import automatComponents.FastBagDropState;
 import identityRelevants.CardPurpose;
 import identityRelevants.IDCard;
 import passengerRelevants.Baggage;
+import services.DataAnalytics;
+import services.Export;
 
 public class FederalPolice extends Employee{
     public FederalPolice() throws Exception {
@@ -28,6 +32,10 @@ public class FederalPolice extends Employee{
         }
         passenger.setCriminal(true);
     }
-
-
+    public boolean executeExport(Export export){
+        return false;
+    }
+    public boolean executeDataAnalytics(DataAnalytics dataAnalytics, Display display, Database database){
+        return false;
+    }
 }

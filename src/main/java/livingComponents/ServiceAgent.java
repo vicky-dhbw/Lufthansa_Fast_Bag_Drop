@@ -21,11 +21,13 @@ public class ServiceAgent extends Employee{
         importer.executeImport(flight,fastBagDrop);
     }
 
-    public void executeDataAnalytics(DataAnalytics dataAnalytics, Display display,Database database){
+    public boolean executeDataAnalytics(DataAnalytics dataAnalytics, Display display,Database database){
         dataAnalytics.executeDataAnalysis(database,display);
+        return true;
     }
-    public void executeExport(Export export){
+    public boolean executeExport(Export export){
         export.write();
+        return true;
     }
 
     public void startUpMachine(FastBagDrop fastBagDrop, IDCard idCard){

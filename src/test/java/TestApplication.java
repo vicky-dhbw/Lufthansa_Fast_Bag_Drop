@@ -44,6 +44,7 @@ public class TestApplication {
 
         fastBagDrop.getRightSection().getIdCardScanner().getEncryptionManager().setDes(fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().getMachineDES());
         fastBagDrop.getRightSection().getIdCardScanner().getEncryptionManager().setLogInDatabase(fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().getLogInDatabase());
+
     }
 
     @Test
@@ -201,51 +202,31 @@ public class TestApplication {
     @Test
     @Order(12)
     public void testCheckIn() throws IOException, WriterException {
+        fastBagDrop.getServices().getCheckIn().executeCheckIn(fastBagDrop,flight);
 
     }
-
-
-
 
 
     @Test
     @Order(13)
     public void testCheckInWthExplosives() throws IOException, WriterException {
 
-        Passenger passenger=new Passenger();
-        passenger.setName("Tim Borsbach");
-
         Baggage baggage = new Baggage();
         baggage.setContent("explosives");
 
-        passenger.getBaggageList().add(baggage);
-
-        Queue<Baggage> baggageQueue=new LinkedList<>();
-        baggageQueue.add(baggage);
-
-        BaggageScanner baggageScanner=new BaggageScanner(StringMatchingAlgorithm.BM);
-        boolean containsExplosive=baggageScanner.searchForExplosives(baggage);
-
-        if(containsExplosive){
-            federalPolice.arrestPassenger(passenger);
-        }
-
-        for(Baggage baggage1:passenger.getBaggageList()){
-            assertEquals(0, baggage.getContent().length());
-        }
-
+        BaggageScanner baggageScanner = new BaggageScanner(StringMatchingAlgorithm.BM);
+        baggageScanner.searchForExplosives(baggage);
     }
 
     // test 14 here
     @Test
     @Order(14)
-    public void startUpOnlyThroughServiceAgent(){
+    public void startUpOnlyThroughServiceAgent() {
 // <---- play this
         // machine cannot be started with id card of federal police which is only authorized to lock and unlock machine
 
         // to start up machine ,one needs a id card with id card purpose for on off, which the service agent has
         IDCard federalPoliceIdCard=federalPolice.getIdCard();
-        System.out.println(federalPoliceIdCard.getCardPurpose().toString());
         serviceAgent.startUpMachine(fastBagDrop,federalPoliceIdCard);  //<---- service agent tries to start up machine with id card of the federal police
         assertNotEquals(FastBagDropState.ON,fastBagDrop.getCurrentState());    // expected state of machine after should be on, but the current state of machine is OFF
     }
@@ -253,7 +234,7 @@ public class TestApplication {
     // test 15 here
     @Test
     @Order(15)
-    public void shutDownOnlyThroughServiceAgent(){
+    public void shutDownOnlyThroughServiceAgent() {
         // <---- play this
         // machine cannot be shut down with id card of federal police which is only authorized to lock and unlock machine
 
@@ -262,11 +243,30 @@ public class TestApplication {
         serviceAgent.startUpMachine(fastBagDrop,serviceAgentIdCard);   // the machine must be started for testing off successful shutdown
 
         IDCard federalPoliceIdCard=federalPolice.getIdCard();
-        System.out.println(federalPoliceIdCard.getCardPurpose().toString());
         serviceAgent.shutDownMachine(fastBagDrop,federalPoliceIdCard);
         assertNotEquals(FastBagDropState.OFF,fastBagDrop.getCurrentState());    // expected state of machine after should be off, but the current state of machine is ON
     }
 
+
+    @Test
+    @Order(16)
+    public void exportOnlyThroughServiceAgent() {
+
+
+        assertTrue(serviceAgent.executeExport(fastBagDrop.getServices().getExport()));
+        assertFalse(federalPolice.executeExport(fastBagDrop.getServices().getExport()));
+    }
+
+    @Test
+    @Order(17)
+    public void dataAnalyticsOnlyThroughServiceAgent() throws IOException {
+        serviceAgent.startUpMachine(fastBagDrop,serviceAgent.getIdCard());
+        serviceAgent.executeImport(fastBagDrop.getServices().getImporter(),flight,fastBagDrop);
+        fastBagDrop.getServices().getCheckIn().executeCheckIn(fastBagDrop,flight);
+        serviceAgent.executeExport(fastBagDrop.getServices().getExport());
+        assertTrue(serviceAgent.executeDataAnalytics(fastBagDrop.getServices().getDataAnalytics(),fastBagDrop.getFastBagDropSection(Position.LEFT).getDisplay(), fastBagDrop.getDatabase()));
+      //  assertFalse(federalPolice.executeDataAnalytics(fastBagDrop.getServices().getDataAnalytics(),fastBagDrop.getFastBagDropSection(Position.LEFT).getDisplay(), fastBagDrop.getDatabase()));
+    }
 
 
 }
