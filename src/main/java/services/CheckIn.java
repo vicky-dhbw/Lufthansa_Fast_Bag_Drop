@@ -16,7 +16,7 @@ public class CheckIn {
         QRCodeGenerator.generateQRCode();
     }
 
-    public void executeCheckIn(FastBagDrop fastBagDrop,Flight flight) throws IOException {
+    public boolean executeCheckIn(FastBagDrop fastBagDrop,Flight flight) throws IOException {
         while (!(fastBagDrop.getLeftSection().getBusinessQueue().getBusinessQueue().isEmpty())){
             Passenger passenger=fastBagDrop.getLeftSection().getBusinessQueue().removePassenger();
             baggageDrop.simulateCheckIn(fastBagDrop,passenger,flight,Position.LEFT);
@@ -27,5 +27,7 @@ public class CheckIn {
             baggageDrop.simulateCheckIn(fastBagDrop,passenger_,flight,Position.LEFT);
 
         }
+        return true;
     }
+
 }

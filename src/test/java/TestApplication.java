@@ -14,6 +14,7 @@ import org.junit.jupiter.api.*;
 import passengerRelevants.Baggage;
 import searchAlgorithms.StringMatchingAlgorithm;
 import services.BaggageDrop;
+import services.BoardingPassGenerator;
 import services.ScanBaggage;
 
 import java.io.BufferedReader;
@@ -37,7 +38,6 @@ public class TestApplication {
         fastBagDrop.setServiceAgent(serviceAgent);
         fastBagDrop.setFederalPolice(fastBagDrop.getFederalPolice());
         serviceAgent.executeImport(fastBagDrop.getServices().getImporter(),flight,fastBagDrop);
-
 
         fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().setUpCard(serviceAgent.getIdCard());    // card with rfid chip will be created with encrypted pin by the encryption manager in id scard scanner
         fastBagDrop.getLeftSection().getIdCardScanner().getEncryptionManager().setUpCard(federalPolice.getIdCard());
@@ -172,13 +172,15 @@ public class TestApplication {
     public void checkBaggageTag() throws IOException, WriterException {
         BaggageDrop baggageDrop =new BaggageDrop();
         Queue<Passenger> businessQ=fastBagDrop.getLeftSection().getBusinessQueue().getBusinessQueue();
+        IDCard serviceAgentIdCard=serviceAgent.getIdCard();
+        serviceAgent.startUpMachine(fastBagDrop,serviceAgentIdCard);
 
         while(!businessQ.isEmpty()){
             Passenger passenger=businessQ.poll();
             baggageDrop.simulateCheckIn(fastBagDrop,passenger,flight, Position.LEFT);
             for(Baggage baggage: passenger.getBaggageList()){
-                assertNotNull(baggage.getBaggageTag());
-                assertNotNull(baggage.getBaggageTag().getQrCode());  //all checked in baggage have baggage Tag with qr code
+               assertNotNull(baggage.getBaggageTag());
+               assertNotNull(baggage.getBaggageTag().getQrCode());  //all checked in baggage have baggage Tag with qr code
             }
         }
 
@@ -215,7 +217,7 @@ public class TestApplication {
     @Test
     @Order(12)
     public void testCheckIn() throws IOException, WriterException {
-        fastBagDrop.getServices().getCheckIn().executeCheckIn(fastBagDrop,flight);
+        assertTrue(fastBagDrop.getServices().getCheckIn().executeCheckIn(fastBagDrop,flight));
 
     }
 
@@ -225,10 +227,17 @@ public class TestApplication {
     public void testCheckInWthExplosives() throws IOException, WriterException {
 
         Baggage baggage = new Baggage();
+        Passenger passenger = new Passenger();
+
+        passenger.getBaggageList().add(baggage);
         baggage.setContent("explosives");
 
-        BaggageScanner baggageScanner = new BaggageScanner(StringMatchingAlgorithm.BM);
-        baggageScanner.searchForExplosives(baggage);
+        BaggageDrop baggageDrop = new BaggageDrop();
+
+        baggageDrop.simulateCheckIn(fastBagDrop,passenger,flight,Position.LEFT);
+
+        assertEquals(0.0,baggage.getWeight());
+
     }
 
     // test 14 here
@@ -281,5 +290,20 @@ public class TestApplication {
         assertFalse(federalPolice.executeDataAnalytics(fastBagDrop.getServices().getDataAnalytics(),fastBagDrop.getFastBagDropSection(Position.LEFT).getDisplay(), fastBagDrop.getDatabase()));
     }
 
-
+    @Test
+    @Order(18)
+    public void checkBoardingPass() throws IOException, WriterException {
+        Queue<Passenger> testQueue=fastBagDrop.getRightSection().getEconomyQueue().getEconomyQueue();
+        Queue<Passenger> testQueue2=new LinkedList<>();
+        BaggageDrop baggageDrop =new BaggageDrop();
+        while(!testQueue.isEmpty()){
+            Passenger passenger=testQueue.poll();
+            baggageDrop.simulateCheckIn(fastBagDrop,passenger,flight,Position.RIGHT);
+            testQueue2.add(passenger);
+        }
+        while (!testQueue2.isEmpty()){
+            Passenger passenger=testQueue2.poll();
+            assertNotNull(passenger.getBoardingPass());
+        }
+    }
 }
