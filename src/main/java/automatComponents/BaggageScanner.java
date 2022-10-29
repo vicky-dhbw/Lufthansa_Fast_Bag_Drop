@@ -2,7 +2,8 @@ package automatComponents;
 
 import passengerRelevants.Baggage;
 
-import security.searchAlgorithms.*;
+import searchAlgorithms.*;
+import security.*;
 
 public class BaggageScanner {
 

@@ -4,7 +4,7 @@ import automatComponents.BaggageScanner;
 import automatComponents.FastBagDropSection;
 import automatComponents.Position;
 import passengerRelevants.Baggage;
-import security.searchAlgorithms.StringMatchingAlgorithm;
+import searchAlgorithms.StringMatchingAlgorithm;
 
 public class ExplosivesInvestigation {
 

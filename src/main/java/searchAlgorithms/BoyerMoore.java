@@ -1,4 +1,4 @@
-package security.searchAlgorithms;
+package searchAlgorithms;
 
 public class BoyerMoore implements IStringMatching {
     public int search(String text, String pattern) {

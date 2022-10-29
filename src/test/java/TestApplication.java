@@ -12,7 +12,7 @@ import livingComponents.Passenger;
 import livingComponents.ServiceAgent;
 import org.junit.jupiter.api.*;
 import passengerRelevants.Baggage;
-//import searchAlgorithms.StringMatchingAlgorithm;
+import searchAlgorithms.StringMatchingAlgorithm;
 import services.BaggageDrop;
 import services.ScanBaggage;
 
@@ -212,11 +212,28 @@ public class TestApplication {
     @Order(13)
     public void testCheckInWthExplosives() throws IOException, WriterException {
 
+        Passenger passenger=new Passenger();
+        passenger.setName("Tim Borsbach");
+
         Baggage baggage = new Baggage();
         baggage.setContent("explosives");
 
-        //BaggageScanner baggageScanner = new BaggageScanner(StringMatchingAlgorithm.BM);
-       // baggageScanner.searchForExplosives(baggage);
+        passenger.getBaggageList().add(baggage);
+
+        Queue<Baggage> baggageQueue=new LinkedList<>();
+        baggageQueue.add(baggage);
+
+        BaggageScanner baggageScanner=new BaggageScanner(StringMatchingAlgorithm.BM);
+        boolean containsExplosive=baggageScanner.searchForExplosives(baggage);
+
+        if(containsExplosive){
+            federalPolice.arrestPassenger(passenger);
+        }
+
+        for(Baggage baggage1:passenger.getBaggageList()){
+            assertEquals(0, baggage.getContent().length());
+        }
+
     }
 
     @Test
