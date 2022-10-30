@@ -16,6 +16,9 @@ public class FastBagDropSection {
 
     private final Position position;
 
+    private FingerprintScanner fingerprintScanner;
+    private FaceIDScanner faceIDScanner;
+
     public FastBagDropSection(Position position) throws Exception {
         passportScanner=new PassportScanner();
         documentPrinter =new DocumentPrinter();
@@ -23,7 +26,10 @@ public class FastBagDropSection {
         sensor=new Sensor();
         idCardScanner =new IDCardScanner();
         display=new Display();
+        fingerprintScanner=new FingerprintScanner();
+        faceIDScanner=new FaceIDScanner();
         this.position=position;
+
 
         if(position==Position.LEFT){
             businessQueue=new BusinessQueue(); //new creation of left section creates only a new business Queue, --> note economyQueue is null for leftSection

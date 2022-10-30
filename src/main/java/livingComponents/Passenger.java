@@ -23,6 +23,25 @@ public class Passenger extends Human{
     private Voucher voucher;
     private int numberOfBaggage;
 
+    private FingerPrint fingerPrint;
+    private FaceID faceID;
+
+    public boolean hasFaceID(){
+        if(faceID.getFaceID()==null){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    public boolean hasFingerPrint(){
+        if(fingerPrint.getFingerPrint()==null){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
     private boolean isCriminal;
     public Passenger(){
         passport=new Passport();
@@ -109,4 +128,5 @@ public class Passenger extends Human{
     public void setCriminal(boolean criminal) {
         isCriminal = criminal;
     }
+
 }
