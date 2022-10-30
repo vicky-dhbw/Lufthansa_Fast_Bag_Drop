@@ -20,9 +20,12 @@ public class ScanBaggage {
         if(fastBagDrop.getCurrentState()==FastBagDropState.ON||fastBagDrop.getCurrentState()==FastBagDropState.UNLOCKED){
             while(!baggageQueue.isEmpty()){
                 Baggage baggage=baggageQueue.poll();
-                passenger.getBaggageList().remove(baggage);
-                if(baggage.getWeight()<=23.0){
+                boolean baggageWeightOK=fastBagDrop.getServices().getDetermineWeight().checkWeight(baggage);
+                passenger.getBaggageList().remove(baggage); // the passenger does not have the baggage in his hand, the baggage must be removed from the baggage list
+                if(baggageWeightOK){
+
                     boolean containsExplosives= fastBagDrop.getServices().getExplosivesInvestigation().searchForExplosives(fastBagDrop.getFastBagDropSection(position),position,baggage);
+
                     if(!containsExplosives){
                         System.out.println("......../ Baggage contains no explosives");
                         BaggageTag baggageTag=new BaggageTag();

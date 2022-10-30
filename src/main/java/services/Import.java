@@ -19,6 +19,11 @@ import java.util.*;
 
 public class Import {
 
+    // with Import, one can get the assignment file, create passengers from the details in file
+    // the passengers are added to fast baggage drop queue
+    // business class passengers are added to business queue <--- left section of fast bag drop
+    // economy and premium economy passengers are added to economy queue <---- right section of fast bag drop
+
     public void executeImport(Flight forFlight, FastBagDrop fastBagDrop){
 
         try {

@@ -33,14 +33,25 @@ public class BaggageDrop {
     }
     public void simulateCheckIn(FastBagDrop fastBagDrop, Passenger passenger, Flight flight, Position position) throws IOException {
         //the scanner uses the machine's database to find ticket id of the passenger-> 1 yes found, 0 not found
+        // check in possible only if the passengers passport is found in the passengerDatabase in FastBagDrop/Database
         boolean ifFound=fastBagDrop.getFastBagDropSection(position).getPassportScanner().scanPassport(fastBagDrop.getDatabase(), passenger.getPassport());
 
         //the display shows message whether ticket is found or not
+        // if ifFound is true the display gives a positive message, else a negative message
         fastBagDrop.getFastBagDropSection(position).getDisplay().showMessage(ifFound,passenger);
+
+        // if a ticket is found for the passenger a flight seat should be searched according to specification
         if(ifFound){
-            //the database uses the static FreeSeatSearcher method to search a non-reserved seat
+            //the database uses the static FreeSeatSearcher method to search a non-reserved seat --> see automateComponents/Database -> method searchForFreeSeat
+            // find FreeSeatSearcher in AutomateComponents
             Seat seat=fastBagDrop.getDatabase().searchForFreeSeat(flight,passenger);
+
+            // the display must show the information related to passenger through the fast bag drop database
+
             fastBagDrop.getFastBagDropSection(position).getDisplay().showTicketRelevantInformation(fastBagDrop.getDatabase(), passenger);
+
+            // the display should provide passenger choices to either check in or deny check in
+            // by default passenger's decision is set to true
             boolean checkIn=fastBagDrop.getFastBagDropSection(position).getDisplay().offerChoiceAndAcceptCheckInDecision(flight,passenger);
 
             if(checkIn){
@@ -49,12 +60,19 @@ public class BaggageDrop {
                 // the above method returns the int to the method getNumberOfBaggage in Display class
                 // the display returns the int here
                 int numberOfBaggage=fastBagDrop.getFastBagDropSection(position).getDisplay().getNumberOfBaggage(passenger);
+
+                // here the passengers are assigned baggage and baggage weights
                 assignBaggageToPassenger(passenger,numberOfBaggage);
                 assignBaggageWeight(passenger);
 
+                // the baggage are sent through the conveyor belt so that the sensors can detect them
+                // weight of baggage will be displayed here
                 Queue<Baggage> baggageQueue=fastBagDrop.getFastBagDropSection(position).getConveyorBelt().acceptBaggage(passenger.getBaggageList(),fastBagDrop.getFastBagDropSection(position).getSensor(),fastBagDrop.getFastBagDropSection(position).getDisplay());
-                // the search of explosives occur over the scan baggage service where the baggage scanner scans baggage
 
+                // the search of explosives occur over the scan baggage service where the baggage scanner scans baggage
+                // go to ScanBaggage class in services package to see what happens when baggage are scanned
+
+                // a copy of the baggage are sent for scanning
                 fastBagDrop.getServices().getScanBaggage().scanBaggage(baggageQueue,fastBagDrop,position,passenger.getBoardingPass(),passenger, fastBagDrop.getDatabase());
 
                 // passenger who is a criminal will not get a seat or be issued a boarding pass
