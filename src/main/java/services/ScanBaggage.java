@@ -55,7 +55,7 @@ public class ScanBaggage {
                         fastBagDrop.getServices().getExport().getBaggageRecords().put(baggageTagId,baggageRecordsObjects);  //Records
 
                         boardingPass.addBaggageToTagList(baggageTag);
-                        passenger.getHandyApp().getHandyAppDatabase().getAppDatabase2().put(passenger.getPassport().getId(),passenger.getBoardingPass().getBaggageTagList());
+                        passenger.getHandyApp().setBaggageTagList(passenger.getBoardingPass().getBaggageTagList());
                         passenger.getBaggageList().add(baggage);
                     }
                     else {

@@ -81,7 +81,7 @@ public class BaggageDrop {
                     String seatId=FlightSeatStatusUpdater.reserveSeat(seat,flight);  // <---- the searched seat is reserved for the passenger by updating the status of the flight seats
                     BoardingPassGenerator.generateBoardingPass(fastBagDrop.getDatabase(), passenger,flight,seatId);
 
-                    passenger.getHandyApp().getHandyAppDatabase().getAppDatabase1().put(passenger.getPassport().getId(),passenger.getBoardingPass());
+                    passenger.getHandyApp().setBoardingPass(passenger.getBoardingPass());
                     //after successful scan baggage a record of all information to a passenger is gathered as Record Object and saved in the fast bag drop database...nice!!!
                     Record record=new Record(passenger);
                     fastBagDrop.getDatabase().getRecordList().add(record);
