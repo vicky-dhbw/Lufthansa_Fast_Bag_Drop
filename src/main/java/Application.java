@@ -11,6 +11,8 @@ import livingComponents.ServiceAgent;
 public class Application {
     public static void main(String[] args) throws Exception {
 
+        // Hei have a nice journey from Frankfurt to Hong Kong........
+
         Flight flight=new Flight(FlightID.LH2121,"22:00", IATAAirportCodes.FRA,IATAAirportCodes.HKG,Gate.A05);
 
         FastBagDrop fastBagDrop=new FastBagDrop(Manufacturer.SMITH);
@@ -48,8 +50,6 @@ public class Application {
 
         serviceAgent.executeDataAnalytics(fastBagDrop.getServices().getDataAnalytics(),fastBagDrop.getFastBagDropSection(Position.LEFT).getDisplay(), fastBagDrop.getDatabase());
         serviceAgent.shutDownMachine(fastBagDrop,serviceAgent.getIdCard());
-
-
 
     }
 
