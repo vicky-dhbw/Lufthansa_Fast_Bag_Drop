@@ -15,10 +15,6 @@ import java.util.Map;
 
 public class Display {
 
-    public boolean enterPIN(int pin){
-        return true;
-    }
-
     public void showMessage(boolean ifSuccessful, Passenger passenger){
         if(ifSuccessful){
             System.out.println("Ticket found for "+ passenger.getName()+ " and Flight LH2121");
