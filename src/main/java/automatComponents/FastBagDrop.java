@@ -4,16 +4,17 @@ import livingComponents.FederalPolice;
 import livingComponents.ServiceAgent;
 import services.Services;
 
+import javax.xml.crypto.Data;
 import java.util.UUID;
 
-public class FastBagDrop {
+public class FastBagDrop implements IFastBagDrop{
 
-    private final UUID serialNumber;
-    private final Manufacturer manufacturer;
+    private UUID serialNumber;
+    private Manufacturer manufacturer;
     private FastBagDropState currentState;
     private final FastBagDropSection rightSection=new FastBagDropSection(Position.RIGHT);
     private final FastBagDropSection leftSection=new FastBagDropSection(Position.LEFT);
-    private final Database database=new Database();
+    private Database database=new Database();
 
     private ServiceAgent serviceAgent=new ServiceAgent();
     private FederalPolice federalPolice=new FederalPolice();
@@ -26,7 +27,17 @@ public class FastBagDrop {
         this.currentState=FastBagDropState.OFF;
         this.manufacturer=manufacturer;
     }
+    public void setSerialNumber(UUID serialNumber){
+        this.serialNumber=UUID.randomUUID();
+    }
 
+    public void setDatabase(Database database){
+        this.database=database;
+    }
+
+    public void setManufacturer(Manufacturer manufacturer){
+        this.manufacturer=manufacturer;
+    }
     public UUID getSerialNumber() {
         return serialNumber;
     }

@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-public class EconomyQueue {
+public class EconomyQueue implements IQueue{
 
     private final Queue<Passenger> economyQueue;
     Comparator<Passenger> passengerClassComparator = (p1, p2) -> p1.getPassengerBookingClass().getClassCode() - p2.getPassengerBookingClass().getClassCode();

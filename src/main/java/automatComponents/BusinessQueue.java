@@ -5,7 +5,7 @@ import livingComponents.Passenger;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BusinessQueue {
+public class BusinessQueue implements IQueue{
 
     private Queue<Passenger> businessQueue=new LinkedList<>();
     public BusinessQueue(){
