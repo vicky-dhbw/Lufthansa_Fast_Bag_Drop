@@ -4,6 +4,7 @@ import automatComponents.Database;
 import flightRelevants.Flight;
 import flightRelevants.FlightID;
 import flightRelevants.IATAAirportCodes;
+import identityRelevants.BoardingPass;
 import identityRelevants.BookingClass;
 import identityRelevants.LeftBoardingPassPart;
 import identityRelevants.RightBoardingPassPart;

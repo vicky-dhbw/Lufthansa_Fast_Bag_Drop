@@ -190,7 +190,7 @@ public class TestApplication {
     @Order(9)
     public void checkManagementAdministration() {
 
-        IDCard serviceAgentIdCard=federalPolice.getIdCard();
+        IDCard serviceAgentIdCard=serviceAgent.getIdCard();
 
         serviceAgent.startUpMachine(fastBagDrop,serviceAgentIdCard);
         assertEquals(FastBagDropState.ON,fastBagDrop.getCurrentState());
@@ -229,8 +229,12 @@ public class TestApplication {
         Baggage baggage = new Baggage();
         Passenger passenger = new Passenger();
 
+
         passenger.getBaggageList().add(baggage);
         baggage.setContent("explosives");
+
+        IDCard serviceAgentIdCard=serviceAgent.getIdCard();
+        serviceAgent.startUpMachine(fastBagDrop,serviceAgentIdCard);
 
         BaggageDrop baggageDrop = new BaggageDrop();
 
@@ -273,7 +277,6 @@ public class TestApplication {
     @Test
     @Order(16)
     public void exportOnlyThroughServiceAgent() {
-
 
         assertTrue(serviceAgent.executeExport(fastBagDrop.getServices().getExport()));
         assertFalse(federalPolice.executeExport(fastBagDrop.getServices().getExport()));

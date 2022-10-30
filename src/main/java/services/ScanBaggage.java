@@ -17,7 +17,7 @@ import java.util.Queue;
 public class ScanBaggage {
     public void scanBaggage(Queue<Baggage> baggageQueue, FastBagDrop fastBagDrop, Position position, BoardingPass boardingPass, Passenger passenger, Database database) throws IOException {
 
-        if(fastBagDrop.getCurrentState()==FastBagDropState.ON){
+        if(fastBagDrop.getCurrentState()==FastBagDropState.ON||fastBagDrop.getCurrentState()==FastBagDropState.UNLOCKED){
             while(!baggageQueue.isEmpty()){
                 Baggage baggage=baggageQueue.poll();
                 passenger.getBaggageList().remove(baggage);
