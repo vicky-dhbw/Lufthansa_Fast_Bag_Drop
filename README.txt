@@ -27,5 +27,3 @@ The Fast Fag Drop Database has the following:
   Created after successful check of a passenger and are used for Data Analysis
 
 - The database does not contain status after baggage scan, the status with baggage id, passenger id, nanoseconds are saved in a hashmap in Export and are exported to fast_baggage_drop.csv
-
-Repository : https://github.com/vicky-dhbw/Lufthansa_Fast_Bag_Drop.git
