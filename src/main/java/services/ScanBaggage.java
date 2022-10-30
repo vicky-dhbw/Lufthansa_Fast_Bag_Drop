@@ -58,12 +58,12 @@ public class ScanBaggage {
                     }
                     else {
                         System.out.println("Baggage contains explosives");
-                        fastBagDrop.getFederalPolice().lockMachine(fastBagDrop);
+                        fastBagDrop.getFederalPolice().lockMachine(fastBagDrop); // <----- the federal officer locks the machine if explosive is found
                         fastBagDrop.getFederalPolice().arrestPassenger(passenger);   //federal police declares passenger as criminal
 
 
                         IDCard federalPoliceIDCard=fastBagDrop.getFederalPolice().getIdCard();
-                        fastBagDrop.getFederalPolice().unlockMachine(fastBagDrop,federalPoliceIDCard);
+                        fastBagDrop.getFederalPolice().unlockMachine(fastBagDrop,federalPoliceIDCard); //<------ federal police unlocks the machine after arresting passenger
 
                     }
                 }

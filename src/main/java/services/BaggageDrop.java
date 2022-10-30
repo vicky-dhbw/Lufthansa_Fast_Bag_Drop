@@ -77,14 +77,15 @@ public class BaggageDrop {
 
                 // passenger who is a criminal will not get a seat or be issued a boarding pass
 
-                if(!passenger.isCriminal()){ // <----- passengers who are not criminals
-                    String seatId=FlightSeatStatusUpdater.reserveSeat(seat,flight);
+                if(!passenger.isCriminal()){ // <----- passengers who are not criminals shall be provided with a seat and be given valid boarding pass
+                    String seatId=FlightSeatStatusUpdater.reserveSeat(seat,flight);  // <---- the searched seat is reserved for the passenger by updating the status of the flight seats
                     BoardingPassGenerator.generateBoardingPass(fastBagDrop.getDatabase(), passenger,flight,seatId);
 
+                    //after successful scan baggage a record of all information to a passenger is gathered as Record Object and saved in the fast bag drop database...nice!!!
                     Record record=new Record(passenger);
                     fastBagDrop.getDatabase().getRecordList().add(record);
 
-                    fastBagDrop.getFastBagDropSection(position).getDocumentPrinter().printBoardingPass(passenger);
+                    fastBagDrop.getFastBagDropSection(position).getDocumentPrinter().printBoardingPass(passenger);  //<----- the display displays the boarding pass of the passenger
                     fastBagDrop.getFastBagDropSection(position).getDocumentPrinter().printVoucher(passenger);
                 }
 
@@ -109,7 +110,7 @@ public class BaggageDrop {
         }
     }
 
-    public void getBaggageWeightToQueue(){
+    public void getBaggageWeightToQueue(){   //this method get weights from the baggage weight file , then saves it to a queue/  the baggage are then assigned to the passengers
         try{
             BufferedReader bufferedReader=new BufferedReader(new FileReader(Configuration.INSTANCE.baggageWeights));
             String line;
@@ -124,7 +125,7 @@ public class BaggageDrop {
             System.out.println(e.getMessage());
         }
     }
-    public void assignBaggageToPassenger(Passenger passenger, int numberOfBaggage){
+    public void assignBaggageToPassenger(Passenger passenger, int numberOfBaggage){   // this method gets baggage contents from the baggage content file, saves it in a queue and then are set to baggage
         for(int i=0;i<numberOfBaggage;i++){
             Baggage baggage=new Baggage();
             passenger.getBaggageList().add(baggage);
