@@ -34,7 +34,7 @@ public class Application {
         fastBagDrop.setFederalPolice(federalPolice);
 
         // note rfid chip pin is saved to the left section of the fast bag drop
-        // the service agent and the federal police start, unlock shutdown the fast bag drop through the left section of the fast bag drop
+        // the service agent and the federal police start, unlock shutdown the fast bag drop through the left section of the fast bag drop <----  default log in
 
         // federal officer tries to unlock the machine when the machine state is LOCKED,   <--- change of state of machine from LOCKED to UNLOCKED
 

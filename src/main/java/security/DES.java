@@ -11,7 +11,7 @@ import javax.crypto.spec.IvParameterSpec;
  * DES/ECB/NoPadding (56)
  * DES/ECB/PKCS5Padding (56) *
  */
-public class DES {
+public class DES implements IEncryptAlgorithm{
     private final SecretKey key;
     private Cipher encCipher;
     private Cipher decCipher;
