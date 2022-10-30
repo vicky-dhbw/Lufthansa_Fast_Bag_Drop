@@ -16,9 +16,10 @@ public class Sensor {
         }
     }
 
-    public void addListener(IBaggageDetectorListener listener) {
+    public double addListener(IBaggageDetectorListener listener) {
         listenerList.add(listener);
         listener.revealPresence();
+        return listener.detectWeight();
     }
 
     public void removeListener(IBaggageDetectorListener listener) {

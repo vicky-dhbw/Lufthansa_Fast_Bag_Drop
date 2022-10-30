@@ -35,8 +35,9 @@ public class Display {
         System.out.println("Checking you in...............");
     }
 
-    public void showBaggageWeight(Baggage baggage){
-        System.out.println("Baggage weighs: "+baggage.getWeight()+ " kg");
+    public void showBaggageWeight(double weight){
+        System.out.println("---- SHOWING BAGGAGE WEIGHT ON DISPLAY -----");
+        System.out.println("Baggage weighs: "+weight+ " kg");
     }
 
     public int getNumberOfBaggage(Passenger passenger){

@@ -24,6 +24,7 @@ public class Baggage implements IBaggageDetectorListener {
         return weight;
     }
 
+
     public void setWeight(double weight) {
         this.weight = weight;
     }
@@ -42,6 +43,11 @@ public class Baggage implements IBaggageDetectorListener {
     public void revealPresence() {
         System.out.println("baggage is on conveyor belt-------");
         System.out.println("---------baggage detected by sensor------------- ");
+    }
+
+    @Override
+    public double detectWeight() {
+        return weight;
     }
 
     public Result getResult() {

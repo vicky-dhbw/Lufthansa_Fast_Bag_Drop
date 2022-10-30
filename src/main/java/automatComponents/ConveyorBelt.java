@@ -16,8 +16,8 @@ public class ConveyorBelt {
     public Queue<Baggage> acceptBaggage(List<Baggage> baggage, Sensor sensor,Display display){
         baggageQueue.addAll(baggage);
         for(Baggage baggage_:baggageQueue){
-            sensor.addListener(baggage_);
-            display.showBaggageWeight(baggage_);     //display showing the weight of the bag...
+            double weight=sensor.addListener(baggage_);
+            display.showBaggageWeight(weight);     //display showing the weight of the bag...
         }
         return baggageQueue;
     }
