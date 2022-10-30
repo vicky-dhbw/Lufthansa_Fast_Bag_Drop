@@ -66,7 +66,7 @@ public class BaggageDrop {
                     Record record=new Record(passenger);
                     fastBagDrop.getDatabase().getRecordList().add(record);
 
-                    fastBagDrop.getFastBagDropSection(position).getDisplay().displayBoardingPass(passenger);
+                    fastBagDrop.getFastBagDropSection(position).getDocumentPrinter().printBoardingPass(passenger);
                     fastBagDrop.getFastBagDropSection(position).getDocumentPrinter().printVoucher(passenger);
                 }
 
