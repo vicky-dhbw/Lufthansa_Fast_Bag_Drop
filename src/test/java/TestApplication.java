@@ -309,4 +309,5 @@ public class TestApplication {
             assertNotNull(passenger.getBoardingPass());
         }
     }
+
 }

@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Queue;
 
 public class ScanBaggage {
+
     public void scanBaggage(Queue<Baggage> baggageQueue, FastBagDrop fastBagDrop, Position position, BoardingPass boardingPass, Passenger passenger, Database database) throws IOException {
 
         if(fastBagDrop.getCurrentState()==FastBagDropState.ON||fastBagDrop.getCurrentState()==FastBagDropState.UNLOCKED){
@@ -54,6 +55,7 @@ public class ScanBaggage {
                         fastBagDrop.getServices().getExport().getBaggageRecords().put(baggageTagId,baggageRecordsObjects);  //Records
 
                         boardingPass.addBaggageToTagList(baggageTag);
+                        passenger.getHandyApp().getHandyAppDatabase().getAppDatabase2().put(passenger.getPassport().getId(),passenger.getBoardingPass().getBaggageTagList());
                         passenger.getBaggageList().add(baggage);
                     }
                     else {

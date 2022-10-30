@@ -10,6 +10,7 @@ import identityRelevants.Passport;
 import passengerRelevants.Baggage;
 import passengerRelevants.Voucher;
 import services.CheckIn;
+import services.HandyApp;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +26,8 @@ public class Passenger extends Human{
 
     private FingerPrint fingerPrint;
     private FaceID faceID;
+
+    private HandyApp handyApp;
 
     public boolean hasFaceID(){
         if(faceID.getFaceID()==null){
@@ -48,6 +51,7 @@ public class Passenger extends Human{
         baggageList=new ArrayList<>();
         boardingPass=new BoardingPass();
         isCriminal=false;     // assume passengers are not criminal
+        handyApp=new HandyApp();
     }
 
     public void setName(String name){
@@ -129,4 +133,11 @@ public class Passenger extends Human{
         isCriminal = criminal;
     }
 
+    public HandyApp getHandyApp() {
+        return handyApp;
+    }
+
+    public void setHandyApp(HandyApp handyApp) {
+        this.handyApp = handyApp;
+    }
 }
